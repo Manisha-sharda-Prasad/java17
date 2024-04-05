@@ -8,7 +8,7 @@ public class WrapperClass {
     System.out.println("======= A. Wrapper : String =========");
         String str1 = new String("manisha - String object"); // heap
         String str2 = "Manisha - string literal" ; // string literal - String pool (fast)
-        Print.single( str1);
+        Print.info( str1);
 
 
     System.out.println("======= B. Wrapper : Integer, Long, Short, Byte =========");

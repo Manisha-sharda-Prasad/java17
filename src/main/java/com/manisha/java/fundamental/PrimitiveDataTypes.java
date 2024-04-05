@@ -1,7 +1,9 @@
 package com.manisha.java.fundamental;
 
 import com.manisha.java.util.Print;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class PrimitiveDataTypes { // can have only one public class in one file.
 	// A.properties
 
@@ -79,44 +81,45 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 	static void learn(){
 		//short,long,int,double------------------------------------------
 		short myShortVar = Short.MIN_VALUE;
-		Print.single(myShortVar);
+		Print.info(myShortVar);
 
 		long myLongVar = Long.SIZE;
-		Print.single(myLongVar);
+		Print.info(myLongVar);
 
 		int myIntVar = Integer.MAX_VALUE;
-		Print.single(myIntVar);
+		Print.info(myIntVar);
 
 		double myDoubleVar = Double.MAX_VALUE;
-		Print.single(myDoubleVar);
+		Print.info(myDoubleVar);
+		// log.info("jbvjkdfbvjbdfjkfdkjbnfkjdnb");
 
 
 		//abbreviating operators------------------------------------------
 		//(increment, decrement, addition compound assignment, subtraction comp, multi comp, division comp).---
 		int plus = 10;
 		plus += 3;
-		Print.single(plus);
+		Print.info(plus);
 
 		int minus = 5;
 		minus -= 2;
-		Print.single(minus);
+		Print.info(minus);
 
 		double multi = 10;
 		multi *= 1.5;
-		Print.single(multi);
+		Print.info(multi);
 
 		double division = 6;
 		division /= 2.5;
-		Print.single(division);
+		Print.info(division);
 
 		//if-then Statement----------------------------------------------------
         //01.-------
 		boolean isDonkey = false;
 		if (isDonkey){
-			Print.single("See that is a Donkey!!!");}
+			Print.info("See that is a Donkey!!!");}
 		else{
-		Print.single("No!");
-		Print.single("That's a Cow!!!!");
+		Print.info("No!");
+		Print.info("That's a Cow!!!!");
 		}
         //02-------
 		int manuScore = 50; //local variable
@@ -130,55 +133,56 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 		int employeeTwoSalary = 8000;
 
 		if ((employeeOneSalary >= avgSalary) && (employeeOneSalary >= employeeTwoSalary)){
-			Print.single("Employee one is earning well!!");
+			Print.info("Employee one is earning well!!");
 		}else {
-			Print.single("Employee one is not getting paid enough!!");
+			Print.info("Employee one is not getting paid enough!!");
 		}
 
 		if ((employeeTwoSalary >= avgSalary) || (employeeTwoSalary >= employeeOneSalary)){
-			Print.single("Employee two is earning well!!");
+			Print.info("Employee two is earning well!!");
 		}else {
-			Print.single("Employee two is not getting paid enough!!");
+			Print.info("Employee two is not getting paid enough!!");
 		}
 
         //Ternary-operators( ? : )-------------------------------------------------------
 
         int currentAge = 15;
 		String  ageOfClient = (currentAge >= 18) ? "Over Eighteen" : "Still a kid" ;
-		Print.single("Our client is " + ageOfClient );
+		Print.info("Our client is " + ageOfClient );
 
 
 		//Operator-Precedence///CODING-CHALLENGE///---------------------------------------
 		double dobVar = 20.00d;
 		double secVar = 80.00d;
 		double operationVar = (dobVar + secVar) * 100.00d;
-		Print.single(operationVar);
+		Print.info(operationVar);
 
 		double theRemainder = (operationVar) % 40.00d;
-		Print.single(theRemainder);
+		Print.info(theRemainder);
 
      	boolean zeroOrNot = Boolean.parseBoolean((theRemainder == 0) ? "true" : "false");
-		Print.single("got some remainder !!");
+		Print.info("got some remainder !!");
 
 	}
 
 	static void calcScore(int score ){
 		int firstDivision = 100;
 		if (score >= firstDivision){
-			Print.single("Yes!! I got first division");
+			Print.info("Yes!! I got first division");
 		}else {
-			Print.single("Ohh No!! I need to study hard :(");
+			Print.info("Ohh No!! I need to study hard :(");
 		}
 	}
 
 	//===================== MAIN ======================
 	public static void main(String[] args)
 	{
-		 Print.multiple("cvjdfjkvnbjfd", "knfdklnnfg", "kbknkv", "bvfdbvfdbif");
+		 Print.info("cvjdfjkvnbjfd", "knfdklnnfg", "kbknkv", "bvfdbvfdbif");
 //		learnBoolean();
 //		learnNumbers();
 //		learnChar();
 		learn();
+
 	}
 }
 
