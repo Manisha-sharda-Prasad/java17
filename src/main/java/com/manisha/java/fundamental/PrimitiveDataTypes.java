@@ -92,7 +92,7 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 
 
 		//abbreviating operators------------------------------------------
-		//increment, decrement, addition compound assignment, subtraction comp, multi comp, division comp.---
+		//(increment, decrement, addition compound assignment, subtraction comp, multi comp, division comp).---
 		int plus = 10;
 		plus += 3;
 		AppUtil.p(plus);
@@ -112,7 +112,7 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 		//if-then Statement----------------------------------------------------
         //01.-------
 		boolean isDonkey = false;
-		if (isDonkey == true){
+		if (isDonkey){
 			AppUtil.p("See that is a Donkey!!!");}
 		else{
 		AppUtil.p("No!");
@@ -123,6 +123,45 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 		int lekhuScore = 100;
 		calcScore(manuScore);
 		calcScore(lekhuScore);
+
+		//logical-operators (&&, ||) -------------------------------------------------
+		int avgSalary = 9000;
+		int employeeOneSalary = 10000;
+		int employeeTwoSalary = 8000;
+
+		if ((employeeOneSalary >= avgSalary) && (employeeOneSalary >= employeeTwoSalary)){
+			AppUtil.p("Employee one is earning well!!");
+		}else {
+			AppUtil.p("Employee one is not getting paid enough!!");
+		}
+
+		if ((employeeTwoSalary >= avgSalary) || (employeeTwoSalary >= employeeOneSalary)){
+			AppUtil.p("Employee two is earning well!!");
+		}else {
+			AppUtil.p("Employee two is not getting paid enough!!");
+		}
+
+        //Ternary-operators( ? : )-------------------------------------------------------
+
+        int currentAge = 15;
+		String  ageOfClient = (currentAge >= 18) ? "Over Eighteen" : "Still a kid" ;
+		AppUtil.p("Our client is " + ageOfClient );
+
+
+		//Operator-Precedence///CODING-CHALLENGE///---------------------------------------
+		double dobVar = 20.00d;
+		double secVar = 80.00d;
+		double operationVar = (dobVar + secVar) * 100.00d;
+		AppUtil.p(operationVar);
+
+		double theRemainder = (operationVar) % 40.00d;
+		AppUtil.p(theRemainder);
+
+     	boolean zeroOrNot = Boolean.parseBoolean((theRemainder == 0) ? "true" : "false");
+		AppUtil.p("got some remainder !!");
+
+
+
 	}
 
 	static void calcScore(int score ){
@@ -133,6 +172,12 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 			AppUtil.p("Ohh No!! I need to study hard :(");
 		}
 	}
+
+
+
+
+
+
 
 	//===================== MAIN ======================
 	public static void main(String[] args)
