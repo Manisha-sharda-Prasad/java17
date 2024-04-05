@@ -1,6 +1,6 @@
 package com.manisha.java.fundamental;
 
-import com.manisha.java.util.AppUtil;
+import com.manisha.java.util.Print;
 
 public class WrapperClass {
     public static void main(String[] args)
@@ -8,7 +8,7 @@ public class WrapperClass {
     System.out.println("======= A. Wrapper : String =========");
         String str1 = new String("manisha - String object"); // heap
         String str2 = "Manisha - string literal" ; // string literal - String pool (fast)
-        AppUtil.p("Str2", str1);
+        Print.single( str1);
 
 
     System.out.println("======= B. Wrapper : Integer, Long, Short, Byte =========");

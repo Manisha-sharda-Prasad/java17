@@ -1,6 +1,6 @@
 package com.manisha.java.fundamental;
 
-import com.manisha.java.util.AppUtil;
+import com.manisha.java.util.Print;
 
 public class PrimitiveDataTypes { // can have only one public class in one file.
 	// A.properties
@@ -79,44 +79,44 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 	static void learn(){
 		//short,long,int,double------------------------------------------
 		short myShortVar = Short.MIN_VALUE;
-		AppUtil.p(myShortVar);
+		Print.single(myShortVar);
 
 		long myLongVar = Long.SIZE;
-		AppUtil.p(myLongVar);
+		Print.single(myLongVar);
 
 		int myIntVar = Integer.MAX_VALUE;
-		AppUtil.p(myIntVar);
+		Print.single(myIntVar);
 
 		double myDoubleVar = Double.MAX_VALUE;
-		AppUtil.p(myDoubleVar);
+		Print.single(myDoubleVar);
 
 
 		//abbreviating operators------------------------------------------
 		//(increment, decrement, addition compound assignment, subtraction comp, multi comp, division comp).---
 		int plus = 10;
 		plus += 3;
-		AppUtil.p(plus);
+		Print.single(plus);
 
 		int minus = 5;
 		minus -= 2;
-		AppUtil.p(minus);
+		Print.single(minus);
 
 		double multi = 10;
 		multi *= 1.5;
-		AppUtil.p(multi);
+		Print.single(multi);
 
 		double division = 6;
 		division /= 2.5;
-		AppUtil.p(division);
+		Print.single(division);
 
 		//if-then Statement----------------------------------------------------
         //01.-------
 		boolean isDonkey = false;
 		if (isDonkey){
-			AppUtil.p("See that is a Donkey!!!");}
+			Print.single("See that is a Donkey!!!");}
 		else{
-		AppUtil.p("No!");
-		AppUtil.p("That's a Cow!!!!");
+		Print.single("No!");
+		Print.single("That's a Cow!!!!");
 		}
         //02-------
 		int manuScore = 50; //local variable
@@ -130,58 +130,51 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 		int employeeTwoSalary = 8000;
 
 		if ((employeeOneSalary >= avgSalary) && (employeeOneSalary >= employeeTwoSalary)){
-			AppUtil.p("Employee one is earning well!!");
+			Print.single("Employee one is earning well!!");
 		}else {
-			AppUtil.p("Employee one is not getting paid enough!!");
+			Print.single("Employee one is not getting paid enough!!");
 		}
 
 		if ((employeeTwoSalary >= avgSalary) || (employeeTwoSalary >= employeeOneSalary)){
-			AppUtil.p("Employee two is earning well!!");
+			Print.single("Employee two is earning well!!");
 		}else {
-			AppUtil.p("Employee two is not getting paid enough!!");
+			Print.single("Employee two is not getting paid enough!!");
 		}
 
         //Ternary-operators( ? : )-------------------------------------------------------
 
         int currentAge = 15;
 		String  ageOfClient = (currentAge >= 18) ? "Over Eighteen" : "Still a kid" ;
-		AppUtil.p("Our client is " + ageOfClient );
+		Print.single("Our client is " + ageOfClient );
 
 
 		//Operator-Precedence///CODING-CHALLENGE///---------------------------------------
 		double dobVar = 20.00d;
 		double secVar = 80.00d;
 		double operationVar = (dobVar + secVar) * 100.00d;
-		AppUtil.p(operationVar);
+		Print.single(operationVar);
 
 		double theRemainder = (operationVar) % 40.00d;
-		AppUtil.p(theRemainder);
+		Print.single(theRemainder);
 
      	boolean zeroOrNot = Boolean.parseBoolean((theRemainder == 0) ? "true" : "false");
-		AppUtil.p("got some remainder !!");
-
-
+		Print.single("got some remainder !!");
 
 	}
 
 	static void calcScore(int score ){
 		int firstDivision = 100;
 		if (score >= firstDivision){
-			AppUtil.p("Yes!! I got first division");
+			Print.single("Yes!! I got first division");
 		}else {
-			AppUtil.p("Ohh No!! I need to study hard :(");
+			Print.single("Ohh No!! I need to study hard :(");
 		}
 	}
-
-
-
-
-
-
 
 	//===================== MAIN ======================
 	public static void main(String[] args)
 	{
+		 Print.multiple("cvjdfjkvnbjfd", "knfdklnnfg", "kbknkv", "bvfdbvfdbif");
 //		learnBoolean();
 //		learnNumbers();
 //		learnChar();
