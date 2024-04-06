@@ -1,8 +1,8 @@
-package com.manisha.java.expressionAndStatement;
+package com.manisha.java.fundamental.exercises;
 
 import com.manisha.java.util.Print;
 
-public class MethodsChallenge {//-------------------start----------------------//
+public class Exercise1 {//-------------------start----------------------//
 
 //Methods//if/else---------------------------------------------------------------------------------------
 

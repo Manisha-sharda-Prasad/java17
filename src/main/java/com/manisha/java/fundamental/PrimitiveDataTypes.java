@@ -8,7 +8,7 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 	// A.properties
 
 	// A. property
-	static int topVariable = 100000;
+	//static int topVariable = 100000;
 
 	// B.method
 	static void learnBoolean(){
@@ -73,12 +73,7 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 		// https://www.rapidtables.com/convert/number/decimal-to-binary.html
 	}
 
-	static  void methods(int manuScore, int lekhuScore){
-		calcScore(manuScore);
-		calcScore(lekhuScore);
-	}
-//--------------------------------------------------------------------------------------------------------
-	static void learn(){
+	void learnMore(){
 		//short,long,int,double------------------------------------------
 		short myShortVar = Short.MIN_VALUE;
 		Print.info(myShortVar);
@@ -91,126 +86,32 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 
 		double myDoubleVar = Double.MAX_VALUE;
 		Print.info(myDoubleVar);
-
-
-		//abbreviating operators------------------------------------------
-		//(increment, decrement, addition compound assignment, subtraction comp, multi comp, division comp).---
-		int plus = 10;
-		plus += 3;
-		Print.info(plus);
-
-		int minus = 5;
-		minus -= 2;
-		Print.info(minus);
-
-		double multi = 10;
-		multi *= 1.5;
-		Print.info(multi);
-
-		double division = 6;
-		division /= 2.5;
-		Print.info(division);
-
-		//if-then Statement----------------------------------------------------
-        //01.-------
-		boolean isDonkey = false;
-		if (isDonkey){
-			Print.info("See that is a Donkey!!!");}
-		else{
-		Print.info("No!");
-		Print.info("That's a Cow!!!!");
-		}
-        //02-------
-		int manuScore = 50; //local variable
-		int lekhuScore = 100;
-		calcScore(manuScore);
-		calcScore(lekhuScore);
-		//--------------------------------------------------------------------------
-        //-Methods------
-		//if/else condition defined in separate calGameScore method.
-         boolean gameOver = true;
-		 int score = 800;
-		 int levelCompleted = 5;
-		 int bonus = 100;
-		 int highScore = calculateGameScore (gameOver, score, levelCompleted, bonus);
-		  Print.info("The highScore is " + highScore);
-
-		 score = 10000;
-		 levelCompleted = 8;
-		 bonus = 200;
-		Print.info("The highScore is " +
-		      calculateGameScore (gameOver, score, levelCompleted, bonus));
-
-
-
-		//logical-operators (&&, ||) -------------------------------------------------
-		int avgSalary = 9000;
-		int employeeOneSalary = 10000;
-		int employeeTwoSalary = 8000;
-
-		if ((employeeOneSalary >= avgSalary) && (employeeOneSalary >= employeeTwoSalary)){
-			Print.info("Employee one is earning well!!");
-		}else {
-			Print.info("Employee one is not getting paid enough!!");
-		}
-
-		if ((employeeTwoSalary >= avgSalary) || (employeeTwoSalary >= employeeOneSalary)){
-			Print.info("Employee two is earning well!!");
-		}else {
-			Print.info("Employee two is not getting paid enough!!");
-		}
-
-        //Ternary-operators( ? : )-------------------------------------------------------
-
-        int currentAge = 15;
-		String  ageOfClient = (currentAge >= 18) ? "Over Eighteen" : "Still a kid" ;
-		Print.info("Our client is " + ageOfClient );
-
-
-		//Operator-Precedence///CODING-CHALLENGE///---------------------------------------
-		double dobVar = 20.00d;
-		double secVar = 80.00d;
-		double operationVar = (dobVar + secVar) * 100.00d;
-		Print.info(operationVar);
-
-		double theRemainder = (operationVar) % 40.00d;
-		Print.info(theRemainder);
-
-     	boolean zeroOrNot = Boolean.parseBoolean((theRemainder == 0) ? "true" : "false");
-		Print.info("got some remainder !!");
-
 	}
 
-	static void calcScore(int score ){
-		int firstDivision = 100;
-		if (score >= firstDivision){
-			Print.info("Yes!! I got first division");
-		}else {
-			Print.info("Ohh No!! I need to study hard :(");
-		}
-	}
-    static  int calculateGameScore(boolean gameOver, int score, int levelCompleted, int bonus){
 
-		int finalScore = score;
+	//  ############## MAIN #############
 
-		if (gameOver == true ) {
-			finalScore +=  (levelCompleted * bonus);
-			finalScore += 1000;
-//			Print.info("Your final score was : " + finalScore);
-		}
-        return finalScore;
-		//removed void with int, as returning value(finalScore.)
-	}
-	//===================== MAIN ======================
 	public static void main(String[] args)
 	{
-//		learnBoolean();
-//		learnNumbers();
-//		learnChar();
-		learn();
-
+		learnBoolean();
+		learnNumbers();
+		learnChar();
 	}
 }
+/*
+Number:
+	Integer:
+ 		int, short, byte, long
+ 	Floating:
+ 		float, double
+
+boolean
+
+char
+
+
+** can be interchange using cast and inbuilt methods provided by wrapper class.
+ */
 
 
 

@@ -1,7 +1,7 @@
-package com.manisha.java.expressionAndStatement;
+package com.manisha.java.fundamental.exercises;
 
 
-public class SpeedConverter
+public class Exercise2_SpeedConverter
 {
     public static long toMilesPerHour(double kilometersPerHour){
         double result = (kilometersPerHour < 0) ? -1d : kilometersPerHour / 1.6;
