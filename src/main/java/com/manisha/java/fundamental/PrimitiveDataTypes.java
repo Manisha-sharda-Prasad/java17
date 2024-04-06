@@ -91,7 +91,6 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 
 		double myDoubleVar = Double.MAX_VALUE;
 		Print.info(myDoubleVar);
-		// log.info("jbvjkdfbvjbdfjkfdkjbnfkjdnb");
 
 
 		//abbreviating operators------------------------------------------
@@ -126,6 +125,23 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 		int lekhuScore = 100;
 		calcScore(manuScore);
 		calcScore(lekhuScore);
+		//--------------------------------------------------------------------------
+        //-Methods------
+		//if/else condition defined in separate calGameScore method.
+         boolean gameOver = true;
+		 int score = 800;
+		 int levelCompleted = 5;
+		 int bonus = 100;
+		 int highScore = calculateGameScore (gameOver, score, levelCompleted, bonus);
+		  Print.info("The highScore is " + highScore);
+
+		 score = 10000;
+		 levelCompleted = 8;
+		 bonus = 200;
+		Print.info("The highScore is " +
+		      calculateGameScore (gameOver, score, levelCompleted, bonus));
+
+
 
 		//logical-operators (&&, ||) -------------------------------------------------
 		int avgSalary = 9000;
@@ -173,11 +189,21 @@ public class PrimitiveDataTypes { // can have only one public class in one file.
 			Print.info("Ohh No!! I need to study hard :(");
 		}
 	}
+    static  int calculateGameScore(boolean gameOver, int score, int levelCompleted, int bonus){
 
+		int finalScore = score;
+
+		if (gameOver == true ) {
+			finalScore +=  (levelCompleted * bonus);
+			finalScore += 1000;
+//			Print.info("Your final score was : " + finalScore);
+		}
+        return finalScore;
+		//removed void with int, as returning value(finalScore.)
+	}
 	//===================== MAIN ======================
 	public static void main(String[] args)
 	{
-		 Print.info("cvjdfjkvnbjfd", "knfdklnnfg", "kbknkv", "bvfdbvfdbif");
 //		learnBoolean();
 //		learnNumbers();
 //		learnChar();
