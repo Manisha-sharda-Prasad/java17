@@ -2,7 +2,7 @@ package com.manisha.java.fundamental.exercises;
 
 import com.manisha.java.util.Print;
 
-public class Exercise1 {//-------------------start----------------------//
+public class Exercise1_HighScore {//-------------------start----------------------//
 
 //Methods//if/else---------------------------------------------------------------------------------------
 
