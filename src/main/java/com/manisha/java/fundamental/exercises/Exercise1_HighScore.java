@@ -2,7 +2,7 @@ package com.manisha.java.fundamental.exercises;
 
 import com.manisha.java.util.Print;
 
-public class Exercise1_HighScore {//-------------------start----------------------//
+public class Exercise1_HighScore {
 
 //Methods//if/else---------------------------------------------------------------------------------------
 
@@ -25,7 +25,7 @@ static int calcHighScorePosition(int score){
          return result;
 }
 
-static  void checkingScores(){
+ static  void checkingScores(){
 
     displayHighScorePosition("Tim" ,1500 );
     displayHighScorePosition("Lek" ,500 );
