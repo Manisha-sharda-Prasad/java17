@@ -1,7 +1,6 @@
 package com.manisha.java.api;
 
-import com.manisha.java.fundamental.exercises.Excercise_Runner;
-import org.springframework.stereotype.Controller;
+import com.manisha.java.fundamental.exercise.ifElse.Excercise_Runner;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

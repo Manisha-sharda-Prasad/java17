@@ -1,21 +1,20 @@
-package com.manisha.java.fundamental.exercises;
+package com.manisha.java.fundamental.exercise.ifElse;
 
 import com.manisha.java.util.Print;
 
-import static com.manisha.java.fundamental.exercises.Exercise1_HighScore.checkingScores;
-import static com.manisha.java.fundamental.exercises.Exercise2_SpeedConverter.printConversion;
-import static com.manisha.java.fundamental.exercises.Exercise3_MegaBytesConverter.printMegaBytesAndKiloBytes;
-import static com.manisha.java.fundamental.exercises.Exercise4_wakeUp.shouldWakeUp;
-import static com.manisha.java.fundamental.exercises.Exercise5_leapyear.isLeapYear;
-import static com.manisha.java.fundamental.exercises.Exercise6_DecimalComparator.areEqualByThreeDecimalPlaces;
-import static com.manisha.java.fundamental.exercises.Exercise7_8_TeenAndSumChecker.hasEqualSum;
-import static com.manisha.java.fundamental.exercises.Exercise7_8_TeenAndSumChecker.hasTeen;
+import static com.manisha.java.fundamental.exercise.ifElse.Exercise2_SpeedConverter.printConversion;
+import static com.manisha.java.fundamental.exercise.ifElse.Exercise3_MegaBytesConverter.printMegaBytesAndKiloBytes;
+import static com.manisha.java.fundamental.exercise.ifElse.Exercise4_wakeUp.shouldWakeUp;
+import static com.manisha.java.fundamental.exercise.ifElse.Exercise5_leapyear.isLeapYear;
+import static com.manisha.java.fundamental.exercise.ifElse.Exercise6_DecimalComparator.areEqualByThreeDecimalPlaces;
+import static com.manisha.java.fundamental.exercise.ifElse.Exercise7_8_TeenAndSumChecker.hasEqualSum;
+import static com.manisha.java.fundamental.exercise.ifElse.Exercise7_8_TeenAndSumChecker.hasTeen;
 
 public class Excercise_Runner {
 
     public static  void main(String[] args){
         //1
-        checkingScores();
+        Exercise1_HighScore.checkingScores();
 
         //2
         printConversion(10.25);

@@ -1,4 +1,4 @@
-package com.manisha.java.fundamental.exercises;
+package com.manisha.java.fundamental.exercise.ifElse;
 
 
 public class Exercise2_SpeedConverter
