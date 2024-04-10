@@ -7,17 +7,18 @@
 - wrapper class
 - cast
 
-### Section 4 - more
+### Section 4 - Control statement -1
 - if-else,
 - operator --> !, && , || , ?:, + - ? *, etc
 
-### Section 5 - Expression, statemennt and more
+### Section 5 - static methods
 - methods
 
-### Section 6 - Control statement
+### Section 6 - Control statement - 2
 - while loop
 - do while loop
 - for loop
+- Switch and Enhanced Switch (java 14)
 
 ### Section 16
 - final
