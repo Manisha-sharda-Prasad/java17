@@ -82,3 +82,13 @@ public class Switchcase {
         printOfDayWeek(3);
     }
 }
+
+/*
+Traditional one
+
+Enhanced switch expression (java 14 )
+- return (by yeild keyword for each case.)
+- case combine by ,. eg : Case 1,2,3 --> {}
+- no need of break
+- : replace ->
+ */
