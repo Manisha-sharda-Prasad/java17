@@ -1,8 +1,10 @@
 package com.manisha.java.fundamental.exercise.whileAndDoWhile;
 
 import com.manisha.java.util.Print;
-import java.util.ArrayList;
+import lombok.extern.slf4j.Slf4j;
 
+import java.util.ArrayList;
+@Slf4j
 public class Exercise9_GetGreatestCommonDivisor {
 
     public static int getGreatestCommonDivisor (int number1, int number2)
@@ -33,6 +35,7 @@ public class Exercise9_GetGreatestCommonDivisor {
                 break;
         }
         Print.print("getGreatestCommonDivisor ", result);
+        log.info("getGreatestCommonDivisor {}", result);
         return result;
     }
 

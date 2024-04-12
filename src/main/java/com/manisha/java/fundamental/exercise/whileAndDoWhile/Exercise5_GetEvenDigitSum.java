@@ -7,7 +7,7 @@ public class Exercise5_GetEvenDigitSum {
 
     public static int getEvenDigitSum (int number)
     {
-       NumberUtil.IsValidateNumber(number);
+       NumberUtil.IsValidWholeNumber(number);
 
         int sum = 0;
         while (number > 0){

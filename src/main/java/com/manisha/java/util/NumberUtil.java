@@ -1,12 +1,15 @@
 package com.manisha.java.util;
 
+import lombok.extern.slf4j.Slf4j;
+
+
 public class NumberUtil
 {
-    // Even or odd
+    //is Even or odd----------------------
     public static boolean isEven (int number){
         return number%2==0 ? true : false;
     }
-
+    //isPrime------------------------------
     public static boolean isPrime (int number){
         boolean divisible = false;
         for(int i=2; i <= number-1; i++){
@@ -17,17 +20,18 @@ public class NumberUtil
     }
 
 
-    // ============ Validators ===========
+    // ============== Validators ==============
 
-
-    public static boolean IsValidateNumber (int number){
+    //invalid whole Number------------------
+    public static boolean IsValidWholeNumber(int number){
         if (number < 0) {
-            Print.print("Please enter valid Number ! "+number+ " is negative !");
+            Print.print("Please enter valid whole Number ! "+number+ " is negative !");
             return false;
         }
         else
             return true;
     }
+    //Validate Range-------------------------
     public static boolean IsValidateRange (int start, int end, int yourNumber){
         if (yourNumber <= end && yourNumber >= start) {
             return true;
