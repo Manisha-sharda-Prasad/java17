@@ -1,9 +1,6 @@
-package com.manisha.java.fundamental.exercise.WhileandDoWhile;
+package com.manisha.java.fundamental.exercise.whileAndDoWhile;
 
 import com.manisha.java.util.Print;
-
-import java.util.Arrays;
-import java.util.Collections;
 
 public class Exercise3_PalindromeNumber {
 

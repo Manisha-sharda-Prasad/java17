@@ -1,4 +1,4 @@
-package com.manisha.java.fundamental.exercise.TheFor;
+package com.manisha.java.fundamental.exercise.forLoop;
 
 import com.manisha.java.util.Print;
 

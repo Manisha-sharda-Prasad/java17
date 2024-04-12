@@ -1,10 +1,8 @@
-package com.manisha.java.fundamental.exercise.WhileandDoWhile;
+package com.manisha.java.fundamental.exercise.whileAndDoWhile;
 
-import com.manisha.java.util.NumberUtil;
 import com.manisha.java.util.Print;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Exercise8_PrintFactors {
 

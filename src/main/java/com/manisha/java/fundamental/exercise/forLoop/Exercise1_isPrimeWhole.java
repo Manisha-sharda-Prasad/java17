@@ -1,4 +1,4 @@
-package com.manisha.java.fundamental.exercise.TheFor;
+package com.manisha.java.fundamental.exercise.forLoop;
 
 import com.manisha.java.util.Print;
 //prime/whole--2,3,5, 7,11,13,17,..61,67 --->divisible by 1 and itself.

@@ -1,4 +1,4 @@
-package com.manisha.java.fundamental.exercise.WhileandDoWhile;
+package com.manisha.java.fundamental.exercise.whileAndDoWhile;
 
 import com.manisha.java.util.Print;
 import java.util.ArrayList;
