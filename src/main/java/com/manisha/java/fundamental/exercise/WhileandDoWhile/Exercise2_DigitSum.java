@@ -3,21 +3,21 @@ package com.manisha.java.fundamental.exercise.WhileandDoWhile;
 import com.manisha.java.util.Print;
 
 public class Exercise2_DigitSum {
-
+//1.)------------------------------------------
     public static int sumDigits(int number){
       if ( number < 0){
           return -1;
       }
       int sum = 0;
-
       while (number > 9){
          int digit = number % 10;
          sum = sum + digit;
-         number = (int) number/10; // cast to int.  4863.4 ---> 4863
+         number = number/10; // cast to int.  4863.4 ---> 4863
          Print.info("number : "+number, "last Digit : "+digit, "sum : "+sum);
       }
       return sum;
     }
+//2.)also--------------------------------------------
     static int sumDigits2(int number){ // 1234
         int sum = 0;
         String numAsString= String.valueOf(number); // "1234"
@@ -29,7 +29,7 @@ public class Exercise2_DigitSum {
         Print.info("SUM 2 : "+sum);
         return sum;
     }
-
+//----------------------------------MAIN---------------------------------------------//
     public static void main(String[]args){
         Print.info("The sum of digits ", sumDigits(1234));
         sumDigits2(12345);

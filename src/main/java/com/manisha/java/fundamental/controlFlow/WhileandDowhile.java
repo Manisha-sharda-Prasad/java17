@@ -3,7 +3,7 @@ package com.manisha.java.fundamental.controlFlow;
 import com.manisha.java.util.Print;
 
 public class WhileandDowhile {
-
+//break and continue-----------------------------------
     static void beak_concept(String searchItem){
         String[] items = new String[] {"bag", "shoes", "watch", "phone","cable"};
 
@@ -35,7 +35,7 @@ public class WhileandDowhile {
             Print.info("charging... "+ currentItem);
         }
     }
-//
+//-----------------------------MAIN----------------------------------------------
     public static void main(String[]args){
         beak_concept("watch");
         continue_concept();

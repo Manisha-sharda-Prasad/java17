@@ -3,14 +3,17 @@ package com.manisha.java.fundamental.controlFlow;
 import com.manisha.java.util.Print;
 
 public class TheForStatement {
-
+//1.)-----------------------
     public static double calcInterest(double amount, double intRate){
 
         return  (amount * (intRate /100));
     }
+//2.)-----------------------
     public static double calcuInt(double amount, double intRate){
         return (amount * (intRate /100));
     }
+
+//-----------------------------------MAIN----------------------------------------//
     public static void main(String[]args){
         //1.)-------
         for ( double rate = 2.0; rate <= 5.0; rate++) {

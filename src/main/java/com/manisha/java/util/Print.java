@@ -18,4 +18,9 @@ public class Print{
                 .forEach(System.out::println);
         System.out.println("------------------------------");
     }
+
+    public static void print(Object... o){
+        Arrays.stream(o).forEach(System.out::println);
+        System.out.println("------------------------------");
+    }
 }
