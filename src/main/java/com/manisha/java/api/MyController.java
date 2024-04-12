@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("/")
 public class MyController {
 
-    @GetMapping("hello")
+    @GetMapping("family")
     String[] helloworld(){
-        return new String[]{" Lekhraj", "Manisha", "Arush"};
+        return new String[]{"Lekhraj", "Manisha", "Arush"};
     }
 
     @GetMapping("call-excercise")

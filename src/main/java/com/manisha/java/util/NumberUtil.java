@@ -1,6 +1,7 @@
 package com.manisha.java.util;
 
-public class NumberUtil {
+public class NumberUtil
+{
     // Even or odd
     public static boolean isEven (int number){
         return number%2==0 ? true : false;
@@ -8,7 +9,7 @@ public class NumberUtil {
 
     public static boolean isPrime (int number){
         boolean divisible = false;
-        for(int i=2; i<number; i++){
+        for(int i=2; i <= number-1; i++){
             divisible = number%i==0 ? true : false;
             if (divisible) break;
         }
