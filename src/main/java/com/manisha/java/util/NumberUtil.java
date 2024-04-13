@@ -1,8 +1,5 @@
 package com.manisha.java.util;
 
-import lombok.extern.slf4j.Slf4j;
-
-
 public class NumberUtil
 {
     //is Even or odd----------------------
@@ -31,6 +28,19 @@ public class NumberUtil
         else
             return true;
     }
+    //parsing int and try & catch--------------------------------
+    public static boolean IsValidWholeNumber(String number){
+        try {
+            int inputNum = Integer.parseInt(number);
+            System.out.println(number+" can be parse into integer. ");
+            return IsValidWholeNumber(inputNum);
+        }catch (NumberFormatException badUserData) {
+            System.out.println(number+" can NOT be parse into integer. ");
+            return false;
+        }
+    }
+
+
     //Validate Range-------------------------
     public static boolean IsValidateRange (int start, int end, int yourNumber){
         if (yourNumber <= end && yourNumber >= start) {

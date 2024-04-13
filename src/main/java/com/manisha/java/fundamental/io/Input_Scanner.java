@@ -38,7 +38,7 @@ public class Input_Scanner {
 
 
     public static void scanner1_console(){
-        // program-1 (Scanner for console)
+        // program-1 (Scanner for console) var = new Scanner(System.in)-------
         Scanner scanFromConsole = new Scanner(System.in); // System.in===console
 
         System.out.println("Please enter name : ");
@@ -48,12 +48,15 @@ public class Input_Scanner {
         int year = 0;
         while (!isValidYear) {
             System.out.println(" Please enter birth year : ");
-            year = Integer.parseInt(scanFromConsole.nextLine()); // <<<<
 
-            if (year > 2024 || year < 1990) {
-                isValidYear = false;
+            try {
+                year = Integer.parseInt(scanFromConsole.nextLine()); // <<<<
+                if (year > 2024 || year < 1990) {
+                    isValidYear = false;
+                } else isValidYear = true;
+            }catch (NumberFormatException badUserData) {
+                System.out.println("Characters are not allowed! Try again.");
             }
-            else isValidYear =true;
         }
 
         int currentYear = LocalDateTime.now().getYear();
@@ -63,9 +66,14 @@ public class Input_Scanner {
         System.out.println( "your age " +  age);
     }
 
+
+
+
+//--------------------------------------MAIN-----------------------------------------------//
     public static void main(String... args)  {
 
         scanner1_console();
+
         //scanner2_file();
 
         //Scanner scanFromConsole = new Scanner(System.in);
