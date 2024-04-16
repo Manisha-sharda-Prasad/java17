@@ -66,9 +66,6 @@ public class Input_Scanner {
         System.out.println( "your age " +  age);
     }
 
-
-
-
 //--------------------------------------MAIN-----------------------------------------------//
     public static void main(String... args)  {
 
