@@ -74,7 +74,7 @@ public class ExpressionAndStatement {
 
 
  //  ############## MAIN #############
- public static void main(String... agrs){
+ public static void main(String[]agrs){
      learn();
  }
 

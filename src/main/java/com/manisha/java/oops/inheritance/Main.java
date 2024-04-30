@@ -10,6 +10,8 @@ public class Main {
         Print.print("make = " + carNew.getMake());
         Print.print("model = " + carNew.getModel());
         Print.print("color = " + carNew.getColor());
+        Print.print("Doors = " + carNew.getDoors());
+        Print.print("Convertible = " + carNew.isConvertible());
         carNew.describeCar();
     }
 }

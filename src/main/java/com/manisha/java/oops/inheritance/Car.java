@@ -31,9 +31,9 @@ public class Car {
     private boolean convertible = true;
 
     public void describeCar(){
-        Print.print(doors + "-Door " +
-                color + " " +
-                make + " " +
+        Print.print(doors + "-Door of " +
+                color  + "  " +
+                make + "  " +
                 model + " " +
                 (convertible ? "convertible" : " "));
     }
