@@ -7,10 +7,9 @@ public class Exercise3_MegaBytesConverter
     // --- start here ---
 
       public static void  printMegaBytesAndKiloBytes(int kiloBytes){ //2050
+          // 1 MB = 1024 KB--
           int megaBytes = kiloBytes / 1024; // 2050/2 = 2
-          int remainder = kiloBytes % 1024; // give reminder - modulus opetrator
-
-          // 1 MB = 1024 KB
+          int remainder = kiloBytes % 1024; // give remainder - % modulus operator
 
           if (kiloBytes < 0) {
               Print.info("Invalid Value");
