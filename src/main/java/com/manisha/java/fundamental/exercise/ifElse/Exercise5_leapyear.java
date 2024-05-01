@@ -21,7 +21,11 @@ public class Exercise5_leapyear
      return leapYear;
  }
 
-
+ // int
+class Integer{
+     // property
+     // method-1,2,3 parseInt(String){}
+}
 //############## MAIN #############
      public static void main (String[]args){
          isLeapYear(1800);

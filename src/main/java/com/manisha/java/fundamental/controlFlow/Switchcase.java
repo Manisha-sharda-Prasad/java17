@@ -3,6 +3,7 @@ package com.manisha.java.fundamental.controlFlow;
 import com.manisha.java.util.Print;
 
 public class Switchcase {
+    //enhanced switch statement-(using--yield)-------
     //1.)example-----------------------------------
     static String getQuarter(String month){
         String result = switch (month) {
@@ -19,7 +20,7 @@ public class Switchcase {
         Print.info(month+" Quarter is "+result);
         return result;
     }
-
+    //traditional switch statement------------------
     //2.)example------------------------------------
     static void natoWord( char charValue) {
         //char charValue = 'A';
