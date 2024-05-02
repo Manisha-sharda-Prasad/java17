@@ -24,7 +24,7 @@ public class Exercise1_isPrimeWhole {
             }
         }
     }
-//--------------------MAIN-------------------------
+//--------------------MAIN-------------------------//
     public static void main(String[]args){
 
 //        Print.info((isPrime(14) ? "" : "Not") + " a prime number");
