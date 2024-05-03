@@ -24,6 +24,5 @@ public static void main(String[] args) {
     Print.info(isCatPlaying(false, 35));
     Print.info(isCatPlaying(false, 50));
 
-
     }
 }

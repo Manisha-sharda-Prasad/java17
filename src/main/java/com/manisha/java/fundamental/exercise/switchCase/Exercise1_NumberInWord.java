@@ -28,5 +28,8 @@ public class Exercise1_NumberInWord {
     public static void main(String[]args){
         printNumberInWord(1);
         printNumberInWord(10);
+        Exercise2_IsLeapYear.isLeapYear(123);
     }
 }
+
+
