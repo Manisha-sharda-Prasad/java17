@@ -23,7 +23,7 @@ public class Account {
     public void depositFunds(Double deposit){
 
         accountBalance = accountBalance + deposit;
-        Print.print("Your deposit is = $" + deposit + "and your current balance is now = $" + accountBalance);
+        Print.print("Your deposit is = $" + deposit + ". Your current balance is now = $" + accountBalance);
     };
 
 
