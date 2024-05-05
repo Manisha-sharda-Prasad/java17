@@ -12,7 +12,7 @@ public class Exercise1_SimpleCalculator {
     public double getFirstNumber() {
         return firstNumber;
     }
-//set-get first num second num------->
+    //set-get first num second num------->
 
     public void setFirstNumber(double firstNumber) {
         this.firstNumber = firstNumber;
@@ -26,7 +26,7 @@ public class Exercise1_SimpleCalculator {
         this.secondNumber = secondNumber;
     }
 
-//get- other methods------->
+    //get- other methods------->
     public double getAdditionalResult() {
         return additionalResult;
     }
@@ -42,6 +42,9 @@ public class Exercise1_SimpleCalculator {
     public double getDivisionResult() {
         return divisionResult;
     }
+    //--------------------------Main----------------------------------
+    public static void main(String[]args){
 
+    }
 
 }
