@@ -4,7 +4,7 @@ public class AccountMain {
     public static void main(String[]args){
 
     Account maniAccount = new Account();
-    Account maniAccount2 = new Account();
+
     maniAccount.setAccountNum("345678");
     maniAccount.setCustomerName("Manisha Prasad");
     maniAccount.setPhoneNumber("9174659937");
