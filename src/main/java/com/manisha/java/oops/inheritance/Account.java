@@ -8,9 +8,24 @@ public class Account {
     private double accountBalance ;
     private String customerName ;
     private String customerEmail;
-    private String phoneNumber ;
+    private String phone;
+    //also with Constructors------------
+    public  Account(){
+        Print.print("Empty constructor called!!");
+    }
+    public Account(String number, double balance, String customerName, String email, String phone){
+        Print.print("Account constructor with parameters called");
+        accountNum = number;
+        accountBalance = balance;// not using this -- different name than parameters.
+        this.customerName = customerName; //same var name -- as properties-- use this.
+        customerEmail = email;
+        this.phone = phone;
 
-    //Methods----------------------
+    }
+
+
+
+    //Methods--------------------------
     public void withdrawingFunds(double withdraw){
         if((accountBalance - withdraw) <= 0){
             Print.print("You cannot withdraw funds!! You have = $" + accountBalance);
@@ -61,11 +76,11 @@ public class Account {
         this.customerEmail = customerEmail;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
