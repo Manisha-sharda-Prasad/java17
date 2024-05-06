@@ -1,5 +1,7 @@
 package com.manisha.java.oops.inheritance;
 
+import com.manisha.java.util.Print;
+
 public class Exercise1_SimpleCalculator {
     private double firstNumber;
     private double secondNumber;
@@ -17,7 +19,6 @@ public class Exercise1_SimpleCalculator {
     public void setFirstNumber(double firstNumber) {
         this.firstNumber = firstNumber;
     }
-
     public double getSecondNumber() {
         return secondNumber;
     }
@@ -28,23 +29,33 @@ public class Exercise1_SimpleCalculator {
 
     //get- other methods------->
     public double getAdditionalResult() {
+        Print.print("Add = " + (firstNumber + secondNumber));
         return additionalResult;
     }
 
     public double getSubtractionResult() {
+        Print.print("Subtract = " + (firstNumber - secondNumber));
         return subtractionResult;
     }
 
     public double getMultiplicationResult() {
+        Print.print("Multiply = " + (firstNumber * secondNumber));
         return multiplicationResult;
     }
 
     public double getDivisionResult() {
+        Print.print("Divide = " + (firstNumber / secondNumber));
         return divisionResult;
     }
     //--------------------------Main----------------------------------
     public static void main(String[]args){
+    Exercise1_SimpleCalculator calculator = new Exercise1_SimpleCalculator();
+        calculator.setFirstNumber(5.0);
+        calculator.setSecondNumber(4);
 
+       double additionalResult = calculator.getAdditionalResult();
+       double subtractionResult = calculator.getSubtractionResult();
+       double multiplicationResult = calculator.getMultiplicationResult();
+       double divisionResult = calculator.getDivisionResult();
     }
-
 }
