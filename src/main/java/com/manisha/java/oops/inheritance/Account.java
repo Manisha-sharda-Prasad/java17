@@ -1,7 +1,9 @@
 package com.manisha.java.oops.inheritance;
 
 import com.manisha.java.util.Print;
+import lombok.ToString;
 
+@ToString
 public class Account {
     //Properties------------------
     private String accountNum ;
@@ -9,21 +11,33 @@ public class Account {
     private String customerName ;
     private String customerEmail;
     private String phone;
-    //also with Constructors------------
-    public  Account(){
-        Print.print("Empty constructor called!!");
+
+    public Account(){
+        //Print.print("Empty constructor-1 called!!");
     }
+    // const - name, no return type, body - good practice : ONLY initialize member property
+    // overload
+    // called only once and define default value
+    // Constructor Chaining - this(), this(**) method----
+
     public Account(String number, double balance, String customerName, String email, String phone){
-        Print.print("Account constructor with parameters called");
+        this(); //Account()
+        //this("123456789", 0,"customerName");
+        //super(); //Parent()
+        Print.print("Account constructor-2 with 5 parameters called");
+        customerEmail = email;
+        this.phone = phone;
         accountNum = number;
         accountBalance = balance;// not using this -- different name than parameters.
         this.customerName = customerName; //same var name -- as properties-- use this.
-        customerEmail = email;
-        this.phone = phone;
-
     }
 
-
+    public Account(String number, double balance, String customerName){
+        Print.print("Account constructor-3 with 3 parameters called");
+        accountNum = number;
+        accountBalance = balance;// not using this -- different name than parameters.
+        this.customerName = customerName; //same var name -- as properties-- use this.
+    }
 
     //Methods--------------------------
     public void withdrawingFunds(double withdraw){
@@ -40,8 +54,6 @@ public class Account {
         accountBalance = accountBalance + deposit;
         Print.print("Your deposit is = $" + deposit + ". Your current balance is now = $" + accountBalance);
     };
-
-
 
     //auto generated getter-setter---------
     public String getAccountNum() {
