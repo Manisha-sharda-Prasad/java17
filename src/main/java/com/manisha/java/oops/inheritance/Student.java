@@ -2,12 +2,22 @@ package com.manisha.java.oops.inheritance;
 
 import com.manisha.java.util.Print;
 
-public class Student {
+// INBUILT :: PARENT OF ALL
+/*
+    public class Object{
+        String toString() {
+            // return heap address
+        }
+    }
+ */
 
-    private  String id; //id()
-    private String name;
+public class Student  { // extend Object
+
+    private String id; //id()
+    private String name ;
     private String dateOfBirth;
     private String classList;
+    private static int countryCode; // common copy in heap
 
     // ==========boiler plate code==============start
 
@@ -22,6 +32,10 @@ public class Student {
    // 2. to string
     @Override
     public String toString() {
+        // old :: from parent
+        // return memory address from heap
+
+        //new ::
         return "Student{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
@@ -66,6 +80,8 @@ public class Student {
 
     //-------------------------Main----------------------------->
     public static void main(String[]args){
+        int code = Student.countryCode;
+
         for (int i = 1 ; i <= 5 ; i++) {
             Student student = new Student("12300" + i, getNameByIndex(i) , "" , "" );
             Print.print(student);

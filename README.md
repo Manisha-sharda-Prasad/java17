@@ -32,8 +32,32 @@
 ---
 ## OOP
 ### Section 7 - OOP-part-1
+
+#### Class and objects 
+- class:Object is parent of ALL classes.
+- Class (Template for creating object) : private prop and public method.
+- "Static" Property of Class ** / common copy in heap + use :: Classname.<static-member>
+- "static" method : can refer only static member (p/m).
+- "instance" member of class **
+- object create - using new constructor
+- constructor : default/no-agr , All-Arg conts, chaining - this()
+- special method -->  setter, getter, toString (override)
+- "POJO" term - plain old java object / class with (setter,getter, constructor,toString)
+- java 16 - record (removes boilerplate code) - no setter, allArgCont, getter with no prefix, final props.
+- Introduction to Annotation, eg : @override. markers/metaData to compiler.
+- local variable (var declared inside method)
+
+#### Inheritance
+- xxxxxx
+
+#### Polymorphism
+- method over-ride -> signature same. Override method-body {}. child override parent.
+- method over-load -> same name but different signature (no., type, order of args). return-type does not matter
+
 ### Section 8 - OOP-part-2
 ### Section 11 - Abstraction
+
+
 
 ---
 ## Collection
