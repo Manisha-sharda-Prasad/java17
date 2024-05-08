@@ -4,7 +4,7 @@ import com.manisha.java.util.Print;
 
 public class Animal {
     //attributes----------
-    private String type;
+    protected String type;
     private String size;
     private double weight;
     //constructors----
@@ -55,12 +55,12 @@ public class Animal {
     Print.print("********");
 
     Dog retriever = new Dog("Labrador Retriever", 80, "Swimmer", "Floppy");
-    doAnimalStuff(retriever, "Slow");
+    doAnimalStuff(retriever, "slow");
     Print.print(retriever);
     Print.print("********");
 
     Dog yorkie = new Dog("Yorkie", 15, "Straight", "Curled");
-    doAnimalStuff(yorkie, "Fast");
+    doAnimalStuff(yorkie, "fast");
     Print.print(yorkie);
     Print.print("********");
    }

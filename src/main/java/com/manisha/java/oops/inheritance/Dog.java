@@ -23,15 +23,6 @@ public class Dog extends Animal {
         this.tailShape = tailShape;
         this.earShape = earShape;
     }
-    //same method name-->will override super class(Animal)---
-    public void makeNoise(){}
-
-    //better- won't override---(both works with same method name--super, subclass )
-    @Override
-    public void move(String speed) {
-        super.move(speed);
-        Print.print("Dogs walk, run and wag their tail");
-    }
     //string concat(+) and super toString(+)-------
     @Override
     public String toString() {
@@ -39,6 +30,36 @@ public class Dog extends Animal {
                 "tailShape='" + tailShape + '\'' +
                 ", earShape='" + earShape + '\'' +
                 "} " + super.toString();
+    }
+
+    //same method name-->will override super class(Animal)-----
+    public void makeNoise(){
+    }
+
+    @Override
+    public void move(String speed) {
+        super.move(speed);
+        //Print.print("Dogs walk, run and wag their tail");
+        if(speed == "slow") {
+            walk();
+            wagTail();
+        }else{
+            run();
+            bark();
+        }
+        Print.print();
+    }
+    private void bark(){
+        Print.print("Woof");
+    }
+    private void run(){
+        Print.print("Dog Running");
+    }
+    private void walk(){
+        Print.print("Dog Walking");
+    }
+    private void wagTail(){
+        Print.print("Dog Wagging tail");
     }
 
 }
