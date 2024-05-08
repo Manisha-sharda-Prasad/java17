@@ -1,4 +1,4 @@
-package com.manisha.java.oops.inheritance;
+package com.manisha.java.oops.Inheritance.Account;
 
 import com.manisha.java.util.Print;
 import lombok.ToString;

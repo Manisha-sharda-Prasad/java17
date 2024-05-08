@@ -1,4 +1,4 @@
-package com.manisha.java.oops.inheritance;
+package com.manisha.java.oops.Inheritance.Car;
 //using Car class--
 //setter -
 

@@ -1,4 +1,4 @@
-package com.manisha.java.oops.inheritance;
+package com.manisha.java.oops.Inheritance.Car;
 
 //''getter and setter''--->(getter Retrieves/returns ; and setter does not retrieves/returns, it sets the value of a private field)
 //goTo--> menu-code-generate-select-getter(),setter()--
