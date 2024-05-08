@@ -1,4 +1,4 @@
-package com.manisha.java.oops.Inheritance;
+package com.manisha.java.oops.Inheritance.Strings;
 
 public class Strings {
     public static void main(String[]args){
@@ -32,6 +32,7 @@ public class Strings {
         }
 
     }
+    //--------------------------------------------
     public static void printoinfo(String string){
         int length = string.length();
         System.out.printf("Length : %d %n", length);

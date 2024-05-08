@@ -1,4 +1,4 @@
-package com.manisha.java.oops.Inheritance;
+package com.manisha.java.oops.Inheritance.Strings;
 
 import com.manisha.java.util.Print;
 //Escape Sequence- /t, /n,/", //....
