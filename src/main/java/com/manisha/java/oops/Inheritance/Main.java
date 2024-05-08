@@ -9,6 +9,7 @@ public class Main extends Object{
 
         PrimarySchoolStudent jimin = new PrimarySchoolStudent("Jimin", 20, "Namjoon");
         Print.print(jimin);
+
     }
 }
 // can only  make one class public----
