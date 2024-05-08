@@ -39,10 +39,14 @@ public class Worker {
         Print.print("Age = " + manu.getAge());
         Print.print("Pay = " + manu.collectPay());
 
-        Employee lekhu = new Employee("Lekhu", "5/18/1991", "05/02/2017");
+        SalariedEmployee lekhu = new SalariedEmployee("Lekhu", "5/18/1991", "05/02/2017", 90000);
         Print.print(lekhu);
         Print.print("Age = " + lekhu.getAge());
         Print.print("Pay = " + lekhu.collectPay());
+        Print.print("Lekhu paycheck is = $" + lekhu.collectPay());
+
+        lekhu.retire();
+        Print.print("Lekhu pension check = " + lekhu.collectPay());
     }
 
 }
