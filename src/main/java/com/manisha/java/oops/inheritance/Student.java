@@ -10,7 +10,6 @@ import com.manisha.java.util.Print;
         }
     }
  */
-
 public class Student  { // extend Object
 
     private String id; //id()
