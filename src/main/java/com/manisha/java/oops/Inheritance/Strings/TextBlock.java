@@ -1,7 +1,7 @@
 package com.manisha.java.oops.Inheritance.Strings;
 
 import com.manisha.java.util.Print;
-//Escape Sequence- /t, /n,/", //....
+//Escape Sequence- \t, \n, \, \\....
 //Text block
 //Format specifiers- %d(decimal int value),
 public class TextBlock {
