@@ -1,4 +1,4 @@
-package com.manisha.java.oops.Encapsulation;
+package com.manisha.java.oops.Encapsulation.Player;
 
 import com.manisha.java.util.Print;
 
