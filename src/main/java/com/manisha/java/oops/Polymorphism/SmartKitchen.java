@@ -23,7 +23,14 @@ public class SmartKitchen {
     }
 
     public void setKitchenState(boolean coffeeFlag, boolean fridgeFlag, boolean dishFlag){
-
+    brewMaster.setHasWorkToDo(coffeeFlag);
+    iceBox.setHasWorkToDo(fridgeFlag);
+    dishwasher.setHasWorkToDo(dishFlag);
+    }
+    public void doKitchenWork(){
+       brewMaster.brewCoffee();
+       iceBox.orderFood();
+       dishwasher.doDishes();
     }
 }
 class CoffeeMaker{
@@ -74,7 +81,7 @@ class Dishwasher{
 //    }
 //
 //
-//    public void doKitchenWork(){}
+//
 //
 //  ;
 
