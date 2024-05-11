@@ -1,7 +1,6 @@
 package com.manisha.java.oops.Encapsulation.Player;
 
 import com.manisha.java.util.Print;
-
 public class EnhancedPlayer {
     private String fullName;
     private int healthPercent;

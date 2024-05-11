@@ -1,8 +1,6 @@
 package com.manisha.java.oops.Encapsulation.Printer;
 
-import com.manisha.java.oops.Encapsulation.Printer.Printer;
 import com.manisha.java.util.Print;
-
 public class PrinterMain {
     public static void main(String[]args){
 
@@ -13,3 +11,4 @@ public class PrinterMain {
         System.out.printf("Current Job pages = %d, Printer Total = %d %n", pagesPrinted, printer.getPagesPrinted());
     }
 }
+//------------------------
