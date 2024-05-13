@@ -1,4 +1,4 @@
-package com.manisha.java.oops.Polymorphism;
+package com.manisha.java.oops.Polymorphism.Kitchen;
 
 import com.manisha.java.util.Print;
 //3 appliances(used diff class for each--not extending/making instance) of smart kitchen---

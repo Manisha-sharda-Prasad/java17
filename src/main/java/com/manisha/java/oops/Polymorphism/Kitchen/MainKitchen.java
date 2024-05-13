@@ -1,4 +1,4 @@
-package com.manisha.java.oops.Polymorphism;
+package com.manisha.java.oops.Polymorphism.Kitchen;
 
 public class MainKitchen {
     public static void main(String[]args){
