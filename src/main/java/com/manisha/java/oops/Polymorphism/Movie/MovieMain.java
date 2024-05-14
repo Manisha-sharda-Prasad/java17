@@ -20,9 +20,6 @@ public class MovieMain {
 
         Movie movie5 = Movie.getMovie("Adventure", "Avtar");
         movie5.watchMovie();
-
-
-
     }
 }
 

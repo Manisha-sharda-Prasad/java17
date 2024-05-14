@@ -10,14 +10,15 @@ public class Dog extends Animal {
     private String tailShape;
     private String earShape;
 
-    public Dog() {
-        super("Husky", "Big", 50);
-    }
+    //super() --calling super(parent) constructor----
+    public Dog() {super("Husky", "Big", 50);}
 
+    //this() --calling this(current) constructor----
     public Dog(String type, double weight) {
         this("Pug", 70, "Perky", "Curled");
     }
 
+    //this. --calling (current obj) --(this.properties)----
     public Dog(String type, double weight, String tailShape, String earShape) {
         super(type, weight < 15 ? "small" : (weight < 35 ? "medium" : "large"), weight);
         this.tailShape = tailShape;
@@ -31,11 +32,9 @@ public class Dog extends Animal {
                 ", earShape='" + earShape + '\'' +
                 "} " + super.toString();
     }
-
     //same method name-->will override super class(Animal)-----
     public void makeNoise(){
     }
-
     @Override
     public void move(String speed) {
         super.move(speed);
