@@ -14,6 +14,15 @@ public class MovieMain {
 
         Movie movie3 = new SciFi("Marvel");
         movie3.watchMovie();
+        // better--
+        Movie movie4 = Movie.getMovie("Comedy", "Hungama");
+        movie4.watchMovie();
+
+        Movie movie5 = Movie.getMovie("Adventure", "Avtar");
+        movie5.watchMovie();
+
+
+
     }
 }
 
