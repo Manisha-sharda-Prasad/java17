@@ -20,6 +20,14 @@ public class MovieMain {
 
         Movie movie5 = Movie.getMovie("Adventure", "Avtar");
         movie5.watchMovie();
+
+        //casting with classes---
+        Adventure jaws = (Adventure) Movie.getMovie("A", "Jaws");
+        jaws.watchMovie();
+
+        Comedy comedy = (Comedy) Movie.getMovie("C", "Airplane");
+        comedy.watchMovie();
+
     }
 }
 
