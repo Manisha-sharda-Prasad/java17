@@ -2,6 +2,8 @@ package com.manisha.java.collection.arraysInJava;
 
 import com.manisha.java.util.Print;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[]args){
         int [] myIntArray = new int[10];
@@ -18,12 +20,41 @@ public class Main {
         Print.print("Length of array = " + arrayLength);
         Print.print("Last element = " + firstTen[arrayLength -1]);
 
+        //traditional for-loop----
         int[] newArray;
-        //newArray = {5,4,3,2,1};//not allowed
         newArray = new int[]{5, 4, 3, 2, 1};
         for (int i = 0; i < newArray.length; i++){
             Print.print(newArray[i] + " ");
         }
+        //assigning each element in a loop----
+        int[] arr;
+        arr = new int[5];
+        for (int i = 0; i < arr.length; i++){
+            arr[i] = arr.length - i; //current index subtracted from length of arr.
+            Print.print(arr[i] + " ");
+        }
+        Print.print("****************");
+        //enhanced for ( declaration : collection){}---
+        for (int element : arr){
+            Print.print(element + " ");
+        }
+        Print.print("****************");
 
+        //java.Util.Arrays-(built in functionality)----
+        //Arrays.toString----(elements printed in a single string)
+        Print.print(Arrays.toString(arr));
+
+        //Assigning Array to an Object variable----
+        //integer array reference to an Obj reference---
+        Object objectVar = newArray;
+        if (objectVar instanceof int[]){
+            Print.print("ObjectVar is really an int Array");
+        }
+        //assign any Object Reference of any TYPE----
+        Object[] objectArray = new Object[3];
+        objectArray[0] = "Hello";
+        objectArray[1] = new StringBuilder("World");
+        objectArray[2] = 2024;
+        Print.print(objectArray);
     }
 }
