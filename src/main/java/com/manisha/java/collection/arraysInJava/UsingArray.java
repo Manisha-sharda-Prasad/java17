@@ -61,7 +61,8 @@ public class UsingArray {
 }
 //"Random"--> class in java.util.library.'.
 //Random is static class...making instance named 'random'.
-// setting new array & size, same as the method's argument.
+//random.nextInt
+//setting new array & size, same as the method's argument.
 //return random int value till 100("exclusive upper bound") - max int value).
 
 //util methods-->Arrays.sort(ascending order), Arrays.fill(0,0) , Arrays.copyOf().
