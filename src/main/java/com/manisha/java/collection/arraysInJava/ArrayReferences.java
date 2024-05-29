@@ -5,13 +5,12 @@ import com.manisha.java.util.Print;
 import java.util.Arrays;
 
 public class ArrayReferences {
-    public static void main(String[]args){
+    public static void main(String...args){
         int[] myIntArray = new int[5];
         int[] anotherArray = myIntArray; //both variable referencing to same array in memory; same copy;
 
         anotherArray[0] = 1; //changed in both
         modifyArray(myIntArray); //passing ref type to method (as argument), third ref to same array;
-
 
         Print.print("change in myIntArray = " + Arrays.toString(myIntArray));
         Print.print("change in anotherArray = " + Arrays.toString(anotherArray));

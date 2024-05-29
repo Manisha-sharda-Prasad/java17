@@ -1,0 +1,33 @@
+package com.manisha.java.collection.arraysInJava;
+
+import com.manisha.java.util.Print;
+
+public class SplitString {
+    public static void main(String...args){
+        String [] splitString = "Hello World Again ".split(" ");
+        printText(splitString);
+
+        Print.print("/".repeat(20));
+        printText("Hello");
+
+        Print.print("/".repeat(20));
+        printText("Hello" , "World" , "2024");
+
+        Print.print("/".repeat(20));
+        printText(); //no args
+
+        String[] sArray = {"first", "second", "third", "fourth", "fifth"}; //String array s, anonymous array initializer
+        Print.print(String.join(",", sArray));
+
+    }
+    private static void printText(String...textList){
+        for (String t : textList){
+            Print.print(t);
+        }
+    }
+}
+//.split(), .repeat(), .join()
+//(String... textList)--feature let us create one method to support multiple ways, of calling this method, call with no args also
+//"varargs"--the Var arguments parameter, gives more option when executing methods
+
+//anonymous array initializer- called anon. because type isn't included.
