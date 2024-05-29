@@ -16,8 +16,8 @@ public class SplitString {
         Print.print("/".repeat(20));
         printText(); //no args
 
-        String[] sArray = {"first", "second", "third", "fourth", "fifth"}; //String array s, anonymous array initializer
-        Print.print(String.join(",", sArray));
+        String[] sArray = {"first", "second", "third", "fourth", "fifth"};//String sArray, anonymous array initializer.
+        Print.print(String.join(",", sArray));// using sArray(arrays) as a method arg.
 
     }
     private static void printText(String...textList){
@@ -28,6 +28,8 @@ public class SplitString {
 }
 //.split(), .repeat(), .join()
 //(String... textList)--feature let us create one method to support multiple ways, of calling this method, call with no args also
-//"varargs"--the Var arguments parameter, gives more option when executing methods
 
-//anonymous array initializer- called anon. because type isn't included.
+//"varargs"--the Var arguments parameter, gives more option when executing methods,
+//but can only have one argument.eg-(String...'textList'), (String.join--java inbuilt methods also take one and last arg)
+
+//'anonymous array initializer-' called anon. because type isn't included.
