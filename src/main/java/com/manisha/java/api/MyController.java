@@ -1,6 +1,6 @@
 package com.manisha.java.api;
 
-import com.manisha.java.fundamental.exercise.ifElse.Excercise_Runner;
+import com.manisha.java.Fundamental.exercise.ifElse.Excercise_Runner;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
