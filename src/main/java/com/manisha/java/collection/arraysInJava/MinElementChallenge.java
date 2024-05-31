@@ -40,7 +40,7 @@ public class MinElementChallenge {
 //nextLine--> reading data from console, by using nextLine method from Scanner Class.
 
 //split-- take input and split strings by using ",".
-//int[]values =new int[splits.length]-->Create an integer array to store the parsed values.
+//int[]values =new int[splits.length]-->Create new integer array to store the parsed values.
 
-//for(int i=0; i<splits.length;i++)--> Parse each split string into an integer and store it in the integer array.
+//for(int i=0; i<splits.length;i++)-->Parse each split string into an integer and store it in integer array.
 //values[i] = Integer.parseInt(splits[i].trim())-->Trim any leading/trailing whitespace and parse the integer.
