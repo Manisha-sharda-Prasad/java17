@@ -1,15 +1,15 @@
 check pom.xml
 
-### Install 
+### A. Install 
 - https://www.baeldung.com/install-maven-on-windows-linux-mac
 - set env var : M2_HOME and MAVEN_HOME
 
-#### Defination
+#### B. Defination
 - standardization java Project
 - Dependency management tool
 - Build automation tool
 
-### Build Lifecycle:
+### C. Build Lifecycle:
 series of phases/stages 
 -  clean
 -  validate
@@ -19,7 +19,7 @@ series of phases/stages
 -  install
 -  deploy
 
-### maven Cli Commands
+### D. maven Cli Commands
 #### Basic Commands
 **can use IDE maven plugin as well.
 
@@ -44,5 +44,5 @@ Description: Packages the compiled code into a distributable format like a JAR o
 ```mvn site```
 Generates a site or documentation for the project.
 
-### Maven plugins
+### E. Maven plugins
 
