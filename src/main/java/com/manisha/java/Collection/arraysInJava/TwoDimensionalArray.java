@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class TwoDimensionalArray {
     public static void main(String[]args){
+        //two-dimensional array------
         int [][] array = new int [4][4];
         Print.print(Arrays.toString(array));
         Print.print("array length = " + array.length);
@@ -20,6 +21,8 @@ public class TwoDimensionalArray {
        }
         Print.print(Arrays.deepToString(array));
     }
+
+
 }
 //apps. that require grid-like structure,such as spreadsheets,game boards,any app. that involves rows & cols of data.
 //1.Declare a 2D array with 4 rows and 4 columns. also--

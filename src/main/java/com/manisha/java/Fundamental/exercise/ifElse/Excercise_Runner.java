@@ -12,7 +12,11 @@ import static com.manisha.java.Fundamental.exercise.ifElse.Exercise7_8_TeenAndSu
 
 public class Excercise_Runner {
 
-    public static  void main(String[] args){
+    public static void main(String[] args){
+        main();
+    }
+
+    public static void main(){
         //1
         Exercise1_HighScore.checkingScores();
 

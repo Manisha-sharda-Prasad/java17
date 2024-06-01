@@ -1,5 +1,7 @@
 package com.manisha.java.OOPS.Polymorphism;
 
+import org.springframework.web.bind.annotation.GetMapping;
+
 public class CarMain {
 
     //static Block
@@ -22,6 +24,7 @@ public class CarMain {
         runRace(audi);
     }
     //passing class Car as parameter type----
+    @GetMapping
     public static void runRace(Car car){
         car.startEngine();
         car.drive();
