@@ -1,4 +1,4 @@
-package com.manisha.java.Collection.ListAndSet;
+package com.manisha.java.Collection.ArrayListAndSet;
 import com.manisha.java.util.Print;
 import java.util.ArrayList;
 import java.util.Arrays;

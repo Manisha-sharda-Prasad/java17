@@ -1,4 +1,4 @@
-package com.manisha.java.Collection.arraysInJava;
+package com.manisha.java.Collection.Arrays;
 
 import com.manisha.java.util.Print;
 import java.util.Arrays;
