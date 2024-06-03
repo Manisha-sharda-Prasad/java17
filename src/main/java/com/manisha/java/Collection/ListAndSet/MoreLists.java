@@ -67,6 +67,8 @@ public class MoreLists {
         var groceryArray = groceries.toArray(new String[groceries.size()]);
         Print.print(Arrays.toString(groceryArray));
 
+        List<String> newList = Arrays.asList("Sunday", "Monday", "Tuesday");
+        Print.print(newList);
     }
 }
 //Methods-java.util--
@@ -85,3 +87,5 @@ public class MoreLists {
 //.sort(Comparator.naturalOrder(),
 //.sort(Comparator.reverseOrder(),
 //.size()
+//.asList()-- returns mutable list, but not resizeable(element size fixed)-----
+//List.of()-- returns immutable list,resizable. Attempt to modify the list(add,remove,or update elements)will result in UnsupportedOperationException
