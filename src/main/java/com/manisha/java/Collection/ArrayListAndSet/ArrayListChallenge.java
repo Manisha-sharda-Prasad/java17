@@ -31,7 +31,6 @@ public class ArrayListChallenge {
     public static void main(String[] args) {
         boolean condition = true;
 
-
         ArrayList<String> groceries = new ArrayList<>();
 
         while (condition) //run until condition is true
@@ -54,8 +53,6 @@ public class ArrayListChallenge {
         }
     }
 }
-
-
  /*
            switch (inputStr){ //an expression that evaluates to an integer.
                 //if user enters other than 1 or 2.
