@@ -19,13 +19,16 @@ public class LinkedListMethods {
         addElements(placesToVisit); //adding elements
         Print.print(placesToVisit);
 
-//        removeElements(placesToVisit);//removing elements
-//        Print.print(placesToVisit);
         gettingElements(placesToVisit);
         Print.print(placesToVisit);
 
-        printItinerary3(placesToVisit);
-        Print.print(placesToVisit);
+//        removeElements(placesToVisit);//removing elements
+
+//        printItinerary3(placesToVisit);
+
+        testIterator(placesToVisit);
+        testListIterator(placesToVisit);
+
     }
     private static void addElements(LinkedList<String> list){
         //add elements------------
@@ -123,4 +126,30 @@ public class LinkedListMethods {
         Print.print("Trip ends at " + list.getLast());
     }
 
+    public static void testIterator(LinkedList<String> list) {
+        var iterator = list.iterator();
+        while (iterator.hasNext()){
+            //Print.print(iterator.next());
+            if(iterator.next().equals("Sydney")){
+                iterator.remove();
+            }
+        }
+        Print.print(list);
+    }
+    public static void testListIterator(LinkedList<String> list) {
+
+        var iterator = list.listIterator();
+        while (iterator.hasNext()){
+            //Print.print(iterator.next());
+            if(iterator.next().equals("Holland")){
+                iterator.add("Goa");
+            }
+        }
+       while (iterator.hasPrevious()){
+           Print.print(iterator.previous());
+       }
+        Print.print(list);
+       var iterator2 = list.listIterator(3);
+       Print.print(iterator2.previous());
+    }
 }
