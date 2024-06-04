@@ -23,7 +23,6 @@ public class LinkedListMethods {
         Print.print(placesToVisit);
 
 //        removeElements(placesToVisit);//removing elements
-
 //        printItinerary3(placesToVisit);
 
         testIterator(placesToVisit);
@@ -93,7 +92,7 @@ public class LinkedListMethods {
         Print.print("Element from peekFirst() = " + list.peekFirst());
         Print.print("Element from peekLast() = " + list.peekLast());
     }
-
+    //traditional For-Loop-----------------------
     public static void printItinerary(LinkedList<String> list) {
         Print.print("Trip starts at " + list.getFirst());
         for (int i = 1; i < list.size(); i ++){
@@ -101,6 +100,7 @@ public class LinkedListMethods {
         }
         Print.print("Trip ends at " + list.getLast());
     }
+    //enhanced For-Loop----------------------------
     public static void printItinerary2(LinkedList<String> list) {
 
         Print.print("Trip starts at " + list.getFirst());
@@ -111,6 +111,7 @@ public class LinkedListMethods {
         }
         Print.print("Trip ends at " + list.getLast());
     }
+    //List-Iterator Loop(better*)-----------------------
     public static void printItinerary3(LinkedList<String> list) {
 
         Print.print("Trip starts at " + list.getFirst());
@@ -125,10 +126,11 @@ public class LinkedListMethods {
         }
         Print.print("Trip ends at " + list.getLast());
     }
-
+    // Iterator Loop---------------------------------------
     public static void testIterator(LinkedList<String> list) {
         var iterator = list.iterator();
         while (iterator.hasNext()){
+            //has-if below elements present=true/else=false
             //Print.print(iterator.next());
             if(iterator.next().equals("Sydney")){
                 iterator.remove();
@@ -136,6 +138,7 @@ public class LinkedListMethods {
         }
         Print.print(list);
     }
+    //List-Iterator Loop---------------------------------------
     public static void testListIterator(LinkedList<String> list) {
 
         var iterator = list.listIterator();
