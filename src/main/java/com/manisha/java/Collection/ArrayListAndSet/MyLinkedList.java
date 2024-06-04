@@ -3,10 +3,11 @@ package com.manisha.java.Collection.ArrayListAndSet;
 import lombok.Setter;
 import lombok.ToString;
 
+
 // Just for references
-public class LinkedList {
-    Item first;
-    Item last;
+public class MyLinkedList {
+    public Item first;
+    public Item last;
     void add(String s)
     {
         Item currentItem = new Item();
@@ -34,7 +35,7 @@ public class LinkedList {
     void remove(){}
 
     public static  void main(String... a){
-        LinkedList myList = new LinkedList();
+        MyLinkedList myList = new MyLinkedList();
         myList.add("item-1");
         myList.add("item-2");
         System.out.println(myList.first+"\n"+myList.last);
