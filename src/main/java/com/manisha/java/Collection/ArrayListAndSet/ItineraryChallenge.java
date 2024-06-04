@@ -1,24 +1,42 @@
 package com.manisha.java.Collection.ArrayListAndSet;
 
 import com.manisha.java.util.Print;
+import lombok.*;
 
 import java.util.LinkedList;
 import java.util.Scanner;
 
-record Place(String name, int distance){
+//record Place2(String name, int distance){
+//    @Override
+//    public String toString() {
+//        return String.format("%s (%d)", name, distance);
+//    }
+//    // name()
+//    // getName()
+//}
+//Lmbok--@Size(min =10, max =15, message ="Please enter password between - 10 to 15")
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Builder
+@ToString
+class Place{
+    String name;
+    int distance;
     @Override
     public String toString() {
         return String.format("%s (%d)", name, distance);
     }
 }
+
 public class ItineraryChallenge {
     public static void main(String[] args) {
         //LinkedList contains our list of Place records.
         LinkedList <Place> placesToVisit = new LinkedList<>();
 
-        Place adelaide = new Place("Adelaide", 1374);
-        addPlace(placesToVisit, adelaide);
-        addPlace(placesToVisit, new Place("adelaide", 1374));
+        addPlace(placesToVisit, new Place("Adelaide", 1374));
+        addPlace(placesToVisit,  Place.builder().name("Adelaide").distance(1374).build());
         addPlace(placesToVisit, new Place("Brisbane", 917));
         addPlace(placesToVisit, new Place("Perth", 3923));
         addPlace(placesToVisit, new Place("Alice Springs", 2771));
@@ -26,6 +44,7 @@ public class ItineraryChallenge {
         addPlace(placesToVisit, new Place("Melbourne", 877));
 
         placesToVisit.addFirst(new Place("Sydney", 0));
+
         Print.print(placesToVisit);
 
         var iterator = placesToVisit.listIterator();
@@ -34,6 +53,7 @@ public class ItineraryChallenge {
         boolean forward = true;
 
         printMenu();
+
         while (!quitLoop){
             if (!iterator.hasPrevious()){
                 Print.print("Originating : " + iterator.next());
@@ -70,7 +90,6 @@ public class ItineraryChallenge {
                     break;
             }
         }
-
     }
     private static void addPlace(LinkedList<Place> list, Place place){
 
@@ -79,14 +98,14 @@ public class ItineraryChallenge {
             return; //contains-checks duplicates, and returns.
         }
         for (Place p : list){
-            if (p.name().equalsIgnoreCase(place.name())){
+            if (p.getName().equalsIgnoreCase(place.getName())){
                 Print.print("Found duplicate : " + place);
                 return;//equalsIgnoreCase- check in upper-lower case
             }
         }
         int matchedIndex = 0; //index var,keeps track of what element is processing.
         for(var listPlace : list){
-            if (place.distance() < listPlace.distance()){
+            if (place.getDistance() < listPlace.getDistance()){
                 list.add(matchedIndex , place);
                 return;
             }
