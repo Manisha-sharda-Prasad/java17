@@ -1,4 +1,4 @@
-package com.manisha.java.Collection.ArrayListAndSet;
+package com.manisha.java.Collection.C01_ListAndSet;
 import com.manisha.java.util.Print;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,8 @@ record GroceryItem(String name, String type, int count) {
         return String.format("%d %s in %s", count, name.toUpperCase(), type);//(count,name) ( int, string, string)
     }
 }
-public class MyList {
+
+public class ArrayList_1 {
     public static void main(String[]args){
         //--------------------------------------------------
         GroceryItem[] groceryItems = new GroceryItem[3];
@@ -26,8 +27,7 @@ public class MyList {
         groceryList.add(new GroceryItem("Butter"));
         groceryList.add(new GroceryItem("Milk","DAIRY",2));
         groceryList.add(new GroceryItem("Oranges","PRODUCE",7));
-        groceryList.set(0,
-                new GroceryItem("Apples","PRODUCE",8));
+        groceryList.set(0,new GroceryItem("Apples","PRODUCE",8));
         groceryList.remove(1);
         Print.print(groceryList);
 

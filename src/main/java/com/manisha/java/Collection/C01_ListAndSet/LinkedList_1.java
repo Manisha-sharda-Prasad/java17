@@ -1,10 +1,10 @@
-package com.manisha.java.Collection.ArrayListAndSet;
+package com.manisha.java.Collection.C01_ListAndSet;
  import com.manisha.java.util.Print;
 
  import  java.util.LinkedList;
  import java.util.ListIterator;
 
-public class LinkedListMethods {
+public class LinkedList_1 {
     //------------------------MAIN----------------------------------------
     public static void main(String[] args) {
         //var placesToVisit = new LinkedList<String>();

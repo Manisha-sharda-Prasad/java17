@@ -1,11 +1,11 @@
-package com.manisha.java.Collection.ArrayListAndSet;
+package com.manisha.java.Collection.C01_ListAndSet;
 import com.manisha.java.util.Print;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-public class ArrayListChallenge {
+public class ArrayList_3_Challenge {
     private static Scanner scan = new Scanner(System.in);
 
     private static void printMenu(){

@@ -1,4 +1,4 @@
-package com.manisha.java.Collection.ArrayListAndSet;
+package com.manisha.java.Collection.C01_ListAndSet;
 
 import com.manisha.java.util.Print;
 
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class MoreLists {
+public class ArrayList_2 {
     public static void main(String[] args) {
         String[] items = {"apples", "bananas", "milk", "eggs"};
         Print.print(items);

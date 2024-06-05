@@ -1,4 +1,4 @@
-package com.manisha.java.Collection.ArrayListAndSet;
+package com.manisha.java.Collection.C99_DataStructure;
 
 import lombok.Setter;
 import lombok.ToString;

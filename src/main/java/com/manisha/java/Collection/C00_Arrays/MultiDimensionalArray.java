@@ -1,4 +1,4 @@
-package com.manisha.java.Collection.Arrays;
+package com.manisha.java.Collection.C00_Arrays;
 
 public class MultiDimensionalArray {
     public static void main(String[]args){
