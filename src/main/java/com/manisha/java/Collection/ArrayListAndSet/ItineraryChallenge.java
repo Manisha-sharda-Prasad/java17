@@ -58,30 +58,31 @@ public class ItineraryChallenge {
 
         //1. create LinkedList .
         //   item type - Place
-        List<Place> placesToVisit = new LinkedList<>();
+        List<Place> placesList = new LinkedList<>();
 
         //2. list - items add
-        placesToVisit.add(new Place("Adelaide", 1374));
-        placesToVisit.add(Place.builder().name("Adelaide").distance(1374).build());
-        placesToVisit.add(new Place("Brisbane", 917));
-        placesToVisit.add(new Place("Perth", 3923));
-        placesToVisit.add(new Place("Alice Springs", 2771));
-        placesToVisit.add(new Place("Darwin", 3972));
-        placesToVisit.add(new Place("Melbourne", 877));
-        placesToVisit.add(new Place("Sydney", 0));
-        //Print.print(placesToVisit);
+        placesList.add(new Place("Adelaide", 1374));
+        placesList.add(Place.builder().name("Adelaide").distance(1374).build());
+        placesList.add(new Place("Brisbane", 917));
+        placesList.add(new Place("Perth", 3923));
+        placesList.add(new Place("Alice Springs", 2771));
+        placesList.add(new Place("Darwin", 3972));
+        placesList.add(new Place("Melbourne", 877));
+        placesList.add(new Place("Sydney", 0));
+        //Print.print(placesList);
 
-        Collections.sort(placesToVisit); // comparable
-        Collections.sort(placesToVisit,new PlaceComparatorByName()); // comparator-1
-        Collections.sort(placesToVisit,new PlaceComparatorByDistance()); // comparator-2
-        //Collections.sort(placesToVisit,(p1,p2)->p1.name.compareTo(p2.name));
+        Collections.sort(placesList); // comparable
+        Collections.sort(placesList,new PlaceComparatorByName()); // comparator-1
+        Collections.sort(placesList,new PlaceComparatorByDistance()); // comparator-2
+        //Collections.sort(placesList,(p1,p2)->p1.name.compareTo(p2.name));
 
-        Print.print(placesToVisit);
+        Print.print(placesList);
 
-        // 3. create iterator
-        var iterator = placesToVisit.listIterator();
-        // iterator.next();
-        // iterator.previous();
+        // 3. create listIterator
+        ListIterator<Place> listIterator = placesList.listIterator();
+        Iterator<Place> iterator = placesList.iterator();
+        // listIterator.next();
+        // listIterator.previous();
 
         // 4. Menu program
         while (!quitLoop)
@@ -90,38 +91,21 @@ public class ItineraryChallenge {
             Print.print("Enter Value your choice: ");
             String menuItem = scan.nextLine().toUpperCase().substring(0,1);
 
-           /* if (!iterator.hasPrevious()){
-                Print.print("Originating : " + iterator.next());
-                forward = true;
-            }
-            if (!iterator.hasNext()){
-                Print.print("Final : " + iterator.previous());
-                forward = false;
-            }*/
-
             switch (menuItem)
             {
                 case "F":
                     Print.print("User wants to go forward");
-                    if (iterator.hasNext()){
-                        Print.print(iterator.next());
-                    }
+                    if (listIterator.hasNext()) Print.print(listIterator.next());
                     break;
 
                 case "B":
                     Print.print("User wants to go backward");
-                    if (iterator.hasPrevious()){
-                        Print.print(iterator.previous());
-                    }
+                    if (listIterator.hasPrevious()) Print.print(listIterator.previous());
                     break;
 
-                case "L":
-                    Print.print(placesToVisit);
-                    break;
+                case "L": Print.print(placesList); break;
 
-                default :
-                    quitLoop = true;
-                    break;
+                default : quitLoop = true; break;
             }
         }
     }
