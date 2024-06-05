@@ -1,6 +1,6 @@
-package com.manisha.java.Collection.C01_ListAndSet.sorting;
+package com.manisha.java.Collection.C01_List.sorting;
 
-import com.manisha.java.Collection.C01_ListAndSet.model.Place;
+import com.manisha.java.Collection.C01_List.model.Place;
 
 import java.util.Comparator;
 

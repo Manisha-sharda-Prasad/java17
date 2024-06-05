@@ -1,4 +1,4 @@
-package com.manisha.java.Collection.C01_ListAndSet.model;
+package com.manisha.java.Collection.C01_List.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

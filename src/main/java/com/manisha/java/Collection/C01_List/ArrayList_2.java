@@ -1,4 +1,4 @@
-package com.manisha.java.Collection.C01_ListAndSet;
+package com.manisha.java.Collection.C01_List;
 
 import com.manisha.java.util.Print;
 

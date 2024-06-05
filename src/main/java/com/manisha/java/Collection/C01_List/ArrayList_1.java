@@ -1,6 +1,6 @@
-package com.manisha.java.Collection.C01_ListAndSet;
+package com.manisha.java.Collection.C01_List;
 
-import com.manisha.java.Collection.C01_ListAndSet.model.GroceryItem;
+import com.manisha.java.Collection.C01_List.model.GroceryItem;
 import com.manisha.java.util.Print;
 import java.util.ArrayList;
 import java.util.Arrays;

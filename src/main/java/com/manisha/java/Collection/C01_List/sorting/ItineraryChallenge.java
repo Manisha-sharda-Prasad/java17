@@ -1,7 +1,8 @@
-package com.manisha.java.Collection.C01_ListAndSet.sorting;
+package com.manisha.java.Collection.C01_List.sorting;
 
-import com.manisha.java.Collection.C01_ListAndSet.model.Place;
+import com.manisha.java.Collection.C01_List.model.Place;
 import com.manisha.java.util.Print;
+
 import java.util.*;
 
 /**
@@ -31,11 +32,19 @@ public class ItineraryChallenge {
         placesList.add(new Place("Melbourne", 877));
         placesList.add(new Place("Sydney", 0));
 
+        /*List l = placesList
+                .stream()
+                .filter(p -> p.name.equals("Perth"))
+                .peek(p-> {})
+                .map(p->p)
+                .collect(Collectors.toList());*/
+
         Collections.sort(placesList,new PlaceComparatorByName()); // comparator-1
         Print.print("SORT-1 (Custom-Order/Comparator-2 - by distance)",placesList);
 
         Collections.sort(placesList,new PlaceComparatorByDistance()); // comparator-2
         Print.print("SORT-2 (Custom-Order/Comparator-1 - by name)",placesList);
+        //Collections.sort(placesList,Integer::m);                 <<< Lambda
 
 
         Collections.sort(placesList); // comparable
