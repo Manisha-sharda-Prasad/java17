@@ -1,7 +1,5 @@
 package com.manisha.java.Collection.C01_List.sorting;
 
-import com.manisha.java.Collection.C01_List.model.Place;
-
 import java.util.Comparator;
 
 public class PlaceComparatorByDistance implements Comparator<Place> {
@@ -11,7 +9,7 @@ public class PlaceComparatorByDistance implements Comparator<Place> {
     }
 }
 
-// Short-hand (Comparator)
+// Shorthand (Comparator)
         /*
         //way-1 (lambda/Arrow-function) - PREFERRED
         Collections.sort(placesList,(p1,p2)->p1.name.compareTo(p2.name));

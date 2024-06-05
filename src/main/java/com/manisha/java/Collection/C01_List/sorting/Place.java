@@ -1,4 +1,4 @@
-package com.manisha.java.Collection.C01_List.model;
+package com.manisha.java.Collection.C01_List.sorting;
 
 import lombok.*;
 

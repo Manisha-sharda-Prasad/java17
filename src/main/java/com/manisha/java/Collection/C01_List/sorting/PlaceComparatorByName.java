@@ -1,7 +1,5 @@
 package com.manisha.java.Collection.C01_List.sorting;
 
-import com.manisha.java.Collection.C01_List.model.Place;
-
 import java.util.Comparator;
 
 public class PlaceComparatorByName implements Comparator<Place> {

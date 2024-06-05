@@ -1,6 +1,5 @@
 package com.manisha.java.Collection.C01_List.sorting;
 
-import com.manisha.java.Collection.C01_List.model.Place;
 import com.manisha.java.util.Print;
 
 import java.util.*;
@@ -32,7 +31,7 @@ public class ItineraryChallenge {
         placesList.add(new Place("Melbourne", 877));
         placesList.add(new Place("Sydney", 0));
 
-        /*List l = placesList
+        /* List l = placesList
                 .stream()
                 .filter(p -> p.name.equals("Perth"))
                 .peek(p-> {})
@@ -77,11 +76,11 @@ public class ItineraryChallenge {
     private static void printMenu(){
         Print.print("""
                 Available actions(select word or letter):
-                (F)orward
-                (B)ackwards
-                (L)ist Places
-                (M)enu
-                (Q)uit
+                (F)Forward
+                (B)Backwards
+                (L)List Places
+                (M)Menu
+                (Q)Quit
                 """);
     }
 }
