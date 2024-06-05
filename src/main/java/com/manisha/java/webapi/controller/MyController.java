@@ -1,4 +1,4 @@
-package com.manisha.java.restAPI;
+package com.manisha.java.webapi.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
