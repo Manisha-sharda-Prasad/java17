@@ -1,5 +1,6 @@
 package com.manisha.java.Collection.C01_ListAndSet.sorting;
 
+import com.manisha.java.Collection.C01_ListAndSet.model.Place;
 import com.manisha.java.util.Print;
 import java.util.*;
 
@@ -35,6 +36,7 @@ public class ItineraryChallenge {
 
         Collections.sort(placesList,new PlaceComparatorByDistance()); // comparator-2
         Print.print("SORT-2 (Custom-Order/Comparator-1 - by name)",placesList);
+
 
         Collections.sort(placesList); // comparable
         Print.print("SORT-3 (natural-Order of Place - by distance)",placesList);

@@ -1,5 +1,7 @@
 package com.manisha.java.Collection.C01_ListAndSet.sorting;
 
+import com.manisha.java.Collection.C01_ListAndSet.model.Place;
+
 import java.util.Comparator;
 
 public class PlaceComparatorByDistance implements Comparator<Place> {

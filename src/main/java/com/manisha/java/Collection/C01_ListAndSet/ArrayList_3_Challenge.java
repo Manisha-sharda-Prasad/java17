@@ -46,7 +46,7 @@ public class ArrayList_3_Challenge {
                 //case 0 -> (shutDown);
                case 1 -> addItems(groceries);
                case 2 -> removeItems(groceries);
-                default -> condition = false;//if user enters other than 1 or 2.
+               default -> condition = false;//if user enters other than 1 or 2.
             }
             groceries.sort(Comparator.naturalOrder());//sorts [items]
             Print.print(groceries);

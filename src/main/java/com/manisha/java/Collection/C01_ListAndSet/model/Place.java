@@ -1,4 +1,4 @@
-package com.manisha.java.Collection.C01_ListAndSet.sorting;
+package com.manisha.java.Collection.C01_ListAndSet.model;
 
 import lombok.*;
 
@@ -9,8 +9,8 @@ public @AllArgsConstructor
 @Builder
 @ToString
 class Place implements Comparable<Place>{
-    String name;
-    int distance;
+    public String name;
+    public int distance;
     @Override
     public String toString() {
         return String.format("%s (%d)", name, distance);
@@ -26,3 +26,7 @@ class Place implements Comparable<Place>{
         else return 0;
     }
 }
+
+//===================
+// Comparable
+//==================

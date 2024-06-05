@@ -7,16 +7,17 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class ArrayList_2 {
-    public static void main(String[] args) {
+public class ArrayList_2
+{
+    public static void main(String[] args)
+    {
+        // Array
         String[] items = {"apples", "bananas", "milk", "eggs"};
-        Print.print(items);
-        //listItems--original copy----
-        List <String> listItems = List.of(items);
+
+        // List from Array
+        List<String> listItems = List.of(items);
         Print.print(listItems);
 
-        //'new' instance/ groceries--making separate copy, making changes in copy version----
-        //calling const. on ArrayList(and passing arg)----
         ArrayList <String> groceries = new ArrayList<>(listItems);
         groceries.add("yogurt");
         groceries.remove(0);
@@ -24,8 +25,7 @@ public class ArrayList_2 {
 
         //better ways to add elements----
         //passing list of Strings, to static method on List -(List.of)---
-        ArrayList<String> nextList = new ArrayList<>(
-                List.of("pickles", "mustard","cheese","papaya","naan"));
+        ArrayList<String> nextList = new ArrayList<>(List.of("pickles", "mustard","cheese","papaya","naan"));
         Print.print(nextList);
         //addAll(other var) array-----
         groceries.addAll(nextList);
@@ -71,6 +71,7 @@ public class ArrayList_2 {
         Print.print(newList);
     }
 }
+
 //Methods-java.util--
 //.contains()
 //.get(),
