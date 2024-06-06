@@ -14,13 +14,14 @@ public class MainRunner {
         fish.makeNoise();
         doAnimalStuff(fish);
 
-        //also using ArrayList multiple instances/add in animals [array].---
+        //also using ArrayList multiple instances/add in animals [array list].---
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(dog);
         animals.add(new Dog("German Shepard", "big", 150));
         animals.add(new Fish("Salmon","small",2));
         animals.add(new Horse("Clydesdale","large" , 1000));
 
+        //loop iterates over a collection/array 'animals', where each element is of type Animal.
         for (Animal animal : animals){
             doAnimalStuff(animal);
         }
