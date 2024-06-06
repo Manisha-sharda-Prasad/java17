@@ -1,4 +1,4 @@
-package com.manisha.java.OOPS.Abstraction;
+package com.manisha.java.OOPS.Abstraction.Phone;
 
 public interface Phone {
     // properties -->  (constant) final, static**

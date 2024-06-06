@@ -1,0 +1,16 @@
+package com.manisha.java.OOPS.Abstraction.Animal;
+
+public abstract class Animal {
+    protected  String type;
+    private String size;
+    private double weight;
+
+    public Animal(String type, String size, double weight) {
+        this.type = type;
+        this.size = size;
+        this.weight = weight;
+    }
+
+    protected abstract void move(String speed);
+    protected abstract void makeNoise();
+}

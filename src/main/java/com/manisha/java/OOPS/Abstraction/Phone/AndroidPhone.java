@@ -1,6 +1,5 @@
-package com.manisha.java.OOPS.Abstraction.impl;
+package com.manisha.java.OOPS.Abstraction.Phone;
 
-import com.manisha.java.OOPS.Abstraction.Phone;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
