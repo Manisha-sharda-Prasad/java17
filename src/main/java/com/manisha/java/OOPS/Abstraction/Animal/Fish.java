@@ -8,8 +8,8 @@ public class Fish extends Animal{
     }
     @Override
     protected void move(String speed) {
-        if (speed == "slow"){Print.print( type + " lazily swimming");}
-        else {Print.print(type + " darting frantically");}
+        if (speed == "slow"){Print.print( getExplicitType() + " lazily swimming");}
+        else {Print.print(getExplicitType() + " darting frantically");}
     }
     @Override
     protected void makeNoise() {

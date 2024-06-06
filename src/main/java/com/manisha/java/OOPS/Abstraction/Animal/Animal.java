@@ -10,7 +10,12 @@ public abstract class Animal {
         this.size = size;
         this.weight = weight;
     }
-
     protected abstract void move(String speed);
     protected abstract void makeNoise();
+    public String getExplicitType(){
+        return getClass().getSimpleName()+", "+type ;
+    }
 }
+//Class-->Subclass--
+//Animal-->Mammal(abstract), Fish.
+//Mammal-->Horse, Dog

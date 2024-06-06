@@ -2,7 +2,7 @@ package com.manisha.java.OOPS.Abstraction.Animal;
 
 import java.util.ArrayList;
 
-public class Main {
+public class MainRunner {
     public static void main(String[] args) {
         //Animal a = new Animal("animal","big" , 100) ; //not possible cannot make new instance/only by subclass.
 
@@ -19,10 +19,17 @@ public class Main {
         animals.add(dog);
         animals.add(new Dog("German Shepard", "big", 150));
         animals.add(new Fish("Salmon","small",2));
+        animals.add(new Horse("Clydesdale","large" , 1000));
 
         for (Animal animal : animals){
             doAnimalStuff(animal);
         }
+        for (Animal mammal : animals ){
+            if (mammal instanceof  Mammal m){
+                m.shedHair();
+            }
+        }
+
     }
     public static void doAnimalStuff(Animal a) {
         a.makeNoise();
