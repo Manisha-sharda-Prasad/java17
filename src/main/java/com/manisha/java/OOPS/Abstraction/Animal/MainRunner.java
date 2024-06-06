@@ -7,14 +7,14 @@ public class MainRunner {
         //Animal a = new Animal("animal","big" , 100) ; //not possible cannot make new instance/only by subclass.
 
         Dog dog = new Dog("Wolf", "big",100);
-        Fish fish = new Fish("Goldfish", "small",3);
         dog.makeNoise();
         doAnimalStuff(dog);
 
+        Fish fish = new Fish("Goldfish", "small",3);
         fish.makeNoise();
         doAnimalStuff(fish);
 
-        //also using ArrayList multiple instances---
+        //also using ArrayList multiple instances/add in animals [array].---
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(dog);
         animals.add(new Dog("German Shepard", "big", 150));
@@ -29,7 +29,6 @@ public class MainRunner {
                 m.shedHair();
             }
         }
-
     }
     public static void doAnimalStuff(Animal a) {
         a.makeNoise();
