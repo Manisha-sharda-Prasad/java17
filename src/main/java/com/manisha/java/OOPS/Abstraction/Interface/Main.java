@@ -21,24 +21,29 @@ public class Main {
         inFlight(flier);
         inFlight(new Jet());
 
+        //Interface var = new implemented Truck---
+        Trackable truck = new Truck();
+        truck.track();
     }
 
     public static void inFlight(FlightEnabled flier) {
         flier.takeOff();
         flier.fly();
         flier.land();
-        //flier.track/ track method not in FlightEnabled.
+
         if (flier instanceof Trackable tracked){
             tracked.track();
         }
-
     }
 }
 //1.Animal--> Bird(extends and implements).
 //Animal Interface --> FlightEnabled, Trackable.
 //2.FlightEnabled,Trackable--> (implementing) Birds, Jet, Truck.
-//Trackable--> (implementing) Truck
+//3.Trackable--> (implementing) Truck
 
-//Interfaces:
+//4.Interfaces:
 //FlightEnabled has methods takeOff, fly, and land.
 //Trackable has the method track.
+
+//5.flier.track/ track() method not in FlightEnabled.
+//Checks if the flier object also implements 'Trackable' using the instanceof pattern matching.
