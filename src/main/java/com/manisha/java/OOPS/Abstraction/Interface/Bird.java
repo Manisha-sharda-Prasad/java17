@@ -1,0 +1,31 @@
+package com.manisha.java.OOPS.Abstraction.Interface;
+
+import com.manisha.java.util.Print;
+
+public class Bird extends Animal implements FlightEnabled, Trackable{
+
+    @Override
+    public void move() {
+        Print.print(getClass().getSimpleName() + " Flaps wings");
+    }
+
+    @Override
+    public void takeOff() {
+        Print.print(getClass().getSimpleName() + " is taking of");
+    }
+
+    @Override
+    public void land() {
+        Print.print(getClass().getSimpleName() + " is landing");
+    }
+
+    @Override
+    public void fly() {
+        Print.print(getClass().getSimpleName() + " is flying ");
+    }
+
+    @Override
+    public void track() {
+        Print.print(getClass().getSimpleName() + " 's coordinates recorded ");
+    }
+}
