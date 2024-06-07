@@ -18,5 +18,15 @@ public class StoreMain {
             item.showDetails();
         }
     }
+
+    public static void addItemToOrder(ArrayList<OrderItem> order, int orderIndex , int quantity) {
+        order.add(new OrderItem(quantity, storeProducts.get(orderIndex)));
+    }
 }
+
+//parent-"ProductsForSale"-->subclass-ArtObject,
+//mainClass-StoreMain.
+//others-OrderItem
+
+
 //passing new-instance of (concrete) class 'ArtObject' / subclass of (abstract Parent Class) "ProductsForSale"/

@@ -23,7 +23,7 @@ abstract public class ProductsForSale {
 }
 
 
-
+//parent-"ProductsForSale"-->subclass-ArtObject,
 
 //The format string "%2d quantity at $%8.2f each, %-15s %-35s%n" specifies:---
 //%2d for a 2-digit integer (quantity).
