@@ -1,4 +1,5 @@
 package com.manisha.java.OOPS.Abstraction.Interface;
+
 interface FlightEnabled{
     void takeOff();
     void land();
