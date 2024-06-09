@@ -1,4 +1,4 @@
-package com.manisha.java.OOPS.Abstraction.Interface;
+package com.manisha.java.OOPS.Abstraction.Interface.AnimalInterface;
 
 interface FlightEnabled{
     void takeOff();

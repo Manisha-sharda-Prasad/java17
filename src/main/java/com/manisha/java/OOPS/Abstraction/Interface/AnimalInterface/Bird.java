@@ -1,8 +1,12 @@
-package com.manisha.java.OOPS.Abstraction.Interface;
-
+package com.manisha.java.OOPS.Abstraction.Interface.AnimalInterface;
 import com.manisha.java.util.Print;
 
-public class Jet implements FlightEnabled,Trackable{
+public class Bird extends Animal implements FlightEnabled, Trackable{
+
+    @Override
+    public void move() {
+        Print.print(getClass().getSimpleName() + " Flaps wings");
+    }
     @Override
     public void takeOff() {
         Print.print(getClass().getSimpleName() + " is taking of");
@@ -17,6 +21,6 @@ public class Jet implements FlightEnabled,Trackable{
     }
     @Override
     public void track() {
-        Print.print(getClass().getSimpleName() + "'s coordinates recorded ");
+        Print.print(getClass().getSimpleName() + " 's coordinates recorded ");
     }
 }

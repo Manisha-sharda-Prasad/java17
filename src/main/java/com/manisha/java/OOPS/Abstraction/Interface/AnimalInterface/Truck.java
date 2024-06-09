@@ -1,4 +1,4 @@
-package com.manisha.java.OOPS.Abstraction.Interface;
+package com.manisha.java.OOPS.Abstraction.Interface.AnimalInterface;
 
 import com.manisha.java.util.Print;
 

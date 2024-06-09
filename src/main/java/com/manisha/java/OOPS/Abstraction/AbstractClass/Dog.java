@@ -1,4 +1,4 @@
-package com.manisha.java.OOPS.Abstraction.Animal;
+package com.manisha.java.OOPS.Abstraction.AbstractClass;
 
 import com.manisha.java.util.Print;
 
