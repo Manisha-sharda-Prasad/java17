@@ -1,4 +1,4 @@
-package com.manisha.java.OOPS.Abstraction.Phone;
+package com.manisha.java.OOPS.Abstraction.Interface.Phone;
 
 import lombok.extern.slf4j.Slf4j;
 
