@@ -5,6 +5,7 @@ public class Main {
         //Bird, can be referred to , by these 4 different types----
         Bird bird = new Bird();
         Animal animal = bird;
+        //Animal animal = new Bird();
 
         //interfaces--
         FlightEnabled flier = bird;
