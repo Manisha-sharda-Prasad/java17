@@ -10,6 +10,7 @@ public class Car implements Vehicle{
         Vehicle.super.start();
     }
 
+
     //-----------------MAIN-------------------
     public static void main(String[] args) {
         Car car = new Car();
@@ -19,3 +20,7 @@ public class Car implements Vehicle{
 
     }
 }
+//can not call Parent Static method in any class that implements interface---
+//     static void stop(){
+//        Vehicle.super.stop();
+//    }
