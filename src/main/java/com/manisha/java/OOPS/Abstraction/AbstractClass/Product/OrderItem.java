@@ -1,4 +1,4 @@
-package com.manisha.java.OOPS.Abstraction.Product;
+package com.manisha.java.OOPS.Abstraction.AbstractClass.Product;
 
 public class OrderItem {
     int quantity;
