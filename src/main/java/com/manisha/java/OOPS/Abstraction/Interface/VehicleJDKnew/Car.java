@@ -3,6 +3,7 @@ package com.manisha.java.OOPS.Abstraction.Interface.VehicleJDKnew;
 public class Car implements Vehicle{
     @Override
     public void drive() {
+        System.out.println("Driving the car...");
     }
     @Override
     public void start() {
@@ -12,8 +13,9 @@ public class Car implements Vehicle{
     //-----------------MAIN-------------------
     public static void main(String[] args) {
         Car car = new Car();
-        car.drive();
-        car.start();
-        car.
+        car.drive(); // overridden method
+        car.start(); // default method
+        Vehicle.service(); //static method, accessing with Interface.
+
     }
 }
