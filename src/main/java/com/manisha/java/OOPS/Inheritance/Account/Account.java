@@ -55,7 +55,7 @@ public class Account {
         Print.print("Your deposit is = $" + deposit + ". Your current balance is now = $" + accountBalance);
     };
 
-    //auto generated getter-setter---------
+    // getter-setter---------
     public String getAccountNum() {
         return accountNum;
     }
