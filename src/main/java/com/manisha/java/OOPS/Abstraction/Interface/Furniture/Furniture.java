@@ -1,4 +1,4 @@
-package com.manisha.java.OOPS.Abstraction.Interface.Mammal;
+package com.manisha.java.OOPS.Abstraction.Interface.Furniture;
 
 public interface Furniture {
     void price();

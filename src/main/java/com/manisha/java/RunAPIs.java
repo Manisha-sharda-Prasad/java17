@@ -21,8 +21,8 @@ public class RunAPIs {
 			.map( i -> i+"====" ) // operator are method(pass Lambda/arrow function)
 			.filter( i -> i.contains("2") )
 			.forEach(System.out::println);
-				//.operatin3()
-				//.operatin4()
+				//.operation3()
+				//.operation4()
 			//.collect( Collectors.toList() ); // terminal operation - collect()
 
 		l.forEach( i -> System.out.println(i) );
