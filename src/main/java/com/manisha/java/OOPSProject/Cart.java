@@ -11,12 +11,18 @@ import java.util.List;
 @ToString
 public class Cart {
 
+    //Cart this --> current object of Cart;
+
+    //this(),this(arg1,...)
+    //super(), super(arg1,...)
+    //  c1 --> call  --->c2  :: first line
+
     protected List<Jewellery> items;
     protected double bill;
     protected Discount discount;
 
     public void addItems(Jewellery j){
-        items.add(j);
+        this.items.add(j);
         calculateBill();
     }
     public void removeItems(Jewellery j){

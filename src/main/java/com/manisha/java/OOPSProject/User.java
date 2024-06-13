@@ -13,8 +13,8 @@ public class User {
     protected String phoneNumber;
     protected Cart cart;
 
-    public User(String userName, String emailID, String phoneNumber) {
-        this.userName = userName;
+    public User(String userNam, String emailID, String phoneNumber) {
+        userName = userNam;
         this.emailID = emailID;
         this.phoneNumber = phoneNumber;
     }
