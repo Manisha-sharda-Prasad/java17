@@ -9,13 +9,16 @@ import java.util.List;
 @SpringBootApplication
 public class RunAPIs {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		SpringApplication.run(RunAPIs.class, args);
-
 		List<String> l = new ArrayList<String>();
-		l.add("item-1");
-		l.add("item-2");
-		l.add("item-3");
+		l.add("Lekhraj");
+		l.add("Zeh");
+		l.add("Manisha");
+		l.add("Arush");
+		// [l, Z, M , A] : order: insertion order
+		// sort : [A, l , M , Z]
 
 		l.stream()
 			.map( i -> i+"====" ) // operator are method(pass Lambda/arrow function)
