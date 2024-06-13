@@ -1,18 +1,59 @@
 package com.manisha.java.OOPSProject;
+
+import com.manisha.java.util.Print;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.util.List;
+@Getter
+@Setter
+@ToString
 public class Cart {
 
-    protected String items;
-    protected String totalItems;
-    protected String paymentMethod;
+    protected List<Jewellery> items;
+    protected double bill;
+    protected Discount discount;
 
-    public Cart(String items, String totalItems, String paymentMethod) {
-        this.items = items;
-        this.totalItems = totalItems;
-        this.paymentMethod = paymentMethod;
+    public void addItems(Jewellery j){
+        items.add(j);
+        calculateBill();
+    }
+    public void removeItems(Jewellery j){
+        items.remove(j);
+        calculateBill();
+    }
+    public int getItemCount(){
+        return items.size();
     }
 
-    public void addItems(){}
-    public void removeItems(){}
-    public void addCoupons(){}
+    public void calculateBill(){
+        this.bill = 0;
+        for ( Jewellery j: this.items){
+            this.bill = this.bill + j.getPrice() ;
+        }
+        Print.print("Your Cart updated : ", items, bill);
+    }
+
+    public void printInvoice(){
+        System.out.println("########################");
+        Print.print(" Welcome to ManishaStore");
+        for ( Jewellery j: this.items){
+             Print.print(j.productCode + " "+ j.productName + ": " +j.getPrice());
+        }
+
+        Print.print(" Bill ", this.bill);
+        //discount
+        this.bill = discount.apply(this.bill);
+        Print.print(" Bill After discount", this.bill);
+
+        //tax
+        this.bill = this.bill + (this.bill * 0.07);
+        Print.print(" Bill After Tax", this.bill);
+
+        Print.print("Total bill : " + this.bill);
+        Print.print(" Thanks for Shopping");
+        System.out.println("########################");
+    }
 
 }

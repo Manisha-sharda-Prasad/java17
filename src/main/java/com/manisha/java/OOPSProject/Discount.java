@@ -1,5 +1,5 @@
 package com.manisha.java.OOPSProject;
 
 public interface Discount {
-    void apply();
+    double apply(double amt);
 }
