@@ -12,7 +12,7 @@ public class Jewellery
     String productName;
     int productCode;
     double price;
-    Category catgery;
+    Category category;
 
     public Jewellery(){}
 
@@ -21,6 +21,13 @@ public class Jewellery
         this.productName = productName;
         this.productCode = productCode;
         this.price = price;
-        this.catgery = catgery;
+        this.category = catgery;
+    }
+
+    public Jewellery(String productName, int productCode, double price)
+    {
+        this.productName = productName;
+        this.productCode = productCode;
+        this.price = price;
     }
 }
