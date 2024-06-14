@@ -13,9 +13,11 @@ public class HashSetExample {
         set.add("Orange");
         set.add("Bread");
         set.add("Banana"); //will not add duplicate.
-        set.size();
-        set.isEmpty();
+
+        Print.print(set.size());
+        Print.print(set.isEmpty());
         set.remove("Bread");
+
         Print.print(set);
 
         if (set.contains("Milk")) {
