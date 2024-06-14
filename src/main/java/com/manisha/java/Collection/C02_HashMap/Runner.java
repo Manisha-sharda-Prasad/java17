@@ -1,4 +1,4 @@
-package com.manisha.java.Collection.C02_Map;
+package com.manisha.java.Collection.C02_HashMap;
 
 import java.util.HashMap;
 import java.util.Map;
