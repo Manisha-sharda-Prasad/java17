@@ -1,5 +1,6 @@
 package com.manisha.java.OOPSProject;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -7,10 +8,19 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class User {
+
+@Entity
+@Table(name = "APP_USER")
+public class User
+{
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    int id;
+
     protected String userName;
     protected String emailID;
     protected String phoneNumber;
+
+    @Transient
     protected Cart cart;
 
     public User(String userNam, String emailID, String phoneNumber) {

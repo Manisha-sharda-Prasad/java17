@@ -9,8 +9,11 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+//@Entity
 public class Cart {
 
+    // @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    int id;
     //Cart this --> current object of Cart;
 
     //this(),this(arg1,...)

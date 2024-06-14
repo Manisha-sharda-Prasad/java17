@@ -16,9 +16,9 @@ public class Runner {
         myMap.put(null, null); // already present
 
         //HashSet -- bts its map only
-        myMap.put("716-OakGlen", null);  //             <<< NOTICE : All values are null
-        myMap.put("716-OakGlenddd", null);
-        myMap.put("716-OakGlenddddfgfg", null);
+        myMap.put("890-OakGlen", null);  //             <<< NOTICE : All values are null
+        myMap.put("891-LakeWood", null);
+        myMap.put("892-Orange blossom", null);
 
 
         // Convert to list/Set
