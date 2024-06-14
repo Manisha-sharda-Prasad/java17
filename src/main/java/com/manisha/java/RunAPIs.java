@@ -12,6 +12,9 @@ public class RunAPIs {
 	public static void main(String[] args)
 	{
 		SpringApplication.run(RunAPIs.class, args);
+
+
+
 		List<String> l = new ArrayList<String>();
 		l.add("Lekhraj");
 		l.add("Zeh");
