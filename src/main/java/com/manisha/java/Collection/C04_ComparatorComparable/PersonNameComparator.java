@@ -12,3 +12,4 @@ public class PersonNameComparator implements Comparator<Person> {
 //Comparator-- to sort the same list of Person objects by their name.
 //Used to define ordering for objects.allows sorting objects in different ways.
 //class implementing Comparator needs to override the compare method.
+//Method to override: compare()
