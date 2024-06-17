@@ -13,10 +13,11 @@ public class PersonMain {
         person.add(new Person("Jim Hopper", 45));
         person.add(new Person("Bobby", 35));
 
-        Collections.sort(person, new PersonNameComparator());
+        Collections.sort(person, new PersonComparator());
         Print.print("Sorting by name : " + person);
 
     }
 }
+////sorting in CUSTOM type
 //Sorts--list according to natural ordering of elements
 //new PersonNameComparator()-- creates an instance of PersonNameComparator c, which implements the Comparator<Person> interface.

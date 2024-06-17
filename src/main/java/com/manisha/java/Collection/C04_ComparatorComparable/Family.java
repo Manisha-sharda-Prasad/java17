@@ -19,3 +19,10 @@ public class Family implements Comparable<Family>{
     }
 }
 //Method to override: compareTo()
+
+//sorting in CUSTOM type
+
+//Comparable--class that implements Comparable needs to override the compareTo method.
+//It is an interfaces in Java used for sorting collections.
+//creates only one  comparable
+// Less flexible, suitable for a single, natural sort order.
