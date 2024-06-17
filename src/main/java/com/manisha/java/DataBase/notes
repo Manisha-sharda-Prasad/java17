@@ -3,6 +3,28 @@
 --To build a web site that shows data from a database, you will need: RDBMS
 
 2.)RDBMS--Relational Database Management System.
---database program (i.e. MS Access, SQL Server, MySQL)
+--database program (i.e. MS Access, SQL Server, MySQL , IBM DB2, Oracle)
+--data in RDBMS is stored in database objects called tables.
+--A table is a collection of related data entries and it consists of columns and rows.
 
+3.)SQL Commands--
 
+-SELECT - extracts data from a database
+-UPDATE - updates data in a database
+-DELETE - deletes data from a database
+-INSERT INTO - inserts new data into a database
+-CREATE DATABASE - creates a new database
+-ALTER DATABASE - modifies a database
+-CREATE TABLE - creates a new table
+-ALTER TABLE - modifies a table
+-DROP TABLE - deletes a table
+-CREATE INDEX - creates an index (search key)
+-DROP INDEX - deletes an index
+
+4.)SQL aggregate functions are:
+
+-MIN() - returns the smallest value within the selected column
+-MAX() - returns the largest value within the selected column
+-COUNT() - returns the number of rows in a set
+-SUM() - returns the total sum of a numerical column
+-AVG() - returns the average value of a numerical column
