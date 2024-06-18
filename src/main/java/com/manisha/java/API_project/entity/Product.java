@@ -22,5 +22,5 @@ public class Product {
     String productName;
     float price;
     int stock;
-    LocalDate createdat;
+    LocalDate createdate;
 }

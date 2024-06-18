@@ -16,7 +16,7 @@ public class ProductServiceImpl implements ProductService{
         // business code
         // calculation
         // report - need data
-         List<Product> result = productRepo.loadAllproducts();
+         List<Product> result = productRepo.loadAllProducts();
          return result;
     }
 
