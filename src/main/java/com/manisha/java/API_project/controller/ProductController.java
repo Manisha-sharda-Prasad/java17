@@ -11,6 +11,7 @@ import java.util.Comparator;
 import java.util.List;
 
 @RestController
+//@RequestMapping("product")
 // Servlet - http request / http response-body-json
 public class ProductController
 {
