@@ -47,6 +47,9 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
  INNER JOIN Customers
  ON Orders.CustomerID=Customers.CustomerID;}
 
+--{Select * From Products
+ where SupplierID <= 7;}
+
 --{SELECT * FROM Employees
  where BirthDate = #8/30/1963#
  or
@@ -58,6 +61,19 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
  From Suppliers
  order by city;}
 
+--{SELECT Price
+ FROM Products
+ order by Price;}
+
 --{SELECT distinct city
   From Customers
   order by city DESC;}
+
+--{SELECT * From Customers
+ where Country = 'France'
+ And CustomerName Like '%s' ;}
+
+--{Select * From Customers
+ where Country = 'France' And Country = 'USA'
+ And CustomerName Like '%s' or CustomerName Like '%a';}
+
