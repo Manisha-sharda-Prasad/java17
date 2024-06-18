@@ -9,11 +9,11 @@ import lombok.ToString;
 @Setter
 @ToString
 
-@Entity
-@Table(name = "APP_USER")
+//@Entity
+//@Table(name = "APP_USER")
 public class User
 {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
     protected String userName;
