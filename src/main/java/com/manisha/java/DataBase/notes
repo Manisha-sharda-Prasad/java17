@@ -3,9 +3,9 @@
 --To build a web site that shows data from a database, you will need: RDBMS
 
 2.)RDBMS--Relational Database Management System.
---database program (i.e. MS Access, SQL Server, MySQL , IBM DB2, Oracle)
+--database program (i.e. MS Access, SQL Server, MySQL , Oracle, Post-Gress)
 --data in RDBMS is stored in database objects called tables.
---A table is a collection of related data entries and it consists of columns and rows.
+--A table is a collection of related data entries it consists of columns and rows.
 
 3.)SQL Commands:
 
@@ -24,8 +24,8 @@
 4.)SQL aggregate functions are:
 function that performs a calculation on a set of values, and returns a single value.
 
--MIN() - returns the smallest value within the selected column
--MAX() - returns the largest value within the selected column
+-MIN() - returns the smallest value of selected column
+-MAX() - returns the largest value
 -COUNT() - returns the number of rows in a set
 -SUM() - returns the total sum of a numerical column
 -AVG() - returns the average value of a numerical column
@@ -38,3 +38,9 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 -RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
 -FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
 -SQL INNER JOIN  SQL LEFT JOIN  SQL RIGHT JOIN  SQL FULL OUTER JOIN
+
+6.)SQL statements:
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers
+ON Orders.CustomerID=Customers.CustomerID;
