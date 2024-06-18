@@ -28,6 +28,7 @@ public class ProductController
     }
 
     @PostMapping("/add-product")
+    //@ResponseBody
     void AddNewproduct(@RequestBody Product p){
         productSrv.addNewProduct(p);
     }
