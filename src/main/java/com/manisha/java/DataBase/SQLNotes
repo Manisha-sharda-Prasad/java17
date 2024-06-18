@@ -41,7 +41,16 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 -SQL INNER JOIN  SQL LEFT JOIN  SQL RIGHT JOIN  SQL FULL OUTER JOIN
 
 6.)SQL statements:
-SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
-FROM Orders
-INNER JOIN Customers
-ON Orders.CustomerID=Customers.CustomerID;
+
+--SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+ FROM Orders
+ INNER JOIN Customers
+ ON Orders.CustomerID=Customers.CustomerID;
+
+--SELECT * FROM Employees
+ where BirthDate = #8/30/1963#
+ or
+ BirthDate = #2/19/1952#;
+
+--SELECT CustomerName, ContactName From Customers;
+
