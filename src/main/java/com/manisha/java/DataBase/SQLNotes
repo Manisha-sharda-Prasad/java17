@@ -8,6 +8,7 @@
 --A table is a collection of related data entries it consists of columns and rows.
 
 3.)SQL Commands:
+(DDL,DML)
 
 -SELECT - extracts data from a database
 -UPDATE - updates data in a database
