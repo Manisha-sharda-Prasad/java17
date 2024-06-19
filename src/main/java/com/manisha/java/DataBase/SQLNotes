@@ -88,45 +88,47 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
  ('Lekhraj', 'Acrylic,Oil', '94 Orange Street');}
 
 --{Update Employees
-Set LastName = 'Miller', FirstName = 'Joyce'
-where EmployeeID = 2;}
+ Set LastName = 'Miller', FirstName = 'Joyce'
+ where EmployeeID = 2;}
 
 --{Delete From Employees
-where LastName = 'Miller';}
+ where LastName = 'Miller';}
 
---SELECT Top 6 * From Products;
+--{SELECT Top 6 * From Products;}
 
---SELECT TOP 20 PERCENT * From Suppliers ;
+--{SELECT TOP 20 PERCENT * From Suppliers ;}
 
---SELECT * From Suppliers
-FETCH FIRST 4 ROWS ONLY;
+--{SELECT * From Suppliers
+ FETCH FIRST 4 ROWS ONLY;}
 
---SELECT * FROM Suppliers
-WHERE Country = 'USA'
-FETCH FIRST 3 ROWS ONLY;
+--{SELECT * FROM Suppliers
+ WHERE Country = 'USA'
+ FETCH FIRST 3 ROWS ONLY;}
 
---SELECT * From Suppliers
-where Country = 'USA'
-Limit 3;
+--{SELECT * From Suppliers
+ where Country = 'USA'
+ Limit 3;}
 
---SELECT MIN (Price)
-And Max (Price)
-From Products;
+--{SELECT MIN (Price)
+ And Max (Price)
+ From Products;}
 
---Select MIN (Price) AS SmallestPrice
-FROM Products;
+--{Select MIN (Price) AS SmallestPrice
+ FROM Products;}
 
---Select Max (Quantity) AS SmallestQuantity
-FROM OrderDetails
-GROUP BY OrderDetailID ;
+--{Select Max (Quantity) AS SmallestQuantity
+ FROM OrderDetails
+ GROUP BY OrderDetailID ;}
 
---SELECT COUNT (Country)
-FROM Suppliers
-WHERE Country = 'Japan';
+--{SELECT COUNT (Country)
+ FROM Suppliers
+ WHERE Country = 'Japan';}
 
---SELECT SUM (Country)
-FROM Suppliers
-WHERE ContactName LIKE 's%'
-AND ContactName LIKE 'r%';
+--{SELECT SUM (Country)
+ FROM Suppliers
+ WHERE ContactName LIKE 's%'
+ AND ContactName LIKE 'r%';}
 
-
+--{SELECT  ProductId, SUM(Price * 2) AS [New Price]
+ FROM PRODUCTS
+ GROUP BY ProductId;}
