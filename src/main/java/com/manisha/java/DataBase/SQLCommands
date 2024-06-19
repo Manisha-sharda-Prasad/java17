@@ -146,8 +146,15 @@ SQL statements:---
  ORDER BY cs.CustomerName ;}
 
 
-{}
-{}
+--{SELECT City FROM Suppliers
+ UNION ALL
+ SELECT City FROM Customers;}
+
+
+--{SELECT COUNT(CustomerID), city
+ FROM Customers
+ GROUP BY city;}
+
 {}
 {}
 {}
