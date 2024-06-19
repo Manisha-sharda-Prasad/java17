@@ -1,0 +1,137 @@
+SQL statements:---
+
+--{SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+ FROM Orders
+ INNER JOIN Customers
+ ON Orders.CustomerID=Customers.CustomerID;}
+
+--{Select * From Products
+ where SupplierID <= 7;}
+
+--{SELECT * FROM Employees
+ where BirthDate = #8/30/1963#
+ or
+ BirthDate = #2/19/1952#;}
+
+--{SELECT CustomerName, ContactName From Customers;}
+
+--{SELECT distinct city
+ From Suppliers
+ order by city;}
+
+--{SELECT Price
+ FROM Products
+ order by Price;}
+
+--{SELECT distinct city
+  From Customers
+  order by city DESC;}
+
+--{Select * From Customers
+ where Country = 'France' And Country = 'USA'
+ And CustomerName Like '%s' or CustomerName Like '%a';}
+
+--{Select * From Employees
+ where FirstName Not Like'%w'
+ And FirstName Not Like'%t'
+ And EmployeeID Not Between 7 And 8;}
+
+--{SELECT * FROM Suppliers
+ where City Not In ('Londona','New Orleans','Tokyo')
+ And Not SupplierID < 6;}
+
+--{SELECT * FROM Customers
+ WHERE Country IN ('France','Brazil','USA');}
+
+--{Insert Into Art (ArtistName, ArtMedium, Address)
+ Values('Manisha', 'Pencil,Charcoal', '5th Tangelo Street');}
+
+--{Update Employees
+ Set LastName = 'Miller', FirstName = 'Joyce'
+ where EmployeeID = 2;}
+
+--{Delete From Employees
+ where LastName = 'Miller';}
+
+--{SELECT Top 6 * From Products;}
+
+--{SELECT TOP 20 PERCENT * From Suppliers ;}
+
+--{SELECT * From Suppliers
+ FETCH FIRST 4 ROWS ONLY;}
+
+--{SELECT * FROM Suppliers
+ WHERE Country = 'USA'
+ FETCH FIRST 3 ROWS ONLY;}
+
+--{SELECT * From Suppliers
+ where Country = 'USA'
+ Limit 3;}
+
+--{SELECT MIN (Price)
+ And Max (Price)
+ From Products;}
+
+--{Select MIN (Price) AS SmallestPrice
+ FROM Products;}
+
+--{Select Max (Quantity) AS SmallestQuantity
+ FROM OrderDetails
+ GROUP BY OrderDetailID ;}
+
+--{SELECT COUNT (Country)
+ FROM Suppliers
+ WHERE Country = 'Japan';}
+
+--{SELECT SUM (Country)
+ FROM Suppliers
+ WHERE ContactName LIKE 's%'
+ AND ContactName LIKE 'r%';}
+
+--{SELECT  ProductId, SUM(Price * 2) AS [New Price]
+ FROM PRODUCTS
+ GROUP BY ProductId;}
+
+--{SELECT AVG(Price)
+ FROM Products
+ WHERE CategoryID > 5;}
+
+--{SELECT AVG(Price) AS [Average Price]
+ FROM Products
+ WHERE CategoryID <= 5;}
+
+--{SELECT * FROM Customers
+ WHERE City LIKE '_erlin'
+ OR City LIKE 'Be_lin';}
+
+--{SELECT * FROM Customers
+ WHERE City LIKE '[xyz]%'
+ OR City LIKE '[s-u]%';}
+
+--{SELECT * FROM Customers
+ WHERE City BETWEEN ('México D.F.')
+ AND ('Marseille')}
+
+--{SELECT ContactName AS FullName, CustomerName AS ContactName
+ FROM Customers;}
+
+--{SELECT ContactName AS "Customer Full Name"
+ FROM Customers;}
+
+--{SELECT ContactName, Address + ', ' + City + ', '+ PostalCode + ', '+ Country
+ AS FullAddress
+ FROM Suppliers;}
+
+--{SELECT  (Suppliers.ContactName), (Suppliers.City), (OrderDetails.OrderID)
+ FROM Suppliers, OrderDetails ;}
+
+
+--{SELECT  (Orders.OrderDate), (Orders.ShipperID), (OrderDetails.OrderDetailID), (OrderDetails.ProductID)
+ FROM Orders
+ INNER JOIN OrderDetails
+ ON (Orders.OrderID) = (OrderDetails.OrderID);}
+
+{}
+{}
+{}
+{}
