@@ -82,10 +82,11 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
  where City Not In ('Londona','New Orleans','Tokyo')
  And Not SupplierID < 6;}
 
+--{SELECT * FROM Customers
+ WHERE Country IN ('France','Brazil','USA');}
+
 --{Insert Into Art (ArtistName, ArtMedium, Address)
- Values
- ('Manisha', 'Pencil,Charcoal', '5th Tangelo Street')
- ('Lekhraj', 'Acrylic,Oil', '94 Orange Street');}
+ Values('Manisha', 'Pencil,Charcoal', '5th Tangelo Street');}
 
 --{Update Employees
  Set LastName = 'Miller', FirstName = 'Joyce'
@@ -132,3 +133,33 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 --{SELECT  ProductId, SUM(Price * 2) AS [New Price]
  FROM PRODUCTS
  GROUP BY ProductId;}
+
+--{SELECT AVG(Price)
+ FROM Products
+ WHERE CategoryID > 5;}
+
+--{SELECT AVG(Price) AS [Average Price]
+ FROM Products
+ WHERE CategoryID <= 5;}
+
+--{SELECT * FROM Customers
+ WHERE City LIKE '_erlin'
+ OR City LIKE 'Be_lin';}
+
+--{SELECT * FROM Customers
+ WHERE City LIKE '[xyz]%'
+ OR City LIKE '[s-u]%';}
+
+--{SELECT * FROM Customers
+ WHERE City BETWEEN ('México D.F.')
+ AND ('Marseille')}
+
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
