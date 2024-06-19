@@ -154,9 +154,16 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
  WHERE City BETWEEN ('México D.F.')
  AND ('Marseille')}
 
-{}
-{}
-{}
+--{SELECT ContactName AS FullName, CustomerName AS ContactName
+ FROM Customers;}
+
+--{SELECT ContactName AS "Customer Full Name"
+ FROM Customers;}
+
+--{SELECT ContactName, Address + ', ' + City + ', '+ PostalCode + ', '+ Country
+ AS FullAddress
+ FROM Suppliers;}
+
 {}
 {}
 {}
