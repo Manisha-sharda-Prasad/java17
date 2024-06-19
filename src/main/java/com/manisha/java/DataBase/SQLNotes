@@ -74,11 +74,20 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
  And CustomerName Like '%s' or CustomerName Like '%a';}
 
 --{Select * From Employees
-where FirstName Not Like'%w'
-And FirstName Not Like'%t'
-And EmployeeID Not Between 7 And 8;}
+ where FirstName Not Like'%w'
+ And FirstName Not Like'%t'
+ And EmployeeID Not Between 7 And 8;}
 
 --{SELECT * FROM Suppliers
-where City Not In ('Londona','New Orleans','Tokyo')
-And Not SupplierID < 6;}
+ where City Not In ('Londona','New Orleans','Tokyo')
+ And Not SupplierID < 6;}
+
+--{Insert Into Art (ArtistName, ArtMedium, Address)
+ Values
+ ('Manisha', 'Pencil,Charcoal', '5th Tangelo Street')
+ ('Lekhraj', 'Acrylic,Oil', '94 Orange Street');}
+
+--{Update Employees
+Set LastName = 'Miller', FirstName = 'Joyce'
+where EmployeeID = 2;}
 
