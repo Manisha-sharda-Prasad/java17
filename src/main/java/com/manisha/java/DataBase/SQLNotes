@@ -124,4 +124,9 @@ GROUP BY OrderDetailID ;
 FROM Suppliers
 WHERE Country = 'Japan';
 
+--SELECT SUM (Country)
+FROM Suppliers
+WHERE ContactName LIKE 's%'
+AND ContactName LIKE 'r%';
+
 
