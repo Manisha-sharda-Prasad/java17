@@ -69,11 +69,16 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
   From Customers
   order by city DESC;}
 
---{SELECT * From Customers
- where Country = 'France'
- And CustomerName Like '%s' ;}
-
 --{Select * From Customers
  where Country = 'France' And Country = 'USA'
  And CustomerName Like '%s' or CustomerName Like '%a';}
+
+--{Select * From Employees
+where FirstName Not Like'%w'
+And FirstName Not Like'%t'
+And EmployeeID Not Between 7 And 8;}
+
+--{SELECT * FROM Suppliers
+where City Not In ('Londona','New Orleans','Tokyo')
+And Not SupplierID < 6;}
 
