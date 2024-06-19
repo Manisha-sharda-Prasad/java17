@@ -91,3 +91,37 @@ A JOIN clause is used to combine rows from two or more tables, based on a relate
 Set LastName = 'Miller', FirstName = 'Joyce'
 where EmployeeID = 2;}
 
+--{Delete From Employees
+where LastName = 'Miller';}
+
+--SELECT Top 6 * From Products;
+
+--SELECT TOP 20 PERCENT * From Suppliers ;
+
+--SELECT * From Suppliers
+FETCH FIRST 4 ROWS ONLY;
+
+--SELECT * FROM Suppliers
+WHERE Country = 'USA'
+FETCH FIRST 3 ROWS ONLY;
+
+--SELECT * From Suppliers
+where Country = 'USA'
+Limit 3;
+
+--SELECT MIN (Price)
+And Max (Price)
+From Products;
+
+--Select MIN (Price) AS SmallestPrice
+FROM Products;
+
+--Select Max (Quantity) AS SmallestQuantity
+FROM OrderDetails
+GROUP BY OrderDetailID ;
+
+--SELECT COUNT (Country)
+FROM Suppliers
+WHERE Country = 'Japan';
+
+
