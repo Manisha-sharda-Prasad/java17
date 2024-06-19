@@ -131,6 +131,31 @@ SQL statements:---
  INNER JOIN OrderDetails
  ON (Orders.OrderID) = (OrderDetails.OrderID);}
 
+--{SELECT  (Orders.OrderDate), (Orders.ShipperID), (OrderDetails.ProductID)
+ FROM Orders
+ LEFT JOIN OrderDetails
+ ON (Orders.OrderID) = (OrderDetails.OrderID);}
+
+--{SELECT DISTINCT cs.CustomerName
+ FROM Categories c, Orders o, OrderDetails od, Products p, Customers cs
+ WHERE cs.CustomerID = o.CustomerID
+ AND o.OrderID = od.OrderID
+ AND od.ProductID = p.ProductID
+ AND p.CategoryID = c.CategoryID
+ AND c.CategoryName = 'Beverages'
+ ORDER BY cs.CustomerName ;}
+
+
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
 {}
 {}
 {}
