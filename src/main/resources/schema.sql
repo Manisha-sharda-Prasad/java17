@@ -76,7 +76,28 @@ CREATE TABLE OrderDetails (
     Quantity INT,
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+
+-- SHOP Table
+CREATE TABLE Shop (
+    ShopID INT PRIMARY KEY,
+    ShopName VARCHAR(255) NOT NULL,
+    Address VARCHAR(255),
+    City VARCHAR(255),
+    PostalCode VARCHAR(20),
+    Country VARCHAR(255)
 );
+
+-- CART Table
+CREATE TABLE Cart (
+    CartID INT PRIMARY KEY,
+    CustomerID INT,
+    ProductID INT,
+    Quantity INT,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
 
 
 -- DROP TABLE CATEGORIES ;

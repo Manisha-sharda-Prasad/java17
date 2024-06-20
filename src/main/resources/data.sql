@@ -108,3 +108,34 @@ INSERT INTO OrderDetails (OrderDetailID, OrderID, ProductID, Quantity) VALUES
 (13, 13, 13, 10),
 (14, 14, 14, 20),
 (15, 15, 15, 15);
+
+-- Inserting data into Shop table
+INSERT INTO Shop (ShopID, ShopName, Address, City, PostalCode, Country) VALUES
+(1, 'Shop A', '123 Main St', 'New York', '10001', 'USA'),
+(2, 'Shop B', '456 Maple Ave', 'Los Angeles', '90001', 'USA'),
+(3, 'Shop C', '789 Elm St', 'Chicago', '60601', 'USA'),
+(4, 'Shop D', '101 Oak St', 'Houston', '77001', 'USA'),
+(5, 'Shop E', '202 Pine St', 'Phoenix', '85001', 'USA'),
+(6, 'Shop F', '303 Cedar St', 'Philadelphia', '19101', 'USA'),
+(7, 'Shop G', '404 Birch St', 'San Antonio', '78201', 'USA'),
+(8, 'Shop H', '505 Walnut St', 'San Diego', '92101', 'USA'),
+(9, 'Shop I', '606 Spruce St', 'Dallas', '75201', 'USA'),
+(10, 'Shop J', '707 Fir St', 'San Jose', '95101', 'USA');
+
+-- Inserting data into Cart table
+INSERT INTO Cart (CartID, CustomerID, ProductID, Quantity) VALUES
+(1, 1, 1, 2),
+(2, 2, 2, 1),
+(3, 3, 3, 4),
+(4, 4, 4, 3),
+(5, 5, 5, 5),
+(6, 6, 6, 2),
+(7, 7, 7, 1),
+(8, 8, 8, 3),
+(9, 9, 9, 2),
+(10, 10, 10, 4),
+(11, 1, 11, 1),
+(12, 2, 12, 2),
+(13, 3, 13, 3),
+(14, 4, 14, 1),
+(15, 5, 15, 2);
