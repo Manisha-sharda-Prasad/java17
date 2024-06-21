@@ -1,4 +1,14 @@
 -- Practice SQL
+-- #1 Start /Stop service
+-- sudo /usr/local/mysql/support-files/mysql.server start
+-- sudo /usr/local/mysql/support-files/mysql.server stop
+
+-- source ~/.bash_profile 
+-- startmysql
+-- stopmysql
+
+Select * from orders;
+
 SELECT o.OrderID, c.CustomerName, o.OrderDate
  FROM Orders o
  INNER JOIN Customers c
@@ -170,16 +180,11 @@ END AS CityInCountry
 FROM Customers;
 
 -- SELECT TOP 6 * From Products;
-
 -- SELECT TOP 20 PERCENT * From Suppliers ;
-
 -- SELECT ContactName,  Address + ', ' + City + ', '+ PostalCode + ', '+ Country  AS FullAddress FROM Suppliers;
-
 -- SELECT * FROM Employees
 -- where BirthDate = #8/30/1963#orders_ibfk_1
 -- or BirthDate = #2/19/1952#;
-
 -- SELECT * FROM Customers WHERE City BETWEEN ('México D.F.') AND ('Marseille')
-
 -- SELECT SUM (Country) FROM Suppliers
 -- WHERE ContactName LIKE 's%' AND ContactName LIKE 'r%';
