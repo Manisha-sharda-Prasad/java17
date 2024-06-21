@@ -1,3 +1,4 @@
+-- Practice SQL
 SELECT o.OrderID, c.CustomerName, o.OrderDate
  FROM Orders o
  INNER JOIN Customers c
@@ -43,16 +44,14 @@ Update Employees
 
 -- Delete From Employees where LastName = 'Miller';
 
-SELECT Top 6 * From Products;
 
-SELECT TOP 20 PERCENT * From Suppliers ;
 
-SELECT * From Suppliers
- FETCH FIRST 4 ROWS ONLY;
+SELECT * From Suppliers;
+-- FETCH FIRST 4 ROWS ONLY
 
 SELECT * FROM Suppliers
- WHERE Country = 'USA'
- FETCH FIRST 3 ROWS ONLY;
+WHERE Country = 'USA' ;
+-- FETCH FIRST 3 ROWS ONLY;
 
 SELECT * From Suppliers
  where Country = 'USA'
@@ -73,8 +72,7 @@ SELECT COUNT (Country)
  FROM Suppliers
  WHERE Country = 'Japan';
 
---SELECT SUM (Country) FROM Suppliers
---WHERE ContactName LIKE 's%' AND ContactName LIKE 'r%';
+
 
 SELECT  ProductId, SUM(Price * 2) AS NewPrice
  FROM PRODUCTS
@@ -171,12 +169,17 @@ CASE
 END AS CityInCountry
 FROM Customers;
 
+-- SELECT TOP 6 * From Products;
+
+-- SELECT TOP 20 PERCENT * From Suppliers ;
 
 -- SELECT ContactName,  Address + ', ' + City + ', '+ PostalCode + ', '+ Country  AS FullAddress FROM Suppliers;
 
- --SELECT * FROM Employees
- --where BirthDate = #8/30/1963#
- --or BirthDate = #2/19/1952#;
-
+-- SELECT * FROM Employees
+-- where BirthDate = #8/30/1963#orders_ibfk_1
+-- or BirthDate = #2/19/1952#;
 
 -- SELECT * FROM Customers WHERE City BETWEEN ('México D.F.') AND ('Marseille')
+
+-- SELECT SUM (Country) FROM Suppliers
+-- WHERE ContactName LIKE 's%' AND ContactName LIKE 'r%';

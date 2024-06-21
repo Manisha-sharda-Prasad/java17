@@ -1,5 +1,5 @@
 -- Customers Table
-CREATE TABLE Customers (
+CREATE TABLE IF NOT EXISTS Customers (
     CustomerID INT PRIMARY KEY,
     CustomerName VARCHAR(255) NOT NULL,
     ContactName VARCHAR(255),
@@ -10,14 +10,14 @@ CREATE TABLE Customers (
 );
 
 -- Categories Table
-CREATE TABLE Categories (
+CREATE TABLE IF NOT EXISTS Categories (
     CategoryID INT PRIMARY KEY,
     CategoryName VARCHAR(255) NOT NULL,
     Description TEXT
 );
 
 -- Employees Table
-CREATE TABLE Employees (
+CREATE TABLE IF NOT EXISTS Employees (
     EmployeeID INT PRIMARY KEY,
     LastName VARCHAR(255) NOT NULL,
     FirstName VARCHAR(255) NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE Employees (
 );
 
 -- Suppliers Table
-CREATE TABLE Suppliers (
+CREATE TABLE IF NOT EXISTS Suppliers (
     SupplierID INT PRIMARY KEY,
     SupplierName VARCHAR(255) NOT NULL,
     ContactName VARCHAR(255),
@@ -38,14 +38,14 @@ CREATE TABLE Suppliers (
 );
 
 -- Shippers Table
-CREATE TABLE Shippers (
+CREATE TABLE IF NOT EXISTS Shippers (
     ShipperID INT PRIMARY KEY,
     ShipperName VARCHAR(255) NOT NULL,
     Phone VARCHAR(255)
 );
 
 -- Products Table
-CREATE TABLE Products (
+CREATE TABLE IF NOT EXISTS Products (
     ProductID INT PRIMARY KEY,
     ProductName VARCHAR(255) NOT NULL,
     SupplierID INT,
@@ -57,7 +57,7 @@ CREATE TABLE Products (
 );
 
 -- Orders Table
-CREATE TABLE Orders (
+CREATE TABLE IF NOT EXISTS Orders (
     OrderID INT PRIMARY KEY,
     CustomerID INT,
     EmployeeID INT,
@@ -69,7 +69,7 @@ CREATE TABLE Orders (
 );
 
 -- OrderDetails Table
-CREATE TABLE OrderDetails (
+CREATE TABLE IF NOT EXISTS OrderDetails (
     OrderDetailID INT PRIMARY KEY,
     OrderID INT,
     ProductID INT,
@@ -78,7 +78,7 @@ CREATE TABLE OrderDetails (
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
 
 -- SHOP Table
-CREATE TABLE Shop (
+CREATE TABLE IF NOT EXISTS Shop (
     ShopID INT PRIMARY KEY,
     ShopName VARCHAR(255) NOT NULL,
     Address VARCHAR(255),
@@ -88,7 +88,7 @@ CREATE TABLE Shop (
 );
 
 -- CART Table
-CREATE TABLE Cart (
+CREATE TABLE IF NOT EXISTS Cart (
     CartID INT PRIMARY KEY,
     CustomerID INT,
     ProductID INT,
@@ -100,11 +100,11 @@ CREATE TABLE Cart (
 
 
 
--- DROP TABLE CATEGORIES ;
--- DROP TABLE CUSTOMERS ;
--- DROP TABLE EMPLOYEES ;
--- DROP TABLE ORDERDETAILS ;
--- DROP TABLE ORDERS ;
--- DROP TABLE PRODUCTS ;
--- DROP TABLE  SHIPPERS ;
--- DROP TABLE SUPPLIERS ;
+-- DROP TABLE IF NOT EXISTS CATEGORIES ;
+-- DROP TABLE IF NOT EXISTS CUSTOMERS ;
+-- DROP TABLE IF NOT EXISTS EMPLOYEES ;
+-- DROP TABLE IF NOT EXISTS ORDERDETAILS ;
+-- DROP TABLE IF NOT EXISTS ORDERS ;
+-- DROP TABLE IF NOT EXISTS PRODUCTS ;
+-- DROP TABLE IF NOT EXISTS  SHIPPERS ;
+-- DROP TABLE IF NOT EXISTS SUPPLIERS ;
