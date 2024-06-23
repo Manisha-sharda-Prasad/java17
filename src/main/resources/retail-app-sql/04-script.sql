@@ -163,6 +163,13 @@ having count(o.customerid) = (select  count(c.customerid)
 
 
 --13.Get the most recent order placed by each customer.
+select distinct c.customerid ,o.orderid, max(o.orderdate) as RecentOrder   
+from retailapp.orders o, retailapp.customers c
+where o.customerid =c.customerid 
+group by c.customerid ,o.orderid 
+order by c.customerid ,o.orderid ;
+
+						
 
 --14.Find customers who have never placed an order.
 
