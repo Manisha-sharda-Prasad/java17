@@ -120,20 +120,25 @@ group by e.employeeid , e.firstname ;
 
 
 --8.Get the list of products supplied by suppliers from a specific country (e.g., 'USA').
+select p.productname , s.country 
+from retailapp.suppliers s , retailapp.products p 
+where s.supplierid = p.supplierid 
+and s.country = 'USA';
 
 
 
 --9.Find the total sales amount for each category.
 
---List all customers along with the total amount they have spent on orders.
 
---Get the list of orders that contain more than three distinct products.
+--10.List all customers along with the total amount they have spent on orders.
 
---Find the products that have been ordered by all customers.
+--11.Get the list of orders that contain more than three distinct products.
 
---Get the most recent order placed by each customer.
+--12.Find the products that have been ordered by all customers.
 
---Find customers who have never placed an order.
+--13.Get the most recent order placed by each customer.
+
+--14.Find customers who have never placed an order.
 
 --get the details of the most expensive product ordered by each customer.
 
