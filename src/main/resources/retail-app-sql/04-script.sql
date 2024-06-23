@@ -84,22 +84,19 @@ where od.quantity = (
 );
 
 
---4. Find the top 3 customers who have placed the highest number of orders.
+--4. Find the top 5 customers who have placed the highest number of orders.
 select o.customerid ,Count(*) as OrderCount  
 from  retailapp.orders o 
 group by o.customerid 
 order by OrderCount desc 
-limit 3;
-
-
---select top 3 * from od.quantity ;
-
-
-
-
+limit 5;
 
 
 --5.Get the list of products that have never been ordered.
+select p.productname ,p.productid 
+from retailapp.products p , retailapp.orderdetails o 
+where p.productid = o.productid 
+and p.productid not in (o.productid) ;
 
 
 --6.Find the average order value for each customer.
