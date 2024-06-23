@@ -85,6 +85,7 @@ where od.quantity = (
 
 
 --4. Find the top 5 customers who have placed the highest number of orders.
+
 select o.customerid ,Count(*) as OrderCount  
 from  retailapp.orders o 
 group by o.customerid 
@@ -93,6 +94,7 @@ limit 5;
 
 
 --5.Get the list of products that have never been ordered.
+
 select p.productname ,p.productid 
 from retailapp.products p , retailapp.orderdetails o 
 where p.productid = o.productid 
@@ -101,7 +103,16 @@ and p.productid not in (o.productid) ;
 
 --6.Find the average order value for each customer.
 
+select o.customerid,  avg (od.quantity * p.price) as AvgOrderValue
+from retailapp.orders o, retailapp.orderdetails od, retailapp.products p 
+where o.orderid = od.orderid
+and od.productid = p.productid 
+group by  o.customerid ;
+
+
 --7.List the employees who have processed orders for more than one customer.
+
+
 
 --8.Get the list of products supplied by suppliers from a specific country (e.g., 'USA').
 
