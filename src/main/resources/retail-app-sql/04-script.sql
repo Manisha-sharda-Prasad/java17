@@ -128,6 +128,13 @@ and s.country = 'USA';
 
 
 --9.Find the total sales amount for each category.
+select  distinct (c.categoryname) , sum(p.price * o.quantity) as TotalSales , c.categoryid 
+from retailapp.categories c , retailapp.orderdetails o , retailapp.products p 
+where o.productid = p.productid 
+and p.categoryid = c.categoryid
+group by c.categoryid 
+order by c.categoryid ;
+
 
 
 --10.List all customers along with the total amount they have spent on orders.
