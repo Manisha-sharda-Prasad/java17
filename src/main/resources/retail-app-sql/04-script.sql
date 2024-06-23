@@ -25,6 +25,7 @@ from retailapp.customers c
 join retailapp.orders o 
 on c.customerid = o.customerid ;
 
+
 --6. Join OrderDetails, Orders,Products to get product details for each order.
 
 select p.productname, od.quantity, o.orderdate 
@@ -136,8 +137,13 @@ group by c.categoryid
 order by c.categoryid ;
 
 
-
 --10.List all customers along with the total amount they have spent on orders.
+select c.customerid , c.customername , sum(od.quantity * p.price) as TotalAmountSpent
+from retailapp.customers c ,retailapp.products p ,retailapp.orderdetails od, retailapp.orders o 
+where od.productid = p.productid 
+and o.customerid = c.customerid 
+group by c.customerid ;
+
 
 --11.Get the list of orders that contain more than three distinct products.
 
