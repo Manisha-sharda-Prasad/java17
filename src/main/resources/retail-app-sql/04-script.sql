@@ -103,18 +103,25 @@ and p.productid not in (o.productid) ;
 
 --6.Find the average order value for each customer.
 
-select o.customerid,  avg (od.quantity * p.price) as AvgOrderValue
+select o.customerid,  avg (od.quantity * p.price) as AvgOrderValue 
 from retailapp.orders o, retailapp.orderdetails od, retailapp.products p 
 where o.orderid = od.orderid
 and od.productid = p.productid 
-group by  o.customerid ;
-
+group by  o.customerid 
+order by o.customerid;
 
 --7.List the employees who have processed orders for more than one customer.
+
+select e.employeeid , e.firstname ,count(distinct o.customerid) as CustomerCount
+from  retailapp.employees e ,retailapp.orders o
+where o.employeeid = e.employeeid 
+group by e.employeeid , e.firstname ;
 
 
 
 --8.Get the list of products supplied by suppliers from a specific country (e.g., 'USA').
+
+
 
 --9.Find the total sales amount for each category.
 
