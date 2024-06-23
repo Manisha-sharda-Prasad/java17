@@ -146,8 +146,21 @@ group by c.customerid ;
 
 
 --11.Get the list of orders that contain more than three distinct products.
+select distinct o.orderid , count(od.productid) as NoOfProducts
+from retailapp.orders o , retailapp.orderdetails od 
+where o.orderid = od.orderid 
+group by o.orderid 
+having count(od.productid) > 3 ;
+
 
 --12.Find the products that have been ordered by all customers.
+select od.productid ,count(o.customerid) as NoOfCustomers
+from retailapp.orders o , retailapp.orderdetails od 
+where o.orderid = od.orderid 
+group by od.productid 
+having count(o.customerid) = (select  count(c.customerid) 
+							from retailapp.customers c );
+
 
 --13.Get the most recent order placed by each customer.
 
