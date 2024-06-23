@@ -85,12 +85,14 @@ where od.quantity = (
 
 
 --4. Find the top 3 customers who have placed the highest number of orders.
-select c.customerid
-from retailapp.customers c , retailapp.orderdetails od
-where od.quantity = (
-			SELECT top 3 * 
-			from c.customername)
-		    order by desc );
+select o.customerid ,Count(*) as OrderCount  
+from  retailapp.orders o 
+group by o.customerid 
+order by OrderCount desc 
+limit 3;
+
+
+--select top 3 * from od.quantity ;
 
 
 
