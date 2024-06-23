@@ -48,7 +48,10 @@ from retailapp.products p , retailapp.categories c
 where p.categoryid  = c.categoryid 
 group by c.categoryname ;
 
+retailapp.orders
+
 -- Complex Queries--
+
 -- 1. Get the total sales amount for each product.
 select p.productname ,(od.quantity * p.price) as TotalSales
 from retailapp.orderdetails od, retailapp.products p;
@@ -81,7 +84,57 @@ where od.quantity = (
 );
 
 
+--4. Find the top 3 customers who have placed the highest number of orders.
+select c.customerid
+from retailapp.customers c , retailapp.orderdetails od
+where od.quantity = (
+			SELECT top 3 * 
+			from c.customername)
+		    order by desc );
 
+
+
+
+
+
+--5.Get the list of products that have never been ordered.
+
+
+--6.Find the average order value for each customer.
+
+--7.List the employees who have processed orders for more than one customer.
+
+--8.Get the list of products supplied by suppliers from a specific country (e.g., 'USA').
+
+--9.Find the total sales amount for each category.
+
+--List all customers along with the total amount they have spent on orders.
+
+--Get the list of orders that contain more than three distinct products.
+
+--Find the products that have been ordered by all customers.
+
+--Get the most recent order placed by each customer.
+
+--Find customers who have never placed an order.
+
+--get the details of the most expensive product ordered by each customer.
+
+--List the shops that have sold the highest number of distinct products.
+
+--Find the total number of products ordered by each shop.
+
+--Get the total sales for each product, grouped by the month of the order date.
+
+--List the customers who have placed orders with a total quantity exceeding a specified threshold (e.g., 100 units).
+
+--Find the average price of products for each supplier.
+
+--Get the list of customers along with the number of different products they have ordered.
+
+--Find the month with the highest total sales across all orders.
+
+--Get the total quantity of products ordered from suppliers in each country.
 
 
 
