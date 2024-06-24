@@ -1,6 +1,6 @@
 1.)SQL-- stands for Structured Query Language
 --SQL is a standard language for storing, manipulating and retrieving data in databases.
---To build a web site that shows data from a database, you will need: RDBMS
+--To build a website that shows data from a database, you will need: RDBMS
 
 2.)RDBMS--Relational Database Management System.
 --database program (i.e. MS Access, SQL Server, MySQL , Oracle, Post-Gress)

@@ -1,6 +1,6 @@
 1.)Database Concepts:--
 Database:
-A structured collection of data . Examples- relational databases like MySQL and PostgresSQL, (H2).
+A structured collection of data , eg- relational-databases like MySQL and PostgresSQL, (H2).
 
 a) 'DDL' (Data Definition Language):--
 
