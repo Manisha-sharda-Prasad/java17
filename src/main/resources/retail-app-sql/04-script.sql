@@ -172,10 +172,24 @@ order by c.customerid ,o.orderid ;
 						
 
 --14.Find customers who have never placed an order.
+select c.customerid ,c.customername 
+from retailapp.customers c , retailapp.orders o 
+where c.customerid = o.customerid 
+and c.customerid not in (o.customerid) ;
 
---get the details of the most expensive product ordered by each customer.
 
---List the shops that have sold the highest number of distinct products.
+--15.get the details of the most expensive product ordered by each customer.
+select distinct o.orderid , c.customername , max(p.price)  as MostExpensive
+from retailapp.products p , retailapp.orderdetails od , retailapp.orders o ,retailapp.customers c 
+where p.productid = od.productid 
+and  c.customerid = o.customerid 
+group by o.orderid , c.customername
+order by o.orderid , c.customername;
+
+
+
+--16.List the shops that have sold the highest number of distinct products.
+
 
 --Find the total number of products ordered by each shop.
 
