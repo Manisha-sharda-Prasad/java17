@@ -1,4 +1,4 @@
-package com.manisha.java.API_project.entity;
+package com.manisha.java.retailapp_project.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
