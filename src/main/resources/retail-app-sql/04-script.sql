@@ -187,7 +187,7 @@ group by o.orderid , c.customername
 order by o.orderid , c.customername;
 
 
---Get the total sales for each product, grouped by the month of the order date.
+--16.Get the total sales for each product, grouped by the month of the order date.
 select p.productname , o.orderdate ,sum(p.price * od.quantity) as TotalSalesInMonth
 from retailapp.products p , retailapp.orderdetails od , retailapp.orders o 
 where p.productid = od.productid 
@@ -195,7 +195,23 @@ and  od.orderid = o.orderid
 group by p.productname , o.orderdate; 
 
 
---List the customers who have placed orders with a total quantity exceeding a specified threshold (e.g., 100 units).
+--17.List the customers who have placed orders with a total quantity- 
+--exceeding a specified threshold (e.g., 100 units).
+select c.customername ,od.quantity 
+from retailapp.customers c , retailapp.orderdetails od , retailapp.orders o 
+where c.customerid = o.customerid 
+and od.orderid  = o.orderid
+and od.quantity > 20
+; 
+
+--18.Get the total quantity of products ordered from suppliers in each country.
+select s.supplierid , s.country , sum (od.quantity) as TotalQuantity
+from retailapp.orderdetails od , retailapp.products p ,retailapp.suppliers s
+where od.productid = p.productid 
+and s.supplierid = p.supplierid 
+group by s.supplierid , s.country 
+order by s.supplierid , s.country ;
+
 
 
 
@@ -203,9 +219,6 @@ group by p.productname , o.orderdate;
 
 --Get the list of customers along with the number of different products they have ordered.
 
---Find the month with the highest total sales across all orders.
-
---Get the total quantity of products ordered from suppliers in each country.
 
 
 
