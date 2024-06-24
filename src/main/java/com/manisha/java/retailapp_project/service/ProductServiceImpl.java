@@ -1,7 +1,7 @@
-package com.manisha.java.API_project.service;
+package com.manisha.java.retailapp_project.service;
 
-import com.manisha.java.API_project.entity.Product;
-import com.manisha.java.API_project.repository.ProductRepository;
+import com.manisha.java.retailapp_project.entity.Product;
+import com.manisha.java.retailapp_project.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package com.manisha.java.API_project.repository;
+package com.manisha.java.retailapp_project.repository;
 
-import com.manisha.java.API_project.entity.Product;
+import com.manisha.java.retailapp_project.entity.Product;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.stereotype.Repository;

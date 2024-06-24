@@ -1,6 +1,6 @@
-package com.manisha.java.API_project.service;
+package com.manisha.java.retailapp_project.service;
 
-import com.manisha.java.API_project.entity.Product;
+import com.manisha.java.retailapp_project.entity.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

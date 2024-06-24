@@ -1,8 +1,8 @@
-package com.manisha.java.API_project.controller;
+package com.manisha.java.retailapp_project.controller;
 
-import com.manisha.java.API_project.entity.Product;
-import com.manisha.java.API_project.repository.ProductRepository;
-import com.manisha.java.API_project.service.ProductService;
+import com.manisha.java.retailapp_project.entity.Product;
+import com.manisha.java.retailapp_project.repository.ProductRepository;
+import com.manisha.java.retailapp_project.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
