@@ -1,7 +1,7 @@
 # Java - learning programs
 
 ## Fundamental
-1. DataType/s
+1. DataType/s :
   - `primitive` Type
     - number: byte,short,int **,Long | float, double ** 
     - char | boolean
@@ -13,7 +13,7 @@
     - explicit : short s = `(cast)` i
     - " "+type = String
 
-2. Control statements:
+2. Control statements :
   - `if else` : if, if-else, if-elseif-elseif-else, if-elseif-elseif
   - `Switch-block `and `Switch-expression` (java 14)
   - operator and `operator-precedence` --> 
@@ -24,7 +24,7 @@
       - int i=8 (binary-100), left-shift: 100(12) | `i = i << 1`
     - good practice : `wrap with ()`
 
-3. loop statements:
+3. Loop statements:
    - while :   `while(until condition=true) { ... }`
    - do-while : `do{ ... } while(until condition=true)`, body will run at least once.
    - `for` , `enhanced-for-loop`:used in collection
@@ -39,7 +39,7 @@
      - checked (compile-time) : `Exception`, and its childException
      - unchecked (Runtime) :    `RuntimeException` and its child
 
-5. input-output :: java.util.io.* / `java.util.nio.*`
+5. Input-Output :: java.util.io.* / `java.util.nio.*`
    - `output` : console, file, etc
    - `input` : keyboard-`Scanner`, file, etc
    - File
@@ -57,7 +57,7 @@
 
 ---
 ## OOPS
-1. Class and objects  / Encapsulation
+1. Class and objects   
   - Template for creating object
   - object create - using `new constructor(...)`
   - `this`,`super` : current object.
@@ -97,19 +97,32 @@
   - java 16 - record (removes boilerplate code) - no setter, allArgCont, getter with no prefix, final props.
   - Introduction to Annotation, eg : @override. markers/metaData to compiler.
   - `Object` is parent of ALL classes.
+  
+2.Encapsulation:
+- wrapping or bundling of data in a {} bracket in as single unit.
+- not exposing directly, write/hide details {}
 
 
-2. Inheritance
+3. Inheritance:
 - Subclass(child) inherits attributes and behaviours(properties,methods) of superClass(parent).
 - subclass 'extends' superClass 
 
-3. Polymorphism
-- method over-ride -> signature same. Overriding parent's method-body {} by child-class.
-- method over-load -> same name but different signature (number, type, count.,order of args).Return-type does not matter.
+4. Polymorphism:
+- Many Forms/changing according to situation.
+- method `Over-ride` -> signature same. Overriding parent's method-body {} by child-class.
+- method `Over-load` -> same name but different signature (number, type, count.,order of args).Return-type does not matter.
 
-4. Abstraction
-
-5. Association (dependency, relationship)
+5. Abstraction:
+- Hide complex details/ showing only what is needed. 
+- Interface:
+  - Abstract methods(no-body)
+  - subclass can implement many interfaces at one time
+  - 
+- Abstract class:
+   - `Abstract` methods(no-body- implements by child class), 
+   - `Concrete` Methods(has-body)
+  
+6. Association (dependency, relationship):
 ```
  eg: Student has Address
    - Class `Address`
@@ -119,9 +132,14 @@
       Adderss address;  //here
      }
 ```
-6. keyword
-- `final`
-- `static`
+7. Keyword:
+- final
+- static
+- Passing Parameters:
+  - `Pass By Value`
+    - For primitive types, the actual value is passed, changes to parameter do not affect the original variable.
+  - `Pass By Reference`
+    - For reference types (objects), a copy of the reference is passed. Changes to the object inside the method will affect the original object.
 
-
+8. Collection:
 
