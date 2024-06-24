@@ -187,15 +187,17 @@ group by o.orderid , c.customername
 order by o.orderid , c.customername;
 
 
-
---16.List the shops that have sold the highest number of distinct products.
-
-
---Find the total number of products ordered by each shop.
-
 --Get the total sales for each product, grouped by the month of the order date.
+select p.productname , o.orderdate ,sum(p.price * od.quantity) as TotalSalesInMonth
+from retailapp.products p , retailapp.orderdetails od , retailapp.orders o 
+where p.productid = od.productid 
+and  od.orderid = o.orderid
+group by p.productname , o.orderdate; 
+
 
 --List the customers who have placed orders with a total quantity exceeding a specified threshold (e.g., 100 units).
+
+
 
 --Find the average price of products for each supplier.
 
