@@ -24,11 +24,24 @@ public class StreamMethods {
         // list of String --
         List<String> characters = Arrays.asList("phone", "tablet", "computer", "laptop", "mouse" , "pen");
                 characters.stream()
-                        //.skip(characters.size()-1)                            //long
                         .limit(characters.size()-1)                     //long
                         .map ((i)-> { return i.toUpperCase()+"*";})             //function
                         .sorted((i1,i2) -> {return 0;})                        //comparator
                         .forEach((i)-> { System.out.println(i);});              //consumer
+
+
+        //List of String --
+        //FlatMap--
+        List<List<String>> nestedList = Arrays.asList(
+                Arrays.asList("a","b"),
+                Arrays.asList("c","d"),
+                Arrays.asList("e","f")
+        );
+                nestedList.stream()
+                        .flatMap((List)-> { return List.stream();})
+                        //.peek((List) -> {System.out.println(List);})
+                        .skip(2)                                             //a,b skipped
+                        .forEach((List) -> {System.out.println(List);});       //c,d,e....
     }
 }
 // Streams-- Process sequence of elements(like collection) in a functional style - readable/ concise /parallel process.
@@ -46,3 +59,5 @@ public class StreamMethods {
     //2.Functions-- takes 1 arg , returns 1 result.
     //3.Consumers-- takes 1 arg , returns nothing
     //4.Suppliers-- takes no arg, returns result
+
+//FlatMap--Transforms each element into a stream, and put resulting streams into a single stream.
