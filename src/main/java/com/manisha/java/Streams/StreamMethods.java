@@ -46,14 +46,20 @@ public class StreamMethods {
 
         // T5.2 reduce(...)
         int subtract = number.stream()
-                       .reduce(0, (i,agg) -> i-agg );
-                  Print.print(subtract);
-
+                             .reduce(0, (i,agg) -> i-agg );
+                        Print.print(subtract);
 
         // T6. collect(Collectors.*)
         // Collectors --> toList(), toSet(), toMap()
 
+
+
+
         // 7. min(),max() : long
+        Optional <Integer> result = number.stream()
+                                            //.min((i, i2)-> i.compareTo(i2));
+                                            .max((i, i2)-> i.compareTo(i2));
+                                       Print.print(result.get());
 
         // 8. anyMatch, allMatch, noneMatch : Boolean
 
