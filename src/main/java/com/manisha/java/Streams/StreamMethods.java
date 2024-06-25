@@ -9,15 +9,15 @@ public class StreamMethods {
         // list of int --
         List<Integer> num = Arrays.asList(3,2,3,4,9,6,8,12,11,12,6);
 
-        // Intermediate Operations: --
+        //1. Intermediate Operations: --
         List<Integer> processesNum = num.stream()
-                                    .filter( n -> n % 3 == 0 ) //3,9,6,12..
-                                    .map( n -> n + n)          //6,12,18,24
+                                    .filter( n -> n % 3 == 0 ) //3,9,6,12.. /Predicate
+                                    .map( n -> n + n)          //6,12,18,24 /Function
                                     .sorted()
                                     .distinct()
                                     .collect(Collectors.toList()); //collect results
 
-        // Terminal Operations: --
+        //2. Terminal Operations: --
         processesNum.forEach(System.out::println);
 
 
@@ -26,8 +26,8 @@ public class StreamMethods {
                 characters.stream()
                         .limit(characters.size()-1)                     //long
                         .map ((i)-> { return i.toUpperCase()+"*";})             //function
-                        .sorted((i1,i2) -> {return 0;})                        //comparator
-                        .forEach((i)-> { System.out.println(i);});              //consumer
+                        .sorted((i1,i2) -> {return 0;})                         //comparator
+                        .forEach((i)-> { System.out.println(i);});              //Consumer
 
 
         //List of String --
@@ -38,7 +38,7 @@ public class StreamMethods {
                 Arrays.asList("e","f")
         );
                 nestedList.stream()
-                        .flatMap((list)-> { return list.stream();})
+                        .flatMap((list)-> { return list.stream();})             //Function
                         //.peek((List) -> {System.out.println(List);})
                         .skip(2)                                             //a,b skipped
                         .forEach((list) -> {System.out.println(list);});       //c,d,e....
@@ -56,8 +56,8 @@ public class StreamMethods {
 
 //4. Functional Interfaces--
     //1.Predicates-- takes value of 1 arg, returns boolean. / BiPredicates--takes 2,return 1/IntPre/LongPre/DoublePre.
-    //2.Functions-- takes 1 arg , returns 1 result./ BiFunction/ UnaryOperator/ BinaryOperator
+    //2.Functions-- takes 1 arg , returns 1 result./ BiFunction/ UnaryOperator/ BinaryOperator.
     //3.Consumers-- takes 1 arg , returns nothing./ BiConsumer.
-    //4.Suppliers-- takes no arg, returns result. /
+    //4.Suppliers-- takes no arg, returns result./
 
 //FlatMap--Transforms each element into a stream, and put resulting streams into a single stream.
