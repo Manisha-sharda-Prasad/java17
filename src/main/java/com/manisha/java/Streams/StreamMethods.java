@@ -25,10 +25,10 @@ public class StreamMethods {
         List<String> characters = Arrays.asList("phone", "tablet", "computer", "laptop", "mouse" , "pen");
                 characters.stream()
                         //.skip(characters.size()-1)                            //long
-                        .limit(characters.size()-1)                     // long
-                        .map ((item) -> { return item.toUpperCase()+"==="; })   //fn
-                        .sorted((item1 ,item2) -> {return 0;} )                 //comparator
-                        .forEach((item) -> { System.out.println(item);});       // consumer
+                        .limit(characters.size()-1)                     //long
+                        .map ((i)-> { return i.toUpperCase()+"*";})             //function
+                        .sorted((i1,i2) -> {return 0;})                        //comparator
+                        .forEach((i)-> { System.out.println(i);});              //consumer
     }
 }
 // Streams-- Process sequence of elements(like collection) in a functional style - readable/ concise /parallel process.
