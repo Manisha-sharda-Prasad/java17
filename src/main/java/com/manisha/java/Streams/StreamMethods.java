@@ -38,10 +38,10 @@ public class StreamMethods {
                 Arrays.asList("e","f")
         );
                 nestedList.stream()
-                        .flatMap((List)-> { return List.stream();})
+                        .flatMap((list)-> { return list.stream();})
                         //.peek((List) -> {System.out.println(List);})
                         .skip(2)                                             //a,b skipped
-                        .forEach((List) -> {System.out.println(List);});       //c,d,e....
+                        .forEach((list) -> {System.out.println(list);});       //c,d,e....
     }
 }
 // Streams-- Process sequence of elements(like collection) in a functional style - readable/ concise /parallel process.
@@ -55,9 +55,9 @@ public class StreamMethods {
     //(collect, forEach, reduce, count).
 
 //4. Functional Interfaces--
-    //1.Predicates-- takes value of 1 arg, returns boolean.
-    //2.Functions-- takes 1 arg , returns 1 result.
-    //3.Consumers-- takes 1 arg , returns nothing
-    //4.Suppliers-- takes no arg, returns result
+    //1.Predicates-- takes value of 1 arg, returns boolean. / BiPredicates--takes 2,return 1/IntPre/LongPre/DoublePre.
+    //2.Functions-- takes 1 arg , returns 1 result./ BiFunction/ UnaryOperator/ BinaryOperator
+    //3.Consumers-- takes 1 arg , returns nothing./ BiConsumer.
+    //4.Suppliers-- takes no arg, returns result. /
 
 //FlatMap--Transforms each element into a stream, and put resulting streams into a single stream.
