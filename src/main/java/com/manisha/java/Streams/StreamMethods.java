@@ -5,6 +5,7 @@ import com.manisha.java.util.Print;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -20,25 +21,34 @@ public class StreamMethods {
     {
         // T1. forOrdered
         // T2. forEachOrdered - same as above.
+        List<Integer> number = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
         List<String> words = Arrays.asList("one","two", "three","four", "five","six", "seven","eight");
 
         // T3. count : Long
         Stream<String> stream1 = words.stream();
         Long size = stream1.count();
-                        Print.print(size);
+                            Print.print(size);
 
         // T4.1 toArray() : []
         Object[] array = words.stream()
-                            .toArray();
-                        Print.print(Arrays.toString(array));
+                              .toArray();
+                         Print.print(Arrays.toString(array));
 
         // T4.2 toArray(IntFunction) : []
-         String[] arrStr = words.stream()
-                                .toArray((i)->  words.toArray(new String[0]));
-                            Print.print(Arrays.toString(arrStr));
+        String[] arrStr = words.stream()
+                               .toArray(String[] :: new);
+                          Print.print(Arrays.toString(arrStr));
 
-        // T5.1 reduce(...)
+        // T5.1 reduce()
+        Optional<Integer> sum = number.stream()
+                                      .reduce((i, agg)-> i+agg);
+                                 Print.print(sum.get());
+
         // T5.2 reduce(...)
+        int subtract = number.stream()
+                       .reduce(0, (i,agg) -> i-agg );
+                  Print.print(subtract);
+
 
         // T6. collect(Collectors.*)
         // Collectors --> toList(), toSet(), toMap()
