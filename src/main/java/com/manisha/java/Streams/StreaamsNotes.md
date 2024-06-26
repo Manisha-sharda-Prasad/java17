@@ -40,14 +40,7 @@ Clear and concise way to implement instances of functional interfaces.
 
 
 **Functional interfaces**--
-Interfaces with single abstract method, used for lambda expression or method reference. Main categories:-
-
-a.) Predicates-- takes value of 1 arg, returns boolean./ BiPredicates--takes 2,return 1 / IntPre/ LongPre/ DoublePre.
-b.) Functions-- takes 1 arg , returns 1 result./ BiFunction/ UnaryOperator/ BinaryOperator.
-c.) Consumers-- takes 1 arg , returns nothing./ BiConsumer.
-d.) Suppliers-- takes no arg, returns result.
-
-
+Interfaces with single abstract method, used for lambda expression or method reference. Main categories:
 
 a.) Predicates: Boolean-valued function of 1 arg.
 -Predicate<T>: Takes 1 arg, returns boolean.
