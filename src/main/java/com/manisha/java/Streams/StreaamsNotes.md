@@ -1,5 +1,8 @@
 **Stream** -- 
-sequence of elements that supports various operations to process data, flowing data in packets.
+- Sequence of elements that supports operations, for processing data . 
+- Data Flowing in packets.
+- They allow us to  quickly perform bulk operations on them at one time,(Intermediate, Terminal operations)  
+- It doesn't get stored in memory after processing.
 
 **Stream processing** --
 Perform operations on data in a clear and readable way.
@@ -9,7 +12,8 @@ Introduced in Java 8 ,allows you to process sequences of elements (like collecti
 Obtain from a data source.
 
 2.)Intermediate Operations:----
-It transforms a stream into another stream ->( Chained Operations ),lastly evoked with terminal operations .
+It transforms a stream into another stream ->( Chained Operations ),
+lastly evoked with terminal operations.
 
 - filter(Predicate): Filters on a condition.
 - map(Function): Transforms element.
@@ -20,7 +24,8 @@ It transforms a stream into another stream ->( Chained Operations ),lastly evoke
 - flatMap()
 
 3.)Terminal Operations:----
-Produce a result or a side effect, they trigger the processing of  stream pipeline.
+Collects bulk  intermediate Operation and presents/shows/produce the final result, or a side effect, 
+they trigger the processing of stream pipeline.
 
 - min(),max():            Comparator
 - count():                Returns the number of elements.

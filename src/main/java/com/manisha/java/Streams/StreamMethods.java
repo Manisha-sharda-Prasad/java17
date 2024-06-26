@@ -10,10 +10,10 @@ import java.util.stream.Stream;
 public class StreamMethods {
     public static void main(String[] args)
     {
-        //intermediate();
+        intermediate();
         terminal();
     }
-
+//-------------------------------------------TERMINAL-OPERATION---------------------------------------------------------s
     static  void terminal()
     {
         // T1. forOrdered
@@ -77,8 +77,9 @@ public class StreamMethods {
         // 9. findAny(), findFirst() : T
         Print.print(number.stream().findFirst()); //similar syntax- (findAny)
 
-
     }
+
+//-------------------------------------------INTERMEDIATE-OPERATION-----------------------------------------------------
 
     static void intermediate()
     {
@@ -97,7 +98,7 @@ public class StreamMethods {
                 .map( n -> n + n)          //6,12,18,24 /Function
                 .sorted()
                 .distinct()
-                .collect(Collectors.toList()); //collect results
+                .collect(Collectors.toList()); //collect-results//Terminal
 
         //2. Terminal Operations: --
         processesNum.forEach(System.out::println);
@@ -109,7 +110,7 @@ public class StreamMethods {
                 .limit(characters.size()-1)                     //long
                 .map ((i)-> { return i.toUpperCase()+"*";})             //function
                 .sorted((i1,i2) -> {return 0;})                         //comparator
-                .forEach((i)-> { System.out.println(i);});              //Consumer
+                .forEach((i)-> { System.out.println(i);});
 
 
         //List of String --
