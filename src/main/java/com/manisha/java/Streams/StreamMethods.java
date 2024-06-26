@@ -110,7 +110,7 @@ public class StreamMethods {
                 .limit(characters.size()-1)                     //long
                 .map ((i)-> { return i.toUpperCase()+"*";})             //function
                 .sorted((i1,i2) -> {return 0;})                         //comparator
-                .forEach((i)-> { System.out.println(i);});
+                .forEach((i)-> System.out.println(i));                 //terminal
 
 
         //List of String --
