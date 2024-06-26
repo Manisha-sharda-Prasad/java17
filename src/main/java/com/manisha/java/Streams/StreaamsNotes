@@ -1,0 +1,37 @@
+Stream processing --introduced in Java 8 ,allows you to process sequences of elements (like collections),
+perform operations on data in a clear and readable way.
+
+
+1.)Creating a Stream -Source :
+Obtain from a data source.
+
+2.)Intermediate Operations :
+It transform a stream into another stream ->(Chained Operations), evoked with terminal operations in last.
+
+3.)Terminal Operations :
+Produce a result or a side-effect, they trigger the processing of  stream pipeline.
+
+
+1.)Source:-----
+-stream(): Creates a stream from a collection.
+
+2.)Intermediate Operations:----
+
+-filter(Predicate): Filters elements based on a condition.
+-map(Function): Transforms each element.
+-sorted(): Sorts the elements.
+-distinct(): Removes duplicates.
+-limit(long n): Limits the stream to the first n elements.
+-skip(long n): Skips the first n elements.
+
+3.)Terminal Operations:----
+
+-collect(Collector): Converts the stream into a collection or another form.
+-forEach(Consumer): Performs an action for each element.
+-reduce(BinaryOperator): Combines elements to produce a single result.
+-count(): Returns the number of elements.
+-findFirst(): Finds the first element.
+-anyMatch(Predicate): Checks if any elements match the condition.
+
+
+
