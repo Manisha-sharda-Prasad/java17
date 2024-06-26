@@ -2,10 +2,7 @@ package com.manisha.java.Streams;
 
 import com.manisha.java.util.Print;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -21,7 +18,7 @@ public class StreamMethods {
     {
         // T1. forOrdered
         // T2. forEachOrdered - same as above.
-        List<Integer> number = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+        List<Integer> number = Arrays.asList(1,2,3,4,5,6,7,8,9,10,4,5,6);
         List<String> words = Arrays.asList("one","two", "three","four", "five","six", "seven","eight");
 
         // T3. count : Long
@@ -51,8 +48,17 @@ public class StreamMethods {
 
         // T6. collect(Collectors.*)
         // Collectors --> toList(), toSet(), toMap()
+        List <Integer> toList = number.stream()
+                .collect(Collectors.toList());
+           Print.print(toList);
 
+        Set<Integer> toSet = number.stream()
+                .collect(Collectors.toSet());
+        Print.print(toSet);
 
+        Map<Integer, Integer> toMap = number.stream()
+                .collect(Collectors.toMap((i)-> i,(i)-> i, (old,nw)->old+nw));
+        Print.print(toMap);
 
 
         // 7. min(),max() : long
@@ -62,8 +68,14 @@ public class StreamMethods {
                                        Print.print(result.get());
 
         // 8. anyMatch, allMatch, noneMatch : Boolean
+        //number = Arrays.asList(2,4,1,8,5);
+        boolean anyOdd = number.stream()
+                               .noneMatch(  i -> i % 3 == 0 ); //similar- (anyMatch, allMatch)
+                          Print.print(anyOdd);
+
 
         // 9. findAny(), findFirst() : T
+        Print.print(number.stream().findFirst()); //similar syntax- (findAny)
 
 
     }
