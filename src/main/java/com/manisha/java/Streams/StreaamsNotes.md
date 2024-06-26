@@ -3,40 +3,37 @@ Introduced in Java 8 ,allows you to process sequences of elements (like collecti
 perform operations on data in a clear and readable way.
 
 
-1.)Creating a Stream -Source :
+1.)Source:-----
 Obtain from a data source.
 
-2.)Intermediate Operations :
-It transforms a stream into another stream ->(Chained Operations), evoked with terminal operations in last.
-
-3.)Terminal Operations :
-Produce a result or a side effect, they trigger the processing of  stream pipeline.
-
-
-1.)Source:-----
--stream(): Creates a stream from a collection.
-
 2.)Intermediate Operations:----
+It transforms a stream into another stream ->( Chained Operations ),lastly evoked with terminal operations .
 
 -filter(Predicate): Filters on a condition.
 -map(Function): Transforms element.
--sorted():
+-sorted(): Takes comparator
 -distinct(): Removes duplicates.
 -limit(long n): Limits the stream.
--skip(long n):
+-skip(long n)
+-flatMap()
 
 3.)Terminal Operations:----
+Produce a result or a side effect, they trigger the processing of  stream pipeline.
 
--collect(Collector): Converts the stream into a collection or another form.
--forEach(Consumer): Performs an action for each element.
+-min(),max():            Comparator
+-count():                Returns the number of elements.
+-collect(Collector):     Converts the stream into a collection or another form.
+-forEach(Consumer):      Performs an action for each element.
 -reduce(BinaryOperator): Combines elements to produce a single result.
--count(): Returns the number of elements.
--findFirst(): Finds the first element.
--anyMatch(Predicate): Checks if any elements match the condition.
+-findFirst():            Finds the first element.
+-anyMatch(Predicate),    Checks if any elements match the condition.
+-allMatch(),
+-noneMatch(): 
 
 
-**lambda expression**-- is a concise way to represent an anonymous function (a function without a name).   
-Clear and concise way to implement instances of functional interfaces.
+
+**lambda expression**-- A Clear, concise way to represent an anonymous function (a function without a name).   
+A way to implement instances of functional interfaces.
 
 
 **Functional interfaces**--
