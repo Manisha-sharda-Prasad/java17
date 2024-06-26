@@ -1,7 +1,8 @@
-**Stream processing**--
-Introduced in Java 8 ,allows you to process sequences of elements (like collections),
-perform operations on data in a clear and readable way.
+**Stream**--sequence of elements that supports various operations to process data, flowing data in packets.
 
+**Stream processing**--
+Perform operations on data in a clear and readable way.
+Introduced in Java 8 ,allows you to process sequences of elements (like collections),
 
 1.)Source:-----
 Obtain from a data source.
@@ -31,10 +32,9 @@ Produce a result or a side effect, they trigger the processing of  stream pipeli
 -noneMatch(): 
 
 
-
-**lambda expression**-- A Clear, concise way to represent an anonymous function (a function without a name).   
+**lambda expression**-- 
+Function without a name, and Clear, Concise way to represent an anonymous function .   
 A way to implement instances of functional interfaces.
-
 
 **Functional interfaces**--
 Interfaces with single abstract method, used for lambda expression or method reference. Main categories:
@@ -50,8 +50,8 @@ UnaryOperator<T>:  operand and result are of the same type.
 BinaryOperator<T>:  BiFunctions where operands, result are of same type.
 
 c.) Consumers: operation that accepts a single input arg, returns no result.
-Consumer<T>: Takes 1 arg, returns no result.
-BiConsumer<T, U>: Takes 2 arg, returns no result.
+Consumer<T>:  1 arg, no result.
+BiConsumer<T, U>: 2 arg, no result.
 
 d.)Suppliers: Functional interfaces that represent a supplier of results.
-Supplier<T>: Takes no args , returns result.
+Supplier<T>: no args , returns result.
