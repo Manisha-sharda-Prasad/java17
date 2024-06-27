@@ -35,3 +35,4 @@
 - 1-level-cache : default / PersistenceContext (PC)
 - 2-level-cache : customize - have to enable it explicitly.
 
+https://www.geeksforgeeks.org/difference-between-jdbc-and-hibernate-in-java/?ref=header_search

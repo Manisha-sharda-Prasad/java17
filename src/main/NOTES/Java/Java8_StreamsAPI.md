@@ -36,7 +36,8 @@ Obtain from a data source. Two types of Operations in Streams:-
 
 3. `Terminal Operations`:
 - Collects bulk  intermediate Operation and presents/shows/produce the final result, or a side effect, 
-- they trigger the processing of stream pipeline.
+- Trigger the processing of stream pipeline.
+- Methods on a stream that will cause a stream to be “closed”
 - eg:
   - `min(),max()`:            Comparator
   - `count`():                Returns the number of elements.
@@ -47,6 +48,8 @@ Obtain from a data source. Two types of Operations in Streams:-
   - `anyMatch`(Predicate)     Checks if any elements match the condition.
   - `allMatch`()
   - `noneMatch`() 
+---
+Input--> Intermediate {{operation1--> operation2-->}}-->Terminal {{Final operation 3}} --->Output
 
 ---
 ## Functional Style programming
@@ -77,6 +80,10 @@ c. `Consumers`: operation that accepts a single input arg, returns no result.
 
 d. `Suppliers`: Functional interfaces that represent a supplier of results.
 - Supplier<T>: no args , returns result.
+
+
+
+
 
 ---
 ## references:
