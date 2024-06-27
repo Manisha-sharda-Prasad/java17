@@ -61,3 +61,5 @@ c.) Consumers: operation that accepts a single input arg, returns no result.
 
 d.)Suppliers: Functional interfaces that represent a supplier of results.
 - Supplier<T>: no args , returns result.
+
+https://www.geeksforgeeks.org/stream-in-java/?ref=header_search
