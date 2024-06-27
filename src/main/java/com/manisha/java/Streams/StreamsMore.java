@@ -2,14 +2,11 @@ package com.manisha.java.Streams;
 
 import com.manisha.java.util.Print;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StreamsMore {
     public static void main(String[] args) {
-
 
         List <List<String>> names = Arrays.asList(
                 Arrays.asList("manisha", "arush","vageesh","ashish"),
@@ -21,9 +18,7 @@ public class StreamsMore {
                                         .map(i -> i.toUpperCase() + " PRASAD|")
                                         .sorted()
                                         .collect(Collectors.toList());          //terminal
-                                    Print.print(familyNames);
-
-
+                                   Print.print(familyNames);
 
 
 
@@ -35,17 +30,51 @@ public class StreamsMore {
                                    .distinct()
                                    .sorted()
                                    .limit(3)
-                                   .collect(Collectors.toList());               //terminal
+                                   .collect(Collectors.toList());                //terminal
                                  //.forEach(i -> Print.print(i));
                               Print.print(var);
 
 
         Optional<Integer> num = intNum.stream()
-                .map(i -> i * 5 )
-                .distinct()
-                .peek((i)-> Print.print(i))
-                .max((i1,i2)-> i1.compareTo(i2));                              //terminal
-           Print.print(num);
+                                      .map(i -> i * 5 )
+                                      .distinct()
+                                      .peek((i)-> Print.print(i))
+                                      .max((i1,i2)-> i1.compareTo(i2));            //terminal
+                                 Print.print(num);
+
+        Optional<Integer> add = intNum.stream()
+                                      .reduce((i1,i2)-> i1+i2);
+                                Print.print(add);
+
+        Optional<Integer> minus = intNum.stream()
+                                        .reduce((i,j) -> i-j);                      //terminal
+                                   Print.print(minus);
+
+        boolean numCheck = intNum.stream()
+                                 .anyMatch( i -> i % 2 == 0);                       //terminal
+                            Print.print(numCheck);
+
+        boolean numCheck2 = intNum.stream()
+                                  .allMatch( i -> i % 3 == 0);                      //terminal
+                             Print.print(numCheck2);
+
+
+
+        List <String> fruits = Arrays.asList("Apple","Papaya","Orange","Kiwi","Litchi","Mango");
+
+        List<String> toList = fruits.stream()
+                                    .sorted()
+                                    .collect(Collectors.toList());
+                               Print.print(toList);
+
+        Set<String> toSet = fruits.stream()
+                                  .limit(4)
+                                  .collect(Collectors.toSet());
+                             Print.print(toSet);
+
+        Map <String, String> toMap = fruits.stream()
+                                  .collect(Collectors.toMap((i)-> i, (i)-> i, (old,nw)-> old+nw));
+                            Print.print(toMap);
 
 
     }

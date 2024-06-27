@@ -49,16 +49,16 @@ public class StreamMethods {
         // T6. collect(Collectors.*)
         // Collectors --> toList(), toSet(), toMap()
         List <Integer> toList = number.stream()
-                .collect(Collectors.toList());
-           Print.print(toList);
+                                      .collect(Collectors.toList());
+                                 Print.print(toList);
 
         Set<Integer> toSet = number.stream()
-                .collect(Collectors.toSet());
-        Print.print(toSet);
+                                   .collect(Collectors.toSet());
+                              Print.print(toSet);
 
         Map<Integer, Integer> toMap = number.stream()
-                .collect(Collectors.toMap((i)-> i,(i)-> i, (old,nw)->old+nw));
-        Print.print(toMap);
+                                            .collect(Collectors.toMap((i)-> i,(i)-> i, (old,nw)->old+nw));
+                                       Print.print(toMap);
 
 
         // 7. min(),max() : long
@@ -70,12 +70,12 @@ public class StreamMethods {
         // 8. anyMatch, allMatch, noneMatch : Boolean
         //number = Arrays.asList(2,4,1,8,5);
         boolean anyOdd = number.stream()
-                               .noneMatch(  i -> i % 3 == 0 ); //similar- (anyMatch, allMatch)
+                               .noneMatch(  i -> i % 3 == 0 );          //similar- (anyMatch, allMatch)
                           Print.print(anyOdd);
 
 
         // 9. findAny(), findFirst() : T
-        Print.print(number.stream().findFirst()); //similar syntax- (findAny)
+        Print.print(number.stream().findFirst());                         //similar syntax- (findAny)
 
     }
 
@@ -94,8 +94,8 @@ public class StreamMethods {
 
         //1. Intermediate Operations: --
         List<Integer> processesNum = num.stream()
-                .filter( n -> n % 3 == 0 ) //3,9,6,12.. /Predicate
-                .map( n -> n + n)          //6,12,18,24 /Function
+                .filter( n -> n % 3 == 0 )                          //3,9,6,12.. /Predicate
+                .map( n -> n + n)                                   //6,12,18,24 /Function
                 .sorted()
                 .distinct()
                 .collect(Collectors.toList()); //collect-results//Terminal
