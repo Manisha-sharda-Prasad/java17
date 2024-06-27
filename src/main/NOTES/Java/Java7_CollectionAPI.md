@@ -6,7 +6,12 @@ An array is a data structure that holds a fixed number of values of a single typ
 - Performance: more performant
 - Primitive Types: store primitive types ( int, char), which is not possible with ArrayList(Wrapper)
 - lacks flexibility in size and built-in methods
+- length(), clone(), Arrays.toString(),
 
+### java.util.Arrays 
+- utility class in the Java Standard Library , provides variety of static methods to manipulate arrays. 
+- Methods include operations - sorting, searching, comparing, and converting arrays to strings.
+- sort(), binarySearch(), equals(), toString(), copyOf().
 
 ### List
 Interface: An ordered collection (sequence) contain duplicate elements.
@@ -16,6 +21,7 @@ Interface: An ordered collection (sequence) contain duplicate elements.
 - Comparator
 - Comparable
 - ListIterator vs Iterator
+- - add(), get(), remove(), size(), contains()
 
 
 ### ArrayList
@@ -25,6 +31,7 @@ Implementation: Implements the List interface using a dynamic array
 - Methods:  methods for manipulating the list, such as add(), remove(), get(), size()
 - Boxing and Unboxing: primitive types automatically boxed(wrapped) into their wrapper classes.
 - Access Time: O(1) - Fast random access.
+- add(), get(), remove(), size()
 
 
 
@@ -32,6 +39,7 @@ Implementation: Implements the List interface using a dynamic array
 Implementation: Implements the List interface using a doubly linked list.
 - Use when you need to perform frequent insertions/deletions, especially at the beginning or middle of the list.
 - Access Time: O(n) - Slow traversal.
+- addFirst(),addLast(),removeFirst(),removeLast(),getFirst(),getLast()
 
 ### iterator
 
@@ -39,24 +47,22 @@ Implementation: Implements the List interface using a doubly linked list.
 ## Java collections
 
 ### Map
-- Interface: A collection that maps keys to values, with no duplicate keys allowed.
-- Key Features: Each key can map to at most one value. Keys are unique.
+- Key-value pairs, unique keys.
+- Maps keys to values, with no duplicate keys allowed.
 - Implementations: HashMap, TreeMap, LinkedHashMap.
+- put(),get(),remove(),containsKey(),keySet()
 
 ####  HashMap
-- Implementation: Implements the Map interface using a hash table.
-- Performance: Fast look-ups.
-- Use Case: Use when you need fast access to key-value pairs and ordering is not important.
+- Fast access, unordered. Use for quick look-ups.
 
 ### Set
-- Interface: A collection that contains no duplicate elements.
-- Key Features: No duplicate elements allowed, used for unique elements.
+- Unique elements, no duplicates.
 - Implementations: HashSet, TreeSet, LinkedHashSet.
+- add(),remove(),contains(), size()
 
 #### HashSet
-- Implementation: Implements the Set interface using a hash table.
-- Performance:Fast look-ups.
-- Use Case: Use when need a collection of unique elements and ordering is not important.
+- Fast access, unordered. Use for unique collections.
+
 
 
 ---
