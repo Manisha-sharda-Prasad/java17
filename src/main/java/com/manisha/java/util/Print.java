@@ -1,6 +1,9 @@
 package com.manisha.java.util;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.Arrays;
+
 
 public class Print{
     static int lineNo = 0;
@@ -22,5 +25,11 @@ public class Print{
     public static void print(Object... o){
         Arrays.stream(o).forEach(System.out::println);
         System.out.println("------------------------------");
+    }
+
+    @Transactional
+    public static void sendMoney(){
+        //1. sender-acct : SQL update : 1000 : 900
+        // 2. receiver-acct : SQL update : 2000 : 2100
     }
 }

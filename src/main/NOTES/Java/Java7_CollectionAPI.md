@@ -17,6 +17,7 @@ An array is a data structure that holds a fixed number of values of a single dat
 ---
 
 # B. Collection 
+A group of  `objects` that represent a single `entity` is known as a collection.
 - Common : `List`, `Map`, `Set`
 - less common : `Queue`, `DeQue`
 - Utility class : `java.util.Collections`
@@ -77,16 +78,19 @@ An array is a data structure that holds a fixed number of values of a single dat
 
 ### 2.1. HashSet < T >
 - Fast access, unordered. Use for unique collections.
+- The objects are inserted based on their hash code.
 
 
 ## 3. Map < K,V >
 - Key-value pairs, unique keys.
 - Maps keys to values, with no duplicate keys allowed.
 - Implementations: HashMap, TreeMap, LinkedHashMap.
-- put(),get(),remove(),containsKey(),keySet()
+- Put(),get(),remove(),containsKey(),keySet()
 
 ###  3.1. HashMap < K,V >
 - Fast access, unordered. Use for quick look-ups.
+- To access value in HashMap, must know its key.
+- Implementation of the Map interface of Java.
 
 ---
 ## 4.Comparable and Comparator
