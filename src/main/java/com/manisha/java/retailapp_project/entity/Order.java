@@ -27,6 +27,13 @@ public  class Order{
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private Set<OrderDetails> orderDetails;
 
+    @ManyToMany
+    @JoinTable(
+            name = "order_product",
+            joinColumns = @JoinColumn(name = "order_id"),
+            inverseJoinColumns = @JoinColumn(name = "product_id")
+    )
+
     private Set<Product> product;
 
 }
