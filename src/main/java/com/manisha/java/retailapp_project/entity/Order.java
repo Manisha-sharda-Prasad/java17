@@ -27,6 +27,6 @@ public  class Order{
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private Set<OrderDetails> orderDetails;
 
-    private Set<Product> products;
+    private Set<Product> product;
 
 }

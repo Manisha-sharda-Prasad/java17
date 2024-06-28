@@ -22,6 +22,6 @@ public class Customer {
    private String name;
 
    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-   private Set<Order> orders;
+   private Set<Order> order;
 
 }

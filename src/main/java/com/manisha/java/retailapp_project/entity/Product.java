@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Setter
 @Getter
 @AllArgsConstructor
@@ -15,5 +17,13 @@ import lombok.Setter;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private double price;
+
+    @ManyToMany(mappedBy = "product")
+    private Set<Order> orders;
+
+
 
 }
