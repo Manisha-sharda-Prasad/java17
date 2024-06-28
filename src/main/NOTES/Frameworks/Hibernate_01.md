@@ -1,9 +1,10 @@
 # 1. Hibernate
-- Hibernate is a Java framework
-- Most used Object/Relational persistence and query service
-- Does mapping, from Java classes to database tables
-- provides data query and recovery facilities
-- automatic transaction management and caching
+- Hibernate is a `Java (ORM)framework`.
+- Most used Object/Relational persistence and query service.
+- Map `Java Classes` to `Database Tables`, by using annotations.
+- Provides data query and recovery facilities
+- Automatic Transaction management 
+- Caching, Lazy-Loading
 
 ### 1.1 Intro
 - `persist` : save in DB.
@@ -14,10 +15,11 @@
   - [ old-developer            >>                                               JDBC >> database ]
   - [ new-developer            >>                                  hibernate >> JDBC >> database ]
   - [ new-generation developer >>  Spring-boot-starter-jpa-data >> hibernate >> JDBC >> database ] **
+   
 - Hibernate Provides >>  `Implementation of JPA concepts` +  `Additional Feature`
 - JDBC sample code : 
   - https://chatgpt.com/c/3f5f6c3f-3b82-4c27-a381-813ca08dd85f
-  - `Driver Load`(Java-prg) > `Connection` > `statement`- SQL query >> `execute` > `ResultSet`
+  - `Driver Load`(Java-prg) > `Connection` > `Statement`- SQL query >> `Execute` > `ResultSet`
   
 ### 1.2 Hibernate Framework: 
 - `JPA Concepts`  to understand flows
@@ -28,16 +30,16 @@
 ## 2. JPA Concept
 - `Java Persistence API `(JPA) 
 - Java specification that provides specific functionality for `ORM` tools.
-- 
-1.`ORM`  - object-relational mapping
+
+### 2.1.`ORM` - Object-relational mapping
   - `Java (Entity)`  <--> Hibernate (Framework) <---> `Database (Table)`
   - Entity : `@Entity` class ABC {...}. Class ABC become entity here.
 
-2.`Association`
+### 2.2.`Association`
 
-3.`Inheritance`
+### 2.3.`Inheritance`
 
-4.`Caching` : 
+### 2.4.`Caching` : 
 - Note: no need to learn.
 - temporary storage /copies - `frequently used data`
 - 1-level-cache : default / PersistenceContext (PC)
