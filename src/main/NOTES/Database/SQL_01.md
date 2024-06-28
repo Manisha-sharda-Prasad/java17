@@ -8,22 +8,22 @@
 - A table is a collection of related data entries it consists of columns and rows.
 
 ### 3. SQL Commands:
-(DDL,DML)
+`(DDL,DML)`
 
-- SELECT - extracts data from a database
-- UPDATE - updates data in a database
-- DELETE - deletes data from a database
-- INSERT INTO - inserts new data into a database
+- `SELECT` - extracts data from a database
+- `UPDATE` - updates data in a database
+- `DELETE` - deletes data from a database
+- `INSERT INTO` - inserts new data into a database
 
-- CREATE DATABASE - creates a new database
-- ALTER DATABASE - modifies a database
+- `CREATE DATABASE` - creates a new database
+- `ALTER DATABASE` - modifies a database
 
-- CREATE TABLE - creates a new table
-- ALTER TABLE - modifies a table
-- DROP TABLE - deletes a table
+- `CREATE TABLE` - creates a new table
+- `ALTER TABLE` - modifies a table
+- `DROP TABLE` - deletes a table
 
-- CREATE INDEX - creates an index (search key)
-- DROP INDEX - deletes an index
+- `CREATE INDEX` - creates an index (search key)
+- `DROP INDEX` - deletes an index
 
 ### 4. SQL Aggregate Functions:
 function that performs a calculation on a set of values, and returns a single value.
