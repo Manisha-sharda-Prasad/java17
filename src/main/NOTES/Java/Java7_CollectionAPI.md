@@ -1,5 +1,5 @@
 #  A. Array 
-An array is a data structure that holds a fixed number of values of a single type.
+An array is a data structure that holds a fixed number of values of a single data type.
 - Fixed Size: fixed size defined at the time of creation
 - Type-Safe: Arrays are type-safe and can store only elements of a specified type
 - Syntax:  use square brackets for declaration
@@ -89,9 +89,23 @@ An array is a data structure that holds a fixed number of values of a single typ
 - Fast access, unordered. Use for quick look-ups.
 
 ---
+## 4.Comparable and Comparator
+interfaces are used to order objects in collections such as lists or arrays.
+
+### 4.1. Comparable
+- Used for natural ordering. 
+- Implemented within the class 
+- Uses the `compareTo` method.
+- Class must implement the `Comparable` interface and `override` the `compareTo` method.
+- `Collections.sort` is called, it sorts the list of Class.
 
 
-
+### 4.2. Comparator
+- Used for custom ordering. 
+- Implemented as a separate class or anonymous class 
+- uses the `compare` method.
+- Create separate class that implements the `Comparator` interface and `override` the `compare` method.
+- `Collections.sort` 
 
 
 
