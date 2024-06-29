@@ -1,6 +1,6 @@
 package com.manisha.java.retailapp_project.service;
 
-import com.manisha.java.retailapp_project.entity.Product;
+/*import com.manisha.java.retailapp_project.entity.Product;
 import com.manisha.java.retailapp_project.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,4 +29,4 @@ public class ProductServiceImpl implements ProductService{
     public void addNewProduct(Product p) {
        productRepo.save(p) ;
     }
-}
+}*/

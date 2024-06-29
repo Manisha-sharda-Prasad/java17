@@ -1,26 +1,17 @@
 package com.manisha.java.retailapp_project.repository;
 
 import com.manisha.java.retailapp_project.entity.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface ProductRepository extends ListCrudRepository<Product,Integer> {
-    // 3 abstract method inherit from ListCrudRepository
-    // body of all 3 method - SB will add at runtime
+public interface ProductRepository extends JpaRepository<Product, Long>
+{
+    // 12 abstract method added by SB, since we ectended JpaRepository
 
-    Product findByProductId(int productId); //special Naming convention - then SB will add query
-
-    @Query(" select p from Product p where p.productId = :productId") // HQL
-    Product findSingleProduct(int productId);
-
-    @Query("select p from Product p")  // HQL --> SQL --> run
-    List<Product> loadAllProducts();
+    @Query("select p from Product p where p.name = :namee")
+    List<Product> findByProductName(String namee);
 }
-
-// JDBC - full code
-// Hibernate - NO TABLE , use ENTITY + code : CRUD, commit, etc
-// SpringBoot - Do nothing , not even CRUD

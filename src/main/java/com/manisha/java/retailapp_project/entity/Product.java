@@ -1,10 +1,7 @@
 package com.manisha.java.retailapp_project.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Set;
 
@@ -13,7 +10,8 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "product", schema = "retailappdb")
+//@ToString
+@Table(name = "product", schema = "public")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,9 +19,15 @@ public class Product {
     private String name;
     private double price;
 
-    @ManyToMany(mappedBy = "product")
+    @ManyToMany(mappedBy = "products" , fetch = FetchType.EAGER)
     private Set<Order> orders;
 
-
-
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

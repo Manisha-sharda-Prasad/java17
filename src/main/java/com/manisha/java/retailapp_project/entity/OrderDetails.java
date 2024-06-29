@@ -11,13 +11,14 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "orderDetails", schema = "retailappdb")
+@Table(name = "order_details", schema = "public")
 public class OrderDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private int quantity;
     private double price;
+
     @ManyToOne
     @JoinColumn(name = "order_id")
     private Order order;

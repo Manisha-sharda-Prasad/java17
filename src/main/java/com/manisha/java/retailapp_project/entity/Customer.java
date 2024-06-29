@@ -13,15 +13,16 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "customer", schema = "retailappdb")
-public class Customer {
+@Table(name = "customer", schema = "public")
+public class Customer
+{
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
    private Long id;
+
    private String name;
 
    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-   private Set<Order> order;
+   private Set<Order> orders;
 
 }

@@ -1,5 +1,6 @@
 package com.manisha.java.retailapp_project.controller;
 
+/*
 import com.manisha.java.retailapp_project.entity.Product;
 import com.manisha.java.retailapp_project.repository.ProductRepository;
 import com.manisha.java.retailapp_project.service.ProductService;
@@ -34,7 +35,7 @@ public class ProductController
     List<Product> selectAllSorted()
     {
         List<Product> result = selectAll();
-        Comparator<Product> c = (p1,p2) -> p1.getProductName().compareTo(p2.getProductName());
+        Comparator<Product> c = (p1,p2) -> p1.getName().compareTo(p2.getName());
         result.sort(c);
         return result; // to --> JSON
     }
@@ -54,7 +55,7 @@ public class ProductController
         List<Product> products =  selectAll();
         List<String> result = new ArrayList<>();
         for (Product p : products){
-            String name= p.getProductName();
+            String name= p.getName();
             result.add(name);
         }
         return result; // -->json
@@ -62,3 +63,4 @@ public class ProductController
 }
 // problem-1 : [ "Laptop","Iphone-15","samsung-note-20-ultra","Asus-15","Motorolla-Z" ]
 // problem-2 : Sorted products
+*/

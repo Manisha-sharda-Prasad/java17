@@ -1,0 +1,56 @@
+Hibernate:
+    drop table if exists order_product cascade
+Hibernate:
+    create table public.customer (
+        id bigserial not null,
+        name varchar(255),
+        primary key (id)
+    )
+Hibernate:
+    create table public.order (
+        customer_id bigint,
+        id bigserial not null,
+        order_date varchar(255),
+        primary key (id)
+    )
+Hibernate:
+    create table public.order_details (
+        price float(53) not null,
+        quantity integer not null,
+        id bigserial not null,
+        order_id bigint,
+        primary key (id)
+    )
+Hibernate:
+    create table public.product (
+        price float(53) not null,
+        id bigserial not null,
+        name varchar(255),
+        primary key (id)
+    )
+Hibernate:
+    create table order_product (
+        order_id bigint not null,
+        product_id bigint not null,
+        primary key (order_id, product_id)
+    )
+Hibernate:
+    alter table if exists public.order
+       add constraint FKb8tboo4d95mh8gavvovwbb7vg
+       foreign key (customer_id)
+       references public.customer
+Hibernate:
+    alter table if exists public.order_details
+       add constraint FKrqebearjsp1kgak9edqrenaeb
+       foreign key (order_id)
+       references public.order
+Hibernate:
+    alter table if exists order_product
+       add constraint FKhnfgqyjx3i80qoymrssls3kno
+       foreign key (product_id)
+       references public.product
+Hibernate:
+    alter table if exists order_product
+       add constraint FKb3sm2umdh0yd7jwrnda0qixd0
+       foreign key (order_id)
+       references public.order
