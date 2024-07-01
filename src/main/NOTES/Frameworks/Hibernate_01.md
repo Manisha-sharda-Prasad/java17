@@ -10,6 +10,7 @@
 ---
 
 # 1. Hibernate (popular)
+- Hibernate Provides >>  `Implementation of JPA concepts` +  `Additional Feature`
 - `ORM` framework for Java
   - Class,Object <--> map <--> Table,Record
   - Automatic Table Creation : Map `Java Classes` to `Database Tables`, by using annotations.
@@ -36,27 +37,41 @@
   - [ new-developer            >>                                  hibernate >> JDBC >> database ]
   - [ new-generation developer >>  Spring-boot-starter-jpa-data >> hibernate >> JDBC >> database ] **
    
-- Hibernate Provides >>  `Implementation of JPA concepts` +  `Additional Feature` 
 - `Driver Load`(Java-prg) > `Connection` > `Statement`- SQL query >> `Execute` > `ResultSet`
   
 ### 1.2 Hibernate Framework: 
 - `JPA Concepts`:  to understand flows
-- `Annotation`. eg : @Entity 
 - `Built-in method`. eg : delete(), save(), get(), etc 
 - `Hibernate-configuration` 
   - SpringBoot project - `application.property` : preferred
   - non-SpringBoot project - `persistent.xml`
+- Key features:-
+  - `ORM Mapping`
+  - `Transparent Persistence`
+  - `HQL (Hibernate Query Language)`
+  - `Automatic Table Creation`
+  - `Caching`
+  - `Lazy Loading`
+  - `Annotations`
+
 
 ## 2. JPA Concept
 - `Java Persistence API `(JPA) 
 - Java specification that provides specific functionality for `ORM` tools.
 
 ### 2.1.`ORM` - (Object-Relational Mapping)
-  - ORM tool simplifies the data creation,
-  - `Java (Entity)`  <--> Hibernate (Framework) <---> `Database (Table)`
-  - Entity : `@Entity` class ABC {...}. Class ABC become entity here.
+  - ORM tool simplifies the Data creation,
+  - `Java (Entity)`  <--> Hibernate Framework <---> `Database (Table)`
+  - 
+### 2.2 `Entities` and `Relationships`
+  - Entity : `@Entity` class ABC {...}. Class become entity here.
+  - Represents a Table in the Database.
 
-### 2.2.`Association` or `relationShip` *****
+###  `RelationShip` or `Association`  **
+- @ One-to-One
+- @ One-to-Many
+- @ Many-to-One
+- @ Many-to-Many
 
 ### 2.3.`Inheritance`
 
