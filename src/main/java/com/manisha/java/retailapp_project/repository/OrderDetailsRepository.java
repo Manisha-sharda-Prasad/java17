@@ -1,6 +1,8 @@
 package com.manisha.java.retailapp_project.repository;
 
+import com.manisha.java.retailapp_project.entity.Order;
 import com.manisha.java.retailapp_project.entity.OrderDetails;
+import jakarta.persistence.Tuple;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -8,7 +10,33 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface OrderDetailsRepository extends JpaRepository<OrderDetails,Long> {
-    @Query("select p2 from OrderDetails p2 where p2.price = :price")
+public interface OrderDetailsRepository extends JpaRepository<OrderDetails,Long>
+{
+    @Query("select od from OrderDetails od, Order o " +
+            "where o.id = od.order.id " +
+            "and od.price = :price ")
     List<OrderDetails> findByPrice(double price);
+
+    @Query("select o from OrderDetails od, Order o " +
+            "where o.id = od.order.id " +
+            "and od.price = :price ")
+    List<Order> findOrderByPrice(double price);
+
+    @Query("select o.id from OrderDetails od, Order o " +
+            "where o.id = od.order.id " +
+            "and od.price = :price ")
+    List<Long> findOrderIdByPrice(double price);
+
+    @Query("select o.id, o.customer.id " +
+            "from OrderDetails od, Order o " +
+            "where o.id = od.order.id " +
+            "and od.price = :price ")
+    List<Tuple> findOrderIdAndCustomerIdByPrice(double price);
+
 }
+
+/*
+1. flexible JQL with joins
+2. jpql return -- sync -- method return
+
+ */

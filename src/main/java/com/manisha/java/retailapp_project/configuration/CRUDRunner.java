@@ -1,19 +1,22 @@
 package com.manisha.java.retailapp_project.configuration;
 
+import com.manisha.java.retailapp_project.entity.Order;
 import com.manisha.java.retailapp_project.entity.OrderDetails;
 import com.manisha.java.retailapp_project.entity.Product;
 import com.manisha.java.retailapp_project.repository.CustomerRepository;
 import com.manisha.java.retailapp_project.repository.OrderDetailsRepository;
 import com.manisha.java.retailapp_project.repository.OrderRepository;
 import com.manisha.java.retailapp_project.repository.ProductRepository;
+import jakarta.persistence.Tuple;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import com.manisha.java.retailapp_project.entity.Order;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+
 @Slf4j
 @Component
 @org.springframework.core.annotation.Order(2)
@@ -73,5 +76,10 @@ public class CRUDRunner implements CommandLineRunner {
                .stream().findFirst().orElseGet(()->null);
         log.info("\norderDetailRepository findByPrice: " +p2);
 
+        List<Tuple> result_tuple = orderDetailsRepository.findOrderIdAndCustomerIdByPrice(20.0)
+                .stream().collect(Collectors.toList());
+                //.findFirst()
+                //.orElseGet(()->null);
+        log.info("\norderDetailRepository findOrderIdAndCustomerIdByPrice: tuple " +result_tuple);
     }
 }
