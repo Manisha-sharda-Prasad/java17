@@ -76,10 +76,11 @@ public class CRUDRunner implements CommandLineRunner {
                .stream().findFirst().orElseGet(()->null);
         log.info("\norderDetailRepository findByPrice: " +p2);
 
+        //7.
         List<Tuple> result_tuple = orderDetailsRepository.findOrderIdAndCustomerIdByPrice(20.0)
                 .stream().collect(Collectors.toList());
-                //.findFirst()
-                //.orElseGet(()->null);
+                //.findFirst()                                                   //using List of <Tuple> //findFirst not possible
+                //.orElseGet(()
         log.info("\norderDetailRepository findOrderIdAndCustomerIdByPrice: tuple " +result_tuple);
     }
 }
