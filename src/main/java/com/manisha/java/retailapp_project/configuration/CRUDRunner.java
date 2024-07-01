@@ -1,10 +1,12 @@
 package com.manisha.java.retailapp_project.configuration;
 
+import com.manisha.java.retailapp_project.entity.OrderDetails;
 import com.manisha.java.retailapp_project.entity.Product;
 import com.manisha.java.retailapp_project.repository.CustomerRepository;
 import com.manisha.java.retailapp_project.repository.OrderDetailsRepository;
 import com.manisha.java.retailapp_project.repository.OrderRepository;
 import com.manisha.java.retailapp_project.repository.ProductRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import com.manisha.java.retailapp_project.entity.Order;
@@ -12,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
-
+@Slf4j
 @Component
 @org.springframework.core.annotation.Order(2)
 public class CRUDRunner implements CommandLineRunner {
@@ -28,6 +30,7 @@ public class CRUDRunner implements CommandLineRunner {
     {
         Product p = null;
         Order o = null;
+        OrderDetails p2 = null;
 
         // 1 findAll
         List<Product> findAll_result= productRepository.findAll();
@@ -35,31 +38,40 @@ public class CRUDRunner implements CommandLineRunner {
                 .stream()
                 .forEach(System.out::println);
 
-        // 2 findById
+        // 2. findById
         Optional<Product> findById_result = productRepository.findById(1L);
         p = findById_result.get();
-        System.out.println("\nfindById_result : "+p);
+        log.info("\nfindById_result : "+p);
 
         // 3. findByName
-        //first step: (HQL : select p from Product p where p.name = : productName)
-        //second step:
+        // first step: (HQL : select p from Product p where p.name = : productName)
+        // second step:
         p = productRepository.findByProductName( "Product 2")
                 .stream()
                 .findFirst().get();
-        System.out.println("\nfindByName_result : "+p);
+        log.info("\nfindByName_result : "+p);
 
-        //4. findAll
+        // 4. findAll
         System.out.println("\norderRepository findAll: ");
         List<Order> fI = orderRepository.findAll();
         fI.stream()
-                .forEach(i -> System.out.println(i));
+                .forEach(i -> log.info(i.toString()));
 
-        //4. findOrderDate
-        //first step: (HQL : select o from Order o where o.order_date = :orderDates)
-        //second step:
+        // 5. findOrderDate
+        // first step: (HQL : select o from Order o where o.order_date = :orderDates)
+        // second step:
         o = orderRepository.findOrderDate("2024-06-28")
                 .stream()
                 .findAny().orElseGet( ()->null);
-        System.out.println("\norderRepository findOrderDate: " +o);
+        log.info("\norderRepository findOrderDate: " +o);
+
+
+        // 6.
+        // first step: (select p2 from OrderDetails where p2.price = :price)
+        // second step:
+        p2 = orderDetailsRepository.findByPrice(20.0)
+               .stream().findFirst().orElseGet(()->null);
+        log.info("\norderDetailRepository findByPrice: " +p2);
+
     }
 }

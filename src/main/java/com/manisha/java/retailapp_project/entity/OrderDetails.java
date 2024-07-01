@@ -22,4 +22,14 @@ public class OrderDetails {
     @ManyToOne
     @JoinColumn(name = "order_id")
     private Order order;
+
+    @Override
+    public String toString() {
+        return "OrderDetails{" +
+                //"id=" + id +
+                //", quantity=" + quantity +
+                ", price=" + price +
+                ", order=" + order +
+                '}';
+    }
 }

@@ -10,10 +10,10 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long>
 {
-    // 12 abstract method added by SB, since we ectended JpaRepository
+    // 12 abstract method added by SB, since we extended JpaRepository
 
-    @Query("select p from Product p where p.name = :productName")
-    List<Product> findByProductName(String productName);
+    @Query("select p from Product p where p.name = :name")
+    List<Product> findByProductName(String name);
 
 
 }
