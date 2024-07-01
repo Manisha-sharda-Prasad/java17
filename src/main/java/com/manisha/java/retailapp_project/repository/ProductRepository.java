@@ -12,6 +12,8 @@ public interface ProductRepository extends JpaRepository<Product, Long>
 {
     // 12 abstract method added by SB, since we ectended JpaRepository
 
-    @Query("select p from Product p where p.name = :namee")
-    List<Product> findByProductName(String namee);
+    @Query("select p from Product p where p.name = :productName")
+    List<Product> findByProductName(String productName);
+
+
 }

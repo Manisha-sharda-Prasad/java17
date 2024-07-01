@@ -25,7 +25,6 @@ public class DMLRunner implements CommandLineRunner
     @Autowired OrderDetailsRepository orderDetailsRepository;
     @Autowired ProductRepository productRepository;
 
-    //
     @Override
     public void run(String... args) throws Exception
     {

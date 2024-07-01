@@ -35,4 +35,14 @@ public  class Order{
     )
     private Set<Product> products;
 
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", orderDate='" + orderDate + '\'' +
+                //", customer=" + customer +
+                //", orderDetails=" + orderDetails +
+               // ", products=" + products +
+                '}';
+    }
 }
