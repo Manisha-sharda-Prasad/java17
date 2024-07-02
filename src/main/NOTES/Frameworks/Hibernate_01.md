@@ -6,38 +6,36 @@
     - client-3 (javaPrg-1, session-3) ...
 - `Transaction` - Atomicity, unit of work
   - can have multiple transaction.
-
 ---
 
 # 1. Hibernate (popular)
 Hibernate Provides >>  `Implementation of JPA concepts` +  `Additional Feature`
 key concepts of Hibernate in Java:
 
-- `JPA Concepts`:  
+- `JPA CONCEPTS`:  
   - to understand flows
-- `ORM Mapping`: 
+- `ORM MAPPING`: 
   - Java Class,Object <--> map <--> Table
-- `@Entity` :
+- `@ENTITY` :
   - Automatic Table Creation : Map `Java Classes` to `Database Tables`.
-- `Built-in method`: 
+- `BUILT METHODS`: 
   - delete(), save(), get(), etc
-- `Mappings`: 
+- `MAPPINGS`: 
   - Annotations for mappings, including relationships.
-- `Caching` : 
-   -`FETHCH - Lazy/Eager Loading` loading related data when needed/ loaded immediately.
-   -  session-level,session factory-level - better performance-reducing database access
-   - 1st level, PersistentContext(PC) | 2nd level , rare, optional.
-   - Performance, less Database call.
-   - Fetch type : `Lazy loading`, `Eager loading`.
-   - Access `PC`, then use `session` Object.
-
-- `Queries`:
+- `CACHING` : 
+     -  session-level,session factory-level - better performance-reducing database access
+     - 1st level, PersistentContext(PC) | 2nd level , rare, optional.
+     - Performance, less Database call.
+     - Access `PC`, then use `session` Object.
+- `FETHCH - Lazy/Eager Loading`:
+  - loading related data when needed/ loaded immediately.
+- `QUERIES`:
   - `HQL` - de-couple with DB,similar to SQL
   - `Native SQL`
   - `Criteria API` -  write complex `dynamic` queries.
   - `Automatic Table Creation` : generate SQL statement from Java code.
 
-- `Transaction management `:
+- `TRANSACTION MANAGEMENT `:
   - Automatic
   - grouping multiple database operations into a single transaction.
   - `SessionFactory` > `session` > `txn.start()` > [your SQL - SQSl1,SQL1, etc] > `txn.commit()` > `session.close()`
@@ -63,12 +61,10 @@ key concepts of Hibernate in Java:
 - `Java Persistence API `(JPA) 
 - Java specification(theory) that provides specific functionality for `ORM` tools.
 
-
-### 2.1.`ORM` - (Object-Relational Mapping)
+### 2.1.`ORM` - (`Object-Relational Mapping`)
   - ORM tool simplifies the Data creation,
   - Maps Java objects to Database tables
   - `Java (Entity)`  <--> Hibernate Framework <---> `Database (Table)`
- 
 
 ### 2.2 `Entities` and `Relationships`
   - Entity : `@Entity` class ABC {...}. Class become entity here.
@@ -92,9 +88,8 @@ key concepts of Hibernate in Java:
             inverseJoinColumns = @JoinColumn(name = "product_id")
     )
     ```
----  
-
-### 2.3. Inheritance
+---
+### 2.3. `Inheritance`
 - Table creation strategy on parent-child class.
 1. `Single table`
 2. `per class`
@@ -119,12 +114,10 @@ key concepts of Hibernate in Java:
 - manages and tracks all your changes
 -  stays in sync with the database.
 
-
-### 2.6. `Session/Entity Manager`: 
+### 2.6. `Session`/`Entity Manager`: 
 - perform CRUD (Create, Read, Update, Delete)operations on entities.
 - manages the `PC`, ensuring that your changes to objects are tracked 
 - synchronized with the database.
-
 
 ---
 
