@@ -19,7 +19,7 @@ key concepts of Hibernate in Java:
   
 - `Caching` : 1st level, PersistentContext(PC) | 2nd level , rare, optional.
   - Performance, less Database call.
-  - Fetch type options : `lazy loading`, `eager loading`.
+  - Fetch type : `lazy loading`, `eager loading`.
   - Access PC, then use `session` Object.
 - `Queries`:
   - `HQL` - de-couple with DB.
@@ -68,7 +68,7 @@ key concepts of Hibernate in Java:
   - ORM tool simplifies the Data creation,
   - Maps Java objects to Database tables
   - `Java (Entity)`  <--> Hibernate Framework <---> `Database (Table)`
-  - `Session/Entity Manager`: perform CRUD (Create, Read, Update, Delete)operations on entities.
+ 
 
 ### 2.2 `Entities` and `Relationships`
   - Entity : `@Entity` class ABC {...}. Class become entity here.
@@ -104,30 +104,39 @@ key concepts of Hibernate in Java:
 ### 2.4.`Caching` : 
 - Note: no need to learn.
 - Temporary storage /copies - `frequently used data`
-- 1st-level/ Session-level Caching:
+- `1st-level/ Session-level Caching:-`
   - automatically caches objects within a session
   - temporary memory
-  - default / PersistenceContext (PC)
-- 2nd-level/ Session-level Caching:
+  - Default / PersistenceContext (PC)
+- `2nd-level/ Session-Factory-level Caching:-`
   - global cache shared across sessions
   - reused data
   - reducing the need to go back to the database frequently.
-  - customize - have to enable it explicitly.
+  - Customize - have to enable it explicitly.
+
+### 2.5. `Persistence Context` /`PC`: 
+- change an object's data, `PC` will eventually update the data in the database,
+- manages and tracks all your changes
+-  stays in sync with the database.
+
+
+### 2.6. `Session/Entity Manager`: 
+- perform CRUD (Create, Read, Update, Delete)operations on entities.
+- manages the `PC`, ensuring that your changes to objects are tracked 
+- synchronized with the database.
+
 
 ---
-https://www.geeksforgeeks.org/difference-between-jdbc-and-hibernate-in-java/?ref=header_search
-https://chatgpt.com/c/571ae190-6863-48e7-90a8-90473fdd943a
 
 ## 3. JDBC
 - JDBC (Java Database Connectivity) 
 - APIs that allows java application to interact with relational databases.
 - Interacts, Executes SQL queries.
-
-
-
-Connections: Establishes a connection to the database using a connection URL, username, and password.
+- Connections: Establishes connection to database uses - URL, username, and password.
 
 ---
 #### Rough Notes/Pointer
 ## 4. Annotations and Concepts
 1. 
+https://www.geeksforgeeks.org/difference-between-jdbc-and-hibernate-in-java/?ref=header_search
+https://chatgpt.com/c/571ae190-6863-48e7-90a8-90473fdd943a
