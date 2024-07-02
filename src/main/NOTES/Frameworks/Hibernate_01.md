@@ -17,10 +17,11 @@ key concepts of Hibernate in Java:
   - Class,Object <--> map <--> Table,Record
   - Automatic Table Creation : Map `Java Classes` to `Database Tables`-`@Entity` .
   
-- `Caching` : 1st level, PersistentContext(PC) | 2nd level , rare, optional.
+- `Caching` : 
+  - 1st level, PersistentContext(PC) | 2nd level , rare, optional.
   - Performance, less Database call.
-  - Fetch type : `lazy loading`, `eager loading`.
-  - Access PC, then use `session` Object.
+  - Fetch type : `Lazy loading`, `Eager loading`.
+  - Access `PC`, then use `session` Object.
 - `Queries`:
   - `HQL` - de-couple with DB.
   - `Native SQL`
@@ -40,8 +41,9 @@ key concepts of Hibernate in Java:
   - `Transparent Persistence`
   - `HQL (Hibernate Query Language)` : similar to SQL
   - `Automatic Table Creation` : generate SQL statement from Java code.
-  - `Caching`:  session-level,session factory-level better performance-reducing database access.
-  - `Lazy/EAGER Loading` loading related data when needed/ loaded immediately.
+  - `Criteria API`
+  - `Caching`:  session-level,session factory-level - better performance-reducing database access.
+  - `FETHCH - Lazy/Eager Loading` loading related data when needed/ loaded immediately.
   - `Mappings`: Annotations for mappings, including relationships.
   - `Transaction`: grouping multiple database operations into a single transaction.
   
