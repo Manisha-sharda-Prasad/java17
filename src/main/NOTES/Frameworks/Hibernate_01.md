@@ -11,11 +11,12 @@
 
 # 1. Hibernate (popular)
 Hibernate Provides >>  `Implementation of JPA concepts` +  `Additional Feature`
+key concepts of Hibernate in Java:
 
-- `ORM` framework for Java
+- `ORM` framework 
   - Class,Object <--> map <--> Table,Record
-  - Automatic Table Creation : Map `Java Classes` to `Database Tables`, by using annotations.
-  - `@Entity`
+  - Automatic Table Creation : Map `Java Classes` to `Database Tables`-`@Entity` .
+  
 - `Caching` : 1st level, PersistentContext(PC) | 2nd level , rare, optional.
   - Performance, less Database call.
   - Fetch type options : `lazy loading`, `eager loading`.
@@ -24,13 +25,14 @@ Hibernate Provides >>  `Implementation of JPA concepts` +  `Additional Feature`
   - `HQL` - de-couple with DB.
   - `Native SQL`
   - `Criteria API` -  write complex `dynamic` queries.
-- `Transaction management (Automatic):`
+- `Transaction management `:
+  - Automatic
   - `SessionFactory` > `session` > `txn.start()` > [your SQL - SQSl1,SQL1, etc] > `txn.commit()` > `session.close()`
   
 ### 1.1 Hibernate Framework:
 - `JPA Concepts`:  to understand flows
 - `Built-in method`. eg : delete(), save(), get(), etc
-- `Hibernate-configuration`
+- Hibernate-configuration:-
   - SpringBoot project - `application.property` : preferred
   - non-SpringBoot project - `persistent.xml`
 - Key features:-
@@ -45,9 +47,8 @@ Hibernate Provides >>  `Implementation of JPA concepts` +  `Additional Feature`
 
 ### 1.2 Intro
 - `Persist` : save in DB.
-- JPA - Java persistence API (Just `Specification`/theory)
-- implementor of JPA : `hibernate`, apache-open-jpa, etc.
-- hibernate uses `JDBC` behind the scene.
+- Implementor of JPA : `hibernate`, apache-open-jpa, etc.
+- Hibernate uses `JDBC` behind the scene.
   - JDBC : Core
   - [ old-developer            >>                                               JDBC >> database ]
   - [ new-developer            >>                                  hibernate >> JDBC >> database ]
@@ -59,7 +60,8 @@ Hibernate Provides >>  `Implementation of JPA concepts` +  `Additional Feature`
 
 ## 2. JPA Concept
 - `Java Persistence API `(JPA) 
-- Java specification that provides specific functionality for `ORM` tools.
+- Java specification(theory) that provides specific functionality for `ORM` tools.
+
 
 ### 2.1.`ORM` - (Object-Relational Mapping)
   - ORM tool simplifies the Data creation,
