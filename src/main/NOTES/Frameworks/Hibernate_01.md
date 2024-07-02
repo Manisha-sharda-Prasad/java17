@@ -13,42 +13,40 @@
 Hibernate Provides >>  `Implementation of JPA concepts` +  `Additional Feature`
 key concepts of Hibernate in Java:
 
-- `ORM` framework 
-  - Class,Object <--> map <--> Table,Record
-  - Automatic Table Creation : Map `Java Classes` to `Database Tables`-`@Entity` .
-  
+- `JPA Concepts`:  
+  - to understand flows
+- `ORM Mapping`: 
+  - Java Class,Object <--> map <--> Table
+- `@Entity` :
+  - Automatic Table Creation : Map `Java Classes` to `Database Tables`.
+- `Built-in method`: 
+  - delete(), save(), get(), etc
+- `Mappings`: 
+  - Annotations for mappings, including relationships.
 - `Caching` : 
-  - 1st level, PersistentContext(PC) | 2nd level , rare, optional.
-  - Performance, less Database call.
-  - Fetch type : `Lazy loading`, `Eager loading`.
-  - Access `PC`, then use `session` Object.
+   -`FETHCH - Lazy/Eager Loading` loading related data when needed/ loaded immediately.
+   -  session-level,session factory-level - better performance-reducing database access
+   - 1st level, PersistentContext(PC) | 2nd level , rare, optional.
+   - Performance, less Database call.
+   - Fetch type : `Lazy loading`, `Eager loading`.
+   - Access `PC`, then use `session` Object.
+
 - `Queries`:
-  - `HQL` - de-couple with DB.
+  - `HQL` - de-couple with DB,similar to SQL
   - `Native SQL`
   - `Criteria API` -  write complex `dynamic` queries.
+  - `Automatic Table Creation` : generate SQL statement from Java code.
+
 - `Transaction management `:
   - Automatic
+  - grouping multiple database operations into a single transaction.
   - `SessionFactory` > `session` > `txn.start()` > [your SQL - SQSl1,SQL1, etc] > `txn.commit()` > `session.close()`
   
 ### 1.1 Hibernate Framework:
-- `JPA Concepts`:  to understand flows
-- `Built-in method`. eg : delete(), save(), get(), etc
+
 - Hibernate-configuration:-
   - SpringBoot project - `application.property` : preferred
   - non-SpringBoot project - `persistent.xml`
-- Key features:-
-  - `ORM Mapping`
-  - `Transparent Persistence`
-  - `HQL (Hibernate Query Language)` : similar to SQL
-  - `Automatic Table Creation` : generate SQL statement from Java code.
-  - `Criteria API`
-  - `Caching`:  session-level,session factory-level - better performance-reducing database access.
-  - `FETHCH - Lazy/Eager Loading` loading related data when needed/ loaded immediately.
-  - `Mappings`: Annotations for mappings, including relationships.
-  - `Transaction`: grouping multiple database operations into a single transaction.
-  
-
-### 1.2 Intro
 - `Persist` : save in DB.
 - Implementor of JPA : `hibernate`, apache-open-jpa, etc.
 - Hibernate uses `JDBC` behind the scene.
