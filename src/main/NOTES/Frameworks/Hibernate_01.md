@@ -23,16 +23,14 @@ key concepts of Hibernate in Java:
 - `MAPPINGS`: 
   - Annotations for mappings, including relationships.
 - `CACHING` : 
-     -  session-level,session factory-level - better performance-reducing database access
-     - 1st level, PersistentContext(PC) | 2nd level , rare, optional.
-     - Performance, less Database call.
+     - `session-level/ 1st-level /PersistentContext(PC)`- temporary memory,clears out.
+     - `session-factory-level/ 2nd level `- global cache shared across sessions,rare used.
      - Access `PC`, then use `session` Object.
 - `FETHCH - Lazy/Eager Loading`:
-  - loading related data when needed/ loaded immediately.
-- `QUERIES`:
-  - `HQL` - de-couple with DB,similar to SQL
-  - `Native SQL`
-  - `Criteria API` -  write complex `dynamic` queries.
+  - loading related data when needed/ fetch all advance,loaded immediately.
+- `QUERIES/ CRITERIA API`:
+  - `HQL` - de-couple with DB ,similar to SQL
+  - `Criteria API` -  An alternative to HQL, write complex `dynamic` queries.
   - `Automatic Table Creation` : generate SQL statement from Java code.
 
 - `TRANSACTION MANAGEMENT `:
