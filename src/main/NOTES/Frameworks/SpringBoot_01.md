@@ -12,7 +12,7 @@
 2.`Standalone Applications`:
    - allows to create standalone applications 
    - run independently without requiring external  server.
-   - package application in `JAR`, run it using an `embedded serve`r like `Tomcat /Jetty`.
+   - package application in `JAR`, run it using an `embedded server` like `Tomcat /Jetty`.
 
 2. `Production-Ready Features`:
    - health checks, and externalized configuration.
@@ -20,8 +20,29 @@
 3. `Microservices Support`:
     - well-suited for developing microservices.
 
+### 2. Spring vs. Spring boot:
 
-### 2. Annotations:
+#### 1. Spring:
+Broad range of features, requiring more configuration and setup.
+
+- Core, `dependency injection`,  `transaction management`.
+- wide range of functionalities
+- Configuration- done through` XML files`,
+- requires `more setup`.
+
+#### 2. Spring boot:
+Extension of Spring that simplifies application development.
+
+- `Simplified Development`.
+- `Auto-Configuration`: with help of dependencies 
+- `reduces manual setup`.
+- `Standalone Applications`: `embedded server` (like Tomcat or Jetty)
+- `Production-Ready Features`: monitoring, logging, managing applications, 
+-  `easier to deploy/ run` in production environments.
+- `Starter POMs`: bundle dependencies for specific functionalities
+
+
+### 3. Annotations:
 1.Core Annotations:------
 
 `@SpringBootApplication`: (combines `@Configuration, @EnableAutoConfiguration,@ComponentScan`, Placed on the main class.)
