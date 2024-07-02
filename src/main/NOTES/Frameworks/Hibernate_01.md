@@ -39,10 +39,11 @@ key concepts of Hibernate in Java:
   - `ORM Mapping`
   - `Transparent Persistence`
   - `HQL (Hibernate Query Language)` : similar to SQL
-  - `Automatic Table Creation` : infer/generate SQL statemnet from Java code.
-  - `Caching`
-  - `Lazy/EAGER Loading`
-  - Declarative Coding : `Annotations` based
+  - `Automatic Table Creation` : generate SQL statement from Java code.
+  - `Caching`:  session-level,session factory-level better performance-reducing database access.
+  - `Lazy/EAGER Loading` loading related data when needed/ loaded immediately.
+  - `Mappings`: Annotations for mappings, including relationships.
+  - `Transaction`: grouping multiple database operations into a single transaction.
   
 
 ### 1.2 Intro
@@ -67,6 +68,7 @@ key concepts of Hibernate in Java:
   - ORM tool simplifies the Data creation,
   - Maps Java objects to Database tables
   - `Java (Entity)`  <--> Hibernate Framework <---> `Database (Table)`
+  - `Session/Entity Manager`: perform CRUD (Create, Read, Update, Delete)operations on entities.
 
 ### 2.2 `Entities` and `Relationships`
   - Entity : `@Entity` class ABC {...}. Class become entity here.
@@ -101,12 +103,20 @@ key concepts of Hibernate in Java:
 
 ### 2.4.`Caching` : 
 - Note: no need to learn.
-- temporary storage /copies - `frequently used data`
-- 1-level-cache : default / PersistenceContext (PC)
-- 2-level-cache : customize - have to enable it explicitly.
+- Temporary storage /copies - `frequently used data`
+- 1st-level/ Session-level Caching:
+  - automatically caches objects within a session
+  - temporary memory
+  - default / PersistenceContext (PC)
+- 2nd-level/ Session-level Caching:
+  - global cache shared across sessions
+  - reused data
+  - reducing the need to go back to the database frequently.
+  - customize - have to enable it explicitly.
 
 ---
 https://www.geeksforgeeks.org/difference-between-jdbc-and-hibernate-in-java/?ref=header_search
+https://chatgpt.com/c/571ae190-6863-48e7-90a8-90473fdd943a
 
 ## 3. JDBC
 - JDBC (Java Database Connectivity) 
