@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import java.util.ArrayList;
 import java.util.List;
 
-@SpringBootApplication(e)
+@SpringBootApplication()
 @ComponentScan("com.manisha.java.retailapp_project")
 public class RunAPIs {
 
