@@ -22,54 +22,54 @@
 
 
 ### 2. Annotations:
-1.Core Annotations:-
+1.Core Annotations:------
 
-`@SpringBootApplication`: combines `@Configuration, @EnableAutoConfiguration,@ComponentScan`, Placed on the main class.
+`@SpringBootApplication`: (combines `@Configuration, @EnableAutoConfiguration,@ComponentScan`, Placed on the main class.)
 
-`@Component:` class as a Spring component.
+`@Component:` (class as a Spring component.)
 
-`@Service:`  specialization of @Component, business logic.
+`@Service:`  (specialization of @Component, business logic.)
 
-`@Repository:`   of@Component, handle database operations.
+`@Repository:`   (of@Component, handle database operations.)
 
-`@Controller:`    of @Component. class serves as a controller in the MVC pattern(Model–view–controller).
+`@Controller:`    (of @Component. class serves as a controller in the MVC pattern(Model–view–controller)).
 
-`@RestController:` of @Controller and @ResponseBody, create REST-ful web services.
+`@RestController:` (of @Controller and @ResponseBody, create REST-ful web services.)
 
-2.Configuration and Bean Annotations:-
+2.Configuration and Bean Annotations:--------
 
-`@Configuration:`
+`@Configuration:`  (class declares one or more @Bean methods)
 
-`@Bean:`
+`@Bean:` (method  will return an object)
 
-3.Dependency Injection Annotations:-
+3. Dependency Injection Annotations:--------
 
-`@Autowired:`
+`@Autowired:` (inject dependencies automatically. constructors, setter , and fields.)
 
-`@Qualifier:`
+`@Qualifier:` (which bean to inject when there are multiple candidates.)
 
-4.JPA Annotations:-
+4.JPA Annotations:---------
 
-`@Entity:`
+`@Entity:` (class  mapped to a database table.)
 
-`@Table:`
+`@Table:` (name of  database table used for mapping.)
 
-`@Id:`
+`@Id:` (specifies primary key of entity.)
 
-`@GeneratedValue:`
+`@GeneratedValue:` (generation strategies for the primary keys.)
 
-`@Column:`
+`@Column:`  (details of column to which a field or property will be mapped.)
 
-5.Spring MVC Annotations:-
+5.Spring MVC Annotations:---------
 
 `@RequestMapping:`
 
-`@RequestParam:`
+`@GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @PatchMapping:` (for @RequestMapping ,specific HTTP methods (GET, POST, PUT, DELETE, PATCH)).
 
-`@GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @PatchMapping:`
+`@RequestParam:`  (extract query parameters, or any other parameters from URL.)
 
-`@PathVariable:`
+`@PathVariable:` (extract values from the URI template.)
 
-6.Security Annotations:-
+6.Security Annotations:----------
 
-`@Secured:`
+`@Secured:` (defines a list of roles on a method.)
