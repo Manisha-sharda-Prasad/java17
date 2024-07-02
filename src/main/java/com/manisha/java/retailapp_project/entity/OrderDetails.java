@@ -21,7 +21,7 @@ public class OrderDetails {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private Order order;
+    private Order order;                 //Dependency - 'Has a Relationship' with Order
 
     @Override
     public String toString() {

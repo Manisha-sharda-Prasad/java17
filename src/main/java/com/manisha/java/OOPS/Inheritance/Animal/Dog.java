@@ -1,7 +1,9 @@
 package com.manisha.java.OOPS.Inheritance.Animal;
 
 import com.manisha.java.util.Print;
+import lombok.Setter;
 
+@Setter
 //public Dog(){
 // super("", "", 10);
 // super();

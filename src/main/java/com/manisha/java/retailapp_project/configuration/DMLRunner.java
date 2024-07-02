@@ -8,19 +8,25 @@ import com.manisha.java.retailapp_project.repository.CustomerRepository;
 import com.manisha.java.retailapp_project.repository.OrderDetailsRepository;
 import com.manisha.java.retailapp_project.repository.OrderRepository;
 import com.manisha.java.retailapp_project.repository.ProductRepository;
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
 import java.util.Set;
 
-//@Component
+/*@Setter
+@AllArgsConstructor
+@NoArgsConstructor*/
+@Component
+//@Profile("prod")
 @org.springframework.core.annotation.Order(1)
-public class DMLRunner implements CommandLineRunner
+public class DMLRunner implements CommandLineRunner, BeanNameAware
 {
     @Autowired
-    CustomerRepository customerRepository; // = new CustomerRepositoryImpl(); @Autowired
+    CustomerRepository customerRepository;                  //  @Autowired -- DependencyInjection
     @Autowired OrderRepository orderRepository;
     @Autowired OrderDetailsRepository orderDetailsRepository;
     @Autowired ProductRepository productRepository;
@@ -76,5 +82,10 @@ public class DMLRunner implements CommandLineRunner
     @Bean
     CustomerRepository myrepo(){
         return null;
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        System.out.println("bean Created with this name : "+name);
     }
 }
