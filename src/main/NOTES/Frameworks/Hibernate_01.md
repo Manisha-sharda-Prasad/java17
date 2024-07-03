@@ -1,8 +1,8 @@
 # DB concept
 - `Session` 
   - multiple client connecting to `same` database.
-    - client-1 (DB-1, Session-1) - DB connection ---txn-1---txn2---- DB Disconnect
-    - client-2 (DB-1, Session-2) - DB connection ---txn-1---txn2---- DB Disconnect
+    - client-1 (DB-1 DBEaver, Session-1) - DB connection ---txn-1---txn2---- DB Disconnect
+    - client-2 (DB-1 DBEaver, Session-2) - DB connection ---txn-1---txn2---- DB Disconnect
     - client-3 (javaPrg-1, session-3) ...
 - `Transaction` - Atomicity, unit of work
   - can have multiple transaction.
@@ -10,14 +10,16 @@
 
 # 1. Hibernate (popular)
 Hibernate Provides >>  `Implementation of JPA concepts` +  `Additional Feature`
-key concepts of Hibernate in Java:
+key concepts of Hibernate :
 
 - `JPA CONCEPTS`:  
-  - to understand flows
-- `ORM MAPPING`: 
-  - Java Class,Object <--> map <--> Table
+  - specification/theory concept hibernate product implements/follows.
+  - jpa- to understand flows.
+- `ORM `: 
+  - hibernate is ORM framework
 - `@ENTITY` :
   - Automatic Table Creation : Map `Java Classes` to `Database Tables`.
+  - Java Class,Object <--> map <--> Table
 - `BUILT METHODS`: 
   - delete(), save(), get(), etc
 - `MAPPINGS`: 
@@ -26,20 +28,27 @@ key concepts of Hibernate in Java:
   - `managed entity` instances, 
   - `Tracks`entity, `synchronizes/update` the database.
 - `CACHING` : 
-     - `session-level/ 1st-level /PersistentContext(PC)`- temporary memory,clears out.
-     - `session-factory-level/ 2nd level `- global cache shared across sessions,rare used.
+     - `1st-level /PersistentContext(PC)`- temporary memory,clears out.
+     - `2nd level `- global cache shared across sessions,rare used.
      - Access `PC`, then use `session` Object.
 - `FETHCH - Lazy/Eager Loading`:
   - loading related data when needed/ fetch all advance,loaded immediately.
-- `QUERIES/ CRITERIA API`:
-  - `HQL` - de-couple with DB ,similar to SQL
-  - `Criteria API` -  An alternative to HQL, write complex `dynamic` queries.
-  - `Automatic Table Creation` : generate SQL statement from Java code.
+- `SESSION` :
+  - single-threaded, short-lived object, (Default)
+  - Conversation between the application and the database. 
+  - methods for CRUD operations.
+- `SESSION FACTORY` :
+  - heavyweight object and should be created once and shared across the application.
+
 
 - `TRANSACTION MANAGEMENT `:
   - Automatic
   - grouping multiple database operations into a single transaction.
   - `SessionFactory` > `session` > `txn.start()` > [your SQL - SQSl1,SQL1, etc] > `txn.commit()` > `session.close()`
+- `QUERIES/ CRITERIA API`:
+  - `HQL` - de-couple with DB ,similar to SQL
+  - `Criteria API` -  An alternative to HQL, write complex `dynamic` queries.
+  - `Automatic Table Creation` : generate SQL statement from Java code.
   
 ### 1.1 Hibernate Framework:
 
