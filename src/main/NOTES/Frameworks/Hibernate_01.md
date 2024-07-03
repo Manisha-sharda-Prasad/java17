@@ -39,27 +39,33 @@ key concepts of Hibernate :
   - Access `PC`, then use `session` Object.
 
 - `FETHCH - Lazy/Eager Loading`:
-  - loading related data when needed/ fetch all advance,loaded immediately.
+  - `Lazy`: 
+    - loading related data when needed
+    - eg- (`no need relations/dependency`)Student Has-Relation 'Address')
+  - `Eager`: 
+    - fetch all advance,loaded immediately.
+    - eg- (`need relations/dependency`)Student Has-Relation 'Address' and other relations)
 
 - `Persistence Context` /`PC`:
-  - `Container` holds managed entity.
-  - `environment` where `entities `are `managed`.
-  - `Tracks`entity, `synchronizes/update` the database.
+  - `Container/Environment` which `holds/Manages` `'Entity'`.
+  -  Entities resides here. 
+  -  Keeps`Track` of entity,
+  - `synchronizes` with database and `updates`.
 
 - `SESSION` :
-  - `lightweight, short-lived object `(Default)
+  - `Lightweight, short-lived object `(Default)
   -  `CRUD` operations.
-  - session provides a connection to database and PC.
-  - create session from `SessionFactory` connects to DB.
+  -  provides `connection` to `DB` and `PC`.
+  -  create session from `SessionFactory` connects to DB.
   - `Session session = sessionFactory.openSession();`
   - `(session.save)->(session.Flush)->(session.close);`
-  - (Create)-openSession<---interact-(CRUD)--->closeSession-(Destroy).
+  -  (`Create`)-openSession<---interact-(`CRUD`)--->closeSession-(`Destroy`).
 
 - `SESSION FACTORY` :
-  - `heavyweight object, alive for long` until termination. 
+  - `Heavyweight object, alive for long` until termination. 
   - `creates and manage sessions`.
   - created once and used throughout the application.
-  - acts like` Factory to manufacture sessions(objects)`
+  -  acts like`Factory` to `Manufacture Sessions`(objects).
   - `more session factory creations -> degrades the performance`
   -`SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();`
 
@@ -72,7 +78,7 @@ key concepts of Hibernate :
   - Summary of Steps:
     - `1.Create the SessionFactory`: Done once at application startup.
     - `2.Open a Session`
-    - `3.Begin a Transaction`: before performing database operations.
+    - `3.Begin a Transaction`: before performing DB operations.
     - `4.Perform Database Operations`
     - `5.Flush Changes`: Synchronize in-memory state with DB (automatic).
     - `6.Commit the Transaction`: Finalize changes and make permanent.
