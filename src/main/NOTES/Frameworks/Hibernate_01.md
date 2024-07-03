@@ -22,6 +22,9 @@ key concepts of Hibernate in Java:
   - delete(), save(), get(), etc
 - `MAPPINGS`: 
   - Annotations for mappings, including relationships.
+- `Persistence Context` /`PC`:
+  - `managed entity` instances, 
+  - `Tracks`entity, `synchronizes/update` the database.
 - `CACHING` : 
      - `session-level/ 1st-level /PersistentContext(PC)`- temporary memory,clears out.
      - `session-factory-level/ 2nd level `- global cache shared across sessions,rare used.
