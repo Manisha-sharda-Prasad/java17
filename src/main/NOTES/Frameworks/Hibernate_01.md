@@ -25,7 +25,8 @@ key concepts of Hibernate :
 - `MAPPINGS`: 
   - Annotations for mappings, including relationships.
 - `Persistence Context` /`PC`:
-  - `managed entity` instances, 
+  - `Container` holds managed entity.
+  - `environment` where `entities `are `managed`.
   - `Tracks`entity, `synchronizes/update` the database.
 - `CACHING` : 
      - `1st-level /PersistentContext(PC)`- temporary memory,clears out.
@@ -34,17 +35,39 @@ key concepts of Hibernate :
 - `FETHCH - Lazy/Eager Loading`:
   - loading related data when needed/ fetch all advance,loaded immediately.
 - `SESSION` :
-  - single-threaded, short-lived object, (Default)
-  - Conversation between the application and the database. 
-  - methods for CRUD operations.
+  - `lightweight, short-lived object `(Default)
+  -  `CRUD` operations.
+  - session provides a connection to database and PC.
+  - create session from `SessionFactory` connects to DB.
+  - `Session session = sessionFactory.openSession();`
+  - `(session.save)->(session.Flush)->(session.close);`
+  - (Create)-openSession<---interact-(CRUD)--->closeSession-(Destroy).
+
 - `SESSION FACTORY` :
-  - heavyweight object and should be created once and shared across the application.
+  - `heavyweight object, alive for long` until termination. 
+  - `creates and manage sessions`.
+  - created once and used throughout the application.
+  - acts like` Factory to manufacture sessions(objects)`
+  - `more session factory creations -> degrades the performance`
+  -`SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();`
 
-
-- `TRANSACTION MANAGEMENT `:
+- `TRANSACTION MANAGEMENT`:
+  - Steps-->Step1 fails--> other steps terminates.
   - Automatic
   - grouping multiple database operations into a single transaction.
-  - `SessionFactory` > `session` > `txn.start()` > [your SQL - SQSl1,SQL1, etc] > `txn.commit()` > `session.close()`
+  - `Transaction transaction = session.beginTransaction();`
+  - `SessionFactory`->`session`->`txn.start`->[yourSQL - SQSl1,SQL1..]->`txn.commit`->`session.close`
+  - Summary of Steps:
+    - `1.Create the SessionFactory`: Done once at application startup.
+    - `2.Open a Session`
+    - `3.Begin a Transaction`: before performing database operations.
+    - `4.Perform Database Operations`
+    - `5.Flush Changes`: Synchronize in-memory state with DB (automatic).
+    - `6.Commit the Transaction`: Finalize changes and make permanent.
+    - `7.Handle Exceptions and Roll Back`: Roll back the transaction if an error occurs.
+    - `8.Close the Session`: Release DB connections and other resources. 
+    - `9.Close the SessionFactory`: Done once at application shutdown to release all resources.
+  
 - `QUERIES/ CRITERIA API`:
   - `HQL` - de-couple with DB ,similar to SQL
   - `Criteria API` -  An alternative to HQL, write complex `dynamic` queries.
