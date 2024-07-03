@@ -26,28 +26,28 @@ key concepts of Hibernate :
 - `BUILT METHODS`: 
   - delete(), save(), get(), etc
 
-  - `MAPPINGS/RELATIONSHIP`: 
+- `MAPPINGS/RELATIONSHIP`: 
     - Annotations for mappings, including relationships.
     - @OneToMany, @ManyToMany
     - @Entity
-
-- `Persistence Context` /`PC`:
-  - `Container` holds managed entity.
-  - `environment` where `entities `are `managed`.
-  - `Tracks`entity, `synchronizes/update` the database.
-
-- `CACHING` : 
-     - `1st-level /PersistentContext(PC)`- temporary memory,clears out.
-     - `2nd level `- global cache shared across sessions,rare used.
-     - Access `PC`, then use `session` Object.
-
-- `FETHCH - Lazy/Eager Loading`:
-  - loading related data when needed/ fetch all advance,loaded immediately.
 
 - `QUERIES/ CRITERIA API`:
   - `HQL` - de-couple with DB ,similar to SQL
   - `Criteria API` -  An alternative to HQL, write complex `dynamic` queries.
   - `Automatic Table Creation` : generate SQL statement from Java code.
+
+- `CACHING` :
+  - `1st-level /PersistentContext(PC)`- temporary memory,clears out.
+  - `2nd level `- global cache shared across sessions,rare used.
+  - Access `PC`, then use `session` Object.
+
+- `FETHCH - Lazy/Eager Loading`:
+  - loading related data when needed/ fetch all advance,loaded immediately.
+
+- `Persistence Context` /`PC`:
+  - `Container` holds managed entity.
+  - `environment` where `entities `are `managed`.
+  - `Tracks`entity, `synchronizes/update` the database.
 
 - `SESSION` :
   - `lightweight, short-lived object `(Default)
