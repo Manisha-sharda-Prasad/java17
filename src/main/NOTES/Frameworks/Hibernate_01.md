@@ -108,12 +108,23 @@ key concepts of Hibernate in Java:
   - Customize - have to enable it explicitly.
 
 ### 2.5. `Persistence Context` /`PC`: 
-- change an object's data, `PC` will eventually update the data in the database,
-- manages and tracks all your changes
--  stays in sync with the database.
+- `container` that holds a set of `managed entity` instances.
+- changes made to these entities are `tracked`,
+- and `synchronizes/update the database`.
+- Types of Persistence Context:-
+  - `1.Transaction-scoped PC`:
+    - single database transaction.
+    - ends when transaction commits/rolls back.
+    - used in web applications, where each request is handled in single transaction.
+  - `2.Extended PC `:
+    - lasts beyond a single transaction.
+    - desktop applications. 
+    - PC span multiple transactions/Data updating continuously
+    - PC open for a longer period
 
 ### 2.6. `Session`/`Entity Manager`: 
-- perform CRUD (Create, Read, Update, Delete)operations on entities.
+- interface provided by JPA
+- provide methods - `CRUD (Create, Read, Update, Delete)`operations on entities.
 - manages the `PC`, ensuring that your changes to objects are tracked 
 - synchronized with the database.
 
