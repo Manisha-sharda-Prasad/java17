@@ -21,10 +21,7 @@ key concepts of Hibernate :
 
 - `@ENTITY` :
   - Automatic Table Creation : Map `Java Classes` to `Database Tables`.
-  - Java Class,Object <--> map <--> Table
-
-- `BUILT METHODS`: 
-  - delete(), save(), get(), etc
+  - `Special Java Class`/`Object` <--> maps <--> DB Table
 
 - `MAPPINGS/RELATIONSHIP`: 
     - Annotations for mappings, including relationships.
