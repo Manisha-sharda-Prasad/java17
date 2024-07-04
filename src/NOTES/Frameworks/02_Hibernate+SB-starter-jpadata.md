@@ -66,7 +66,7 @@ key concepts of Hibernate :
   - `creates and manage sessions`.
   - created once and used throughout the application.
   -  acts like`Factory` to `Manufacture Sessions`(objects).
-  - `more session factory creations -> degrades the performance`
+  - `more session factory creations` -> degrades the performance(create one).
   -`SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();`
 
 - `TRANSACTION MANAGEMENT`:
@@ -85,7 +85,6 @@ key concepts of Hibernate :
     - `7.Handle Exceptions and Roll Back`: Roll back the transaction if an error occurs.
     - `8.Close the Session`: Release DB connections and other resources. 
     - `9.Close the SessionFactory`: Done once at application shutdown to release all resources.
-  
 
   
 ### 1.1 Hibernate Framework:
@@ -108,6 +107,12 @@ key concepts of Hibernate :
 ## 2. JPA Concept
 - `Java Persistence API `(JPA) 
 - Java specification(theory) that provides specific functionality for `ORM` tools.
+- Annotations:-
+  - `@Entity:` (class  mapped to a database table.)
+  - `@Table:` (name of  database table used for mapping.)
+  - `@Id:` (specifies primary key of entity.)
+  - `@GeneratedValue:` (generation strategies for the primary keys.)
+  - `@Column:`  (details of column to which a field or property will be mapped.)
 
 ### 2.1.`ORM` - (`Object-Relational Mapping`)
   - ORM tool simplifies the Data creation,

@@ -12,11 +12,14 @@ import java.util.List;
 @Repository
 public interface OrderDetailsRepository extends JpaRepository<OrderDetails,Long>
 {
-
+    // session start
+    // txn start
     @Query("select od from OrderDetails od, Order o " +
             "where o.id = od.order.id " +
             "and od.price = :price ")
     List<OrderDetails> findByPrice(double price);                         //OrderDetails
+    // txn.commit
+    //session.close
 
     @Query("select o from OrderDetails od, Order o " +
             "where o.id = od.order.id " +

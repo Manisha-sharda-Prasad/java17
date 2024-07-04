@@ -9,6 +9,7 @@ public class Reference {
     public static void main(String[] args) {
 
         Reference obj = new Reference();
+        Reference obj2 = new Reference();
         obj.value = 10;
 
         modifyObject(obj);//(obj) passed by reference
