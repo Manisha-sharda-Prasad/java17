@@ -118,6 +118,18 @@
     - `Spring MVC` - webApp:  JSP:[HTML,JS,CSS] + [ Servlet(http) ]
     - `Spring REST` - REST api
     - ...
+### 2.1 Spring - Steps:
+
+- Step1.`Application Context:` 
+    - initializes and manages the entire lifecycle of beans based on configuration .
+- Step2.`Bean Registration:` 
+    - involves defining beans ,
+    - letting the Application Context register them within the IoC container.
+- Step3.`Dependency Injection:` 
+    - provides beans with their required dependencies either automatically (@Autowired) 
+    - or manually (constructor/setter injection), promoting loose coupling and easier testing.
+
+
 
 ---
 
