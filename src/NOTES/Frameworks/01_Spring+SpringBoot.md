@@ -20,12 +20,12 @@
    - health checks, and externalized configuration.
    
 4.`Microservices Support`:
-    - well-suited for developing microservices.
-    - make your microservices smaller and it will run faster.
+   - well-suited for developing microservices.
+   - make your microservices smaller and it will run faster.
 
-5`More` : 
-- `Auto Configured` Setup and `Starter Projects`:
-- `Extension of Spring` that `simplifies application development using STARTER-PROJECT` / `Starter POMs(bundle dependencies)`
+5.`More` : 
+  - `Auto Configured` Setup and `Starter Projects`:
+  - Extension of Spring`simplifies application development` using `STARTER-PROJECT`/`Starter POMs`(bundle dependencies)
     - sb-starter-`jpa-data`
     - sb-starter-`web` (created using spring-MVC framework)
 
@@ -36,7 +36,6 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 ```
-
 - STARTER-PROJECT
     - `Auto-Configuration`:  starter project will have all framework's default setting/configuration.
         - `@EnableAutoConfiguation`
@@ -46,62 +45,73 @@
     - `Production-Ready Features`:
         - health-monitoring
         - logging
-
 ---
 
 
 ### 2. Spring: (Framework of frameworks):
-- `Core` 
-    - `Dependency` 
+- `Core`: 
+  - `Dependency` 
       - `Class A` has `Class B` instance.
-      -  done by developers(developer control)-> a=new A, b=new B, a.setB(b)
-      - so, A is dependent on B .
-      - eg: Student has Address.
-    - `Dependency Injection` (from Spring) :
-      - `IoC`(Inversion of Control) Manages `bean lifecycle` and `dependencies`.
-      - put `@Componenet`(Singleton class - obj 1) on classA,B,C
-      - Spring will create `IoC-Container` [[ empty ]] 
-      - Spring will create objects of A and B - [[ A a1, B b1 ]]
-      - put `@AutoWire`(DI) on class [A]
-      - Spring will inject [b1 into a1], using either way:
-    - `Developer/ Spring -Ioc (bts) `: 
-        - way-1 : `Setter Injection` : (flexible but mutable.)
-          ```
-          A a1 = new A();
-          B b1 = new B();
-          a1.setB(b1); // DI
-          ```
-        - way-2 : `Constructor Injection` : (promotes immutability.)
-          ```
-          B b1 = new B();
-          A a1 = new A(b1); // DI
-          ```
-      - `Bean type`:
-        - `Singleton beans` ( register in container at startup) 
-          - a1, b1. ( single object only). eg : repo, service, controller `class` are singleton.
-          - mostly used. 90%+
-          - class B { m(){}, m(){}, ... } :: code-present / `stateless classes` / `SINGLETON` (single instance of classB)
-        - `prototype beans` (lazy) 
-          - register later by code:  c1, c2, c3 : [[ A a1, B b1, C c1,c2,c3 ]]
-          - rarely used
-          - class A { P, P, ... } :: data-hold / `stateful classes` / `PROTOTYPE` (multiple instance/s of classA)
-      
-    - Container Analogy:  
-      - `Spring Container` / ApplicationContext AC: [[ beans : o1, o2, o3...    ]]
-      - `hibernate Container` / PersistenceContext PC or Session: [[ entities : e1, e2, e3...    ]]
-    
-    - Spring project - run : empty container load >>  singleton bean gets created and get registered to container.
-      
-  - `AOP` : skip
-  - `Spring hibernate`
-  - `Spring JDBC` : jdbcTemplate.*
-  - `Spring transaction management`
-  - `Spring MVC` - webApp:  JSP:[HTML,JS,CSS] + [ Servlet(http) ]
-  - `Spring REST` - REST api
-  - ...
-  - ...
+      -  done by developers(developer control) manually make objects,
+      -  set property & constructor [a=new A, b=new B, a.setB(b)]
+      -  e.g: A is dependent on B , Student has Address.
 
-- Broad range of features, requiring more configuration and setup.
+  - `Dependency Injection` (from Spring-`IOC`) :
+    - `IoC`(Inversion of Control) Manages `bean lifecycle` and `dependencies`.
+    - put `@Componenet`(Singleton class - obj 1) on classA,B,C
+    - Spring will create `IoC-Container` [[ empty ]] 
+    - Spring will create objects of A and B - [[ A a1, B b1 ]]
+    - put `@AutoWire`(DI) on class [A]
+    - Spring will inject [b1 into a1], using either way:
+
+  - `Developer/ Spring -Ioc (bts) `: 
+      - way-1 : `Setter Injection` : (flexible but mutable.)
+        ```
+        A a1 = new A();
+        B b1 = new B();
+        a1.setB(b1); // DI
+        ```
+      - way-2 : `Constructor Injection` : (promotes immutability.)
+        ```
+        B b1 = new B();
+        A a1 = new A(b1); // DI
+        ```
+  - `Bean type` :
+      - `Singleton beans` ( register in container at startup) 
+        - a1, b1. ( single object only). eg : `repo, service, controller` class are singleton.
+        - mostly used. 90%+
+        - class B { m(){}, m(){}, } :: code-present /`stateless classes`/ `SINGLETON`(single instance/obj of classB)
+        ```
+        @Component
+          public class MySingletonBean {       // Singleton scoped bean
+          }
+        ```
+
+      - `Prototype beans` (lazy) 
+        - register later by code:  c1, c2, c3 : [[ A a1, B b1, C c1,c2,c3 ]]
+        - rarely used
+        - class A { P, P, } :: data-hold / `stateful classes` / `PROTOTYPE` (multiple instance/s of classA)
+        ```
+         @Component
+         @Scope("prototype")
+         public class MyPrototypeBean {       // Prototype scoped bean
+         }
+        ```
+      
+  - Container Analogy:  
+    - `Spring Container` / ApplicationContext AC: [[ beans : o1, o2, o3...    ]]
+    - `Hibernate Container` / PersistenceContext PC or Session: [[ entities : e1, e2, e3...    ]]
+    
+  - Spring project - run : empty container load >>  singleton bean gets created and get registered to container.
+
+  - Broad range of features, requiring more configuration and setup :   
+    - `AOP` : skip
+    - `Spring hibernate`
+    - `Spring JDBC` : jdbcTemplate.*
+    - `Spring transaction management`
+    - `Spring MVC` - webApp:  JSP:[HTML,JS,CSS] + [ Servlet(http) ]
+    - `Spring REST` - REST api
+    - ...
 
 ---
 
