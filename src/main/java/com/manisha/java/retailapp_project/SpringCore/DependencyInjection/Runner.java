@@ -1,4 +1,4 @@
-package com.manisha.java.retailapp_project.SpringCore;
+package com.manisha.java.retailapp_project.SpringCore.DependencyInjection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

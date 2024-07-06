@@ -49,6 +49,9 @@
 
 
 ### 2. Spring: (Framework of frameworks):
+- Manage a well-structured, decoupled application. 
+- each component has a clear responsibility 
+- and dependencies are managed automatically by the Spring IoC container.
 - `Core`: 
   - `Dependency` 
       - `Class A` has `Class B` instance.
@@ -127,12 +130,12 @@
 - Bean Creation (SingleTon Class) & (Stateless no data saving):
   - `@Component:`(marks/flags a class as a Spring component)
     - `@Service:`(specialization of @Component, business logic.)
-    - `@Repository:`(of@Component, handle database operations.)
-    - `@Controller:`(of @Component. class serves as a controller in the MVC pattern(Model–view–controller)).
+    - `@Repository:`(of@Component, handle DB operations, DAO (Data Access Object))
+    - `@Controller:`(of @Component.web controllers,handle HTTP requests.).
       - `@RestController:`(of @Controller and @ResponseBody, create REST-ful web services.)
 
 - Configuration and Bean (Manual DI):
-    - `@Configuration`
+    - `@Configuration`: class declares one or more @Bean methods, may be processed by Spring container to generate bean definitions and service requests.
     - `@Bean`
 
 - Automatic (DI):

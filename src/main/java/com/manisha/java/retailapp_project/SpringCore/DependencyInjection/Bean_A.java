@@ -1,4 +1,4 @@
-package com.manisha.java.retailapp_project.SpringCore;
+package com.manisha.java.retailapp_project.SpringCore.DependencyInjection;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
