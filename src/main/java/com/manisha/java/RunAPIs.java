@@ -1,15 +1,21 @@
 package com.manisha.java;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication()
+//@ComponentScan("com.manisha.java")
 @ComponentScan("com.manisha.java.retailapp_project")
-public class RunAPIs {
+public class RunAPIs implements CommandLineRunner {
+	@Autowired
+	private ApplicationContext applicationContext;
 
 	public static void main(String[] args)
 	{
@@ -34,6 +40,15 @@ public class RunAPIs {
 			//.collect( Collectors.toList() ); // terminal operation - collect()
 
 		l.forEach( i -> System.out.println(i) );
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		System.out.println("===== Command Line Runner ==== 1 ");
+		String[] beanNames = applicationContext.getBeanDefinitionNames();
+		for (String beanName : beanNames) {
+			System.out.println(beanName);
+		}
 	}
 }
 

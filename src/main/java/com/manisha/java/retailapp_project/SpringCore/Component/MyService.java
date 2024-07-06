@@ -9,6 +9,6 @@ public class MyService {
     private MyRepository myRepository;
 
     public String processData(){
-        return myRepository.getData();
+        return myRepository.getData();                      //calling method of 'MyRepository' class
     }
 }

@@ -9,7 +9,8 @@
 
 ### 1.1 Key Features of Spring Boot:
 1.`Auto-Configuration`:
-   - configures Spring application based on the dependencies you added.
+   - Configures Spring application based on the dependencies you added,
+   - Configures Conditionally (Jar/Bean/Class present or not) with help `@EnableAutoConfiguration`.
    
 2.`Standalone Applications`:
    - allows to create standalone applications 
