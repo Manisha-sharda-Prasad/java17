@@ -80,7 +80,8 @@
       - `Singleton beans` ( register in container at startup) 
         - a1, b1. ( single object only). eg : `repo, service, controller` class are singleton.
         - mostly used. 90%+
-        - class B { m(){}, m(){}, } :: code-present /`stateless classes`/ `SINGLETON`(single instance/obj of classB)
+        - class B { m(){}, m(){}, } :: code-present
+        - `Stateless classes`/ `SINGLETON`(single instance/obj of classB)
         ```
         @Component
           public class MySingletonBean {       // Singleton scoped bean
@@ -90,7 +91,8 @@
       - `Prototype beans` (lazy) 
         - register later by code:  c1, c2, c3 : [[ A a1, B b1, C c1,c2,c3 ]]
         - rarely used
-        - class A { P, P, } :: data-hold / `stateful classes` / `PROTOTYPE` (multiple instance/s of classA)
+        - class A { P, P, } :: data-hold 
+        - `Stateful classes` / `PROTOTYPE` (multiple instance/s of classA)
         ```
          @Component
          @Scope("prototype")
@@ -116,23 +118,24 @@
 ---
 
 ### 3. Annotations :
-- `@SpringBootApplication`: (Placed on the main class, combines 
+- Starting Annotations:
+  - `@SpringBootApplication`: (Placed on the main class):
     - `@Configuration` 
     - `@EnableAutoConfiguration`
     - `@ComponentScan`
 
-- Bean Creation:
+- Bean Creation (SingleTon Class) & (Stateless no data saving):
   - `@Component:`(marks/flags a class as a Spring component)
     - `@Service:`(specialization of @Component, business logic.)
     - `@Repository:`(of@Component, handle database operations.)
     - `@Controller:`(of @Component. class serves as a controller in the MVC pattern(Model–view–controller)).
       - `@RestController:`(of @Controller and @ResponseBody, create REST-ful web services.)
 
-  - Configuration and Bean (Manual DI)
+- Configuration and Bean (Manual DI):
     - `@Configuration`
     - `@Bean`
 
-- Automatic - Dependency Injection
+- Automatic (DI):
   - `@Autowired:` : inject dependencies automatically : constructors, setter  or fields (reflection-API, assignment operator)
     - `@Qualifier:` Resolve : multiple candidates beans founds
 
