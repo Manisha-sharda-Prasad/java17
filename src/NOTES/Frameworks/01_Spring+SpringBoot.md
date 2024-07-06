@@ -54,13 +54,17 @@
 - `Core` 
     - `Dependency` 
       - `Class A` has `Class B` instance.
+      -  done by developers(developer control)-> a=new A, b=new B, a.setB(b)
       - so, A is dependent on B .
       - eg: Student has Address.
     - `Dependency Injection` (from Spring) :
-      - `IoC`(Inversion of Control) Manages `bean lifecycle` and dependencies.
-      - First, Spring will create `IoC-Container` [[ empty ]]
-      - next, Spring will create objects of A and B - [[ A a1, B b1 ]]
-      - then, spring will inject b1 into a1, using either way:
+      - `IoC`(Inversion of Control) Manages `bean lifecycle` and `dependencies`.
+      - put `@Componenet`(Singleton class - obj 1) on classA,B,C
+      - Spring will create `IoC-Container` [[ empty ]] 
+      - Spring will create objects of A and B - [[ A a1, B b1 ]]
+      - put `@AutoWire`(DI) on class [A]
+      - Spring will inject [b1 into a1], using either way:
+    - `Developer/ Spring -Ioc (bts) `: 
         - way-1 : `Setter Injection` : (flexible but mutable.)
           ```
           A a1 = new A();
@@ -98,7 +102,6 @@
   - ...
 
 - Broad range of features, requiring more configuration and setup.
-
 
 ---
 
