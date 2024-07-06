@@ -31,16 +31,17 @@
       - so, A is dependent on B .
       - eg: Student has Address.
     - `Dependency Injection` (from Spring) :
+      - `IoC`(Inversion of Control) Manages `bean lifecycle` and dependencies.
       - First, Spring will create `IoC-Container` [[ empty ]]
       - next, Spring will create objects of A and B - [[ A a1, B b1 ]]
       - then, spring will inject b1 into a1, using either way:
-        - way-1 : `setter injection`
+        - way-1 : `Setter Injection` : (flexible but mutable.)
           ```
           A a1 = new A();
           B b1 = new B();
           a1.setB(b1); // DI
           ```
-        - way-2 : `constructor injection` :
+        - way-2 : `Constructor Injection` : (promotes immutability.)
           ```
           B b1 = new B();
           A a1 = new A(b1); // DI
