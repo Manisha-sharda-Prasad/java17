@@ -1,11 +1,13 @@
-##  Spring Boot
- 
+##  Spring vs.Spring Boot
+
+
+### 1.  Spring boot:
 - Framework simplifies development of Java applications, 
-- for web applications and microservices. 
-- provides a pre-configured setup.
+- for web applications and `microservices`. 
+- provides a `pre-configured setup`.
 - reduce boilerplate code.
 
-### 1. Key Features of Spring Boot:
+### 1.1 Key Features of Spring Boot:
 1.`Auto-Configuration`:
    - configures Spring application based on the dependencies you added.
    
@@ -21,10 +23,34 @@
     - well-suited for developing microservices.
     - make your microservices smaller and it will run faster.
 
----
-### 2. Spring vs. Spring boot:
+5`More` : 
+- `Auto Configured` Setup and `Starter Projects`:
+- `Extension of Spring` that `simplifies application development using STARTER-PROJECT` / `Starter POMs(bundle dependencies)`
+    - sb-starter-`jpa-data`
+    - sb-starter-`web` (created using spring-MVC framework)
 
-#### 1. Spring: Framework of frameworks:
+```
+		Starter POM : 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+```
+
+- STARTER-PROJECT
+    - `Auto-Configuration`:  starter project will have all framework's default setting/configuration.
+        - `@EnableAutoConfiguation`
+    - `Standalone Applications` :
+        - Old : create web/servlet code >  install tomcat in laptop > launch/run project inside in Tomcat.
+        - new : JAR has `embedded tomcat server` (or Jetty). run like regular program.
+    - `Production-Ready Features`:
+        - health-monitoring
+        - logging
+
+---
+
+
+### 2. Spring: (Framework of frameworks):
 - `Core` 
     - `Dependency` 
       - `Class A` has `Class B` instance.
@@ -74,32 +100,9 @@
 - Broad range of features, requiring more configuration and setup.
 
 
-#### 2. Spring boot:
-- Extension of Spring that simplifies application development using STARTER-PROJECT / `Starter POMs`
-  - sb-starter-`jpa-data`
-  - sb-starter-`web` (created using spring-MVC framework)
-
-```
-		Starter POM : 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-```
-  
-- STARTER-PROJECT
-  - `Auto-Configuration`:  starter project will have all framework's default setting/configuration. 
-    - `@EnableAutoConfiguation`
-  - `Standalone Applications` :
-    - Old : create web/servlet code >  install tomcat in laptop > launch/run project inside in Tomcat.
-    - new : JAR has `embedded tomcat server` (or Jetty). run like regular program.
-  - `Production-Ready Features`: 
-    - health-monitoring 
-    - logging
-
 ---
 
-### 3. Annotations:
+### 3. Annotations :
 - `@SpringBootApplication`: (Placed on the main class, combines 
     - `@Configuration` 
     - `@EnableAutoConfiguration`
@@ -133,7 +136,6 @@
 
 ---
 
-# Rough
 
 
 
