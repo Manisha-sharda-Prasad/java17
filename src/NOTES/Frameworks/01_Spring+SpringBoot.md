@@ -19,6 +19,7 @@
    
 4.`Microservices Support`:
     - well-suited for developing microservices.
+    - make your microservices smaller and it will run faster.
 
 ---
 ### 2. Spring vs. Spring boot:

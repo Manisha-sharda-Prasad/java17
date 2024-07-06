@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class Runner implements CommandLineRunner {
 
     @Autowired(required = true)
-    @Qualifier("myBeanA_2")                       //Priority -@Qualifier /not @Primary "myBeanA_1"
+    @Qualifier("myBeanA_2")                       //Priority -@Qualifier*** /not @Primary "myBeanA_1"
     Bean_A dependency1; // = null
     @Override
     public void run(String... args) throws Exception {
