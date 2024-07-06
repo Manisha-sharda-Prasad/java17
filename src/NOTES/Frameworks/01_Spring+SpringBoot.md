@@ -1,6 +1,6 @@
 ##  Spring Boot
  
-- Framework designed to simplify the development of Java applications, 
+- Framework simplifies development of Java applications, 
 - for web applications and microservices. 
 - provides a pre-configured setup.
 - reduce boilerplate code.
