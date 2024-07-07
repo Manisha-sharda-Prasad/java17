@@ -55,7 +55,10 @@ Here are the basic ones:
 
 
 ### Spring MVC (Model-View-Controller):
-This client-server interaction is essential for web applications to function dynamically and efficiently.
+- This client-server interaction is essential for web applications 
+- spring-boot-starter-web sets up a web application using Spring MVC. 
+- Instead of traditional HTML views, you can return JSON data using Jackson, 
+- simplifying the development of RESTful web services.
 
 
 - `Spring MVC (Model-View-Controller):`
@@ -71,4 +74,10 @@ This client-server interaction is essential for web applications to function dyn
 
   - Instead of returning HTML views, you  return JSON data.
   - Jackson is a library that Spring Boot uses to convert Java objects to JSON and vice versa.
-  - When a controller method returns a Java object, Jackson automatically converts it to JSON if the client expects JSON.
+  - When controller method returns a Java object, Jackson automatically converts it to JSON if the client expects JSON.
+  
+  - Controller returning JSON:
+    - @RestController: Tells Spring that this controller returns data (usually JSON) instead of views (HTML).
+    - @GetMapping("/products"): Maps the /products URL to this method.
+    - Returning Java objects: These are automatically converted to JSON by Jackson.
+
