@@ -13,26 +13,27 @@ public class MyController {
     }
 
     @PutMapping("family/getdetails-2")
-    String[] helloworld2(){
-        MyFunctionalInterafce implementation1 = new ImplemteterClass(); //old
+    String[] helloWorld2(){
+        MyFunctionalInterface implementation1 = new ImplementerClass(); //old
 
         //new
-        MyFunctionalInterafce implementation2 = ()->System.out.print("xxxxxx");
-        MyFunctionalInterafce implementation3 = ()->System.out.print("xxxxfhgfhgfgfxx");
-        MyFunctionalInterafce implementation4 = ()->System.out.print("xxxxfhgfhgfdvfdvfdvdsfgfxx");
+        MyFunctionalInterface implementation2 = ()->System.out.print("implementation2");
+        MyFunctionalInterface implementation3 = ()->System.out.print("implementation3");
+        MyFunctionalInterface implementation4 = ()->System.out.print("implementation4");
 
         return new String[]{"Lekhraj", "Manisha"};
     }
 }
 
 @FunctionalInterface
-interface MyFunctionalInterafce{
+interface MyFunctionalInterface{
     public void doSomething(); // abstract
 }
 
-class ImplemteterClass implements MyFunctionalInterafce{
-    public void doSomething(){ // implemtation
-        System.out.print("ImplemteterClass :: doSomething()... hellow world");
+
+class ImplementerClass implements MyFunctionalInterface{
+    public void doSomething(){ // implementation
+        System.out.print("ImplementerClass :: doSomething()... hello world");
     }
 }
 
