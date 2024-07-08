@@ -100,7 +100,51 @@
 
 - Automatic Configuration : `bean register`
   - view resolvers bean
-  - DisatcherServlet 
+  - Dispatcher Servlet 
   - set up Jackson: ObjectMapper bean, etc
   - embedded tomcat
   - `/error` --> `BasicErrorController`
+---
+## D. REST API Annotations
+
+- `@RestController:`
+Combines `@Controller, @ResponseBody`, simplifying the creation of REST-ful web services.
+
+- `@RequestMapping:`
+Used to map web requests onto specific handler classes and/or handler methods.
+
+- `@GetMapping:`
+Handles HTTP GET requests.
+
+- `@PostMapping:`
+Handles HTTP POST requests.
+
+- `@PutMapping:`
+Handles HTTP PUT requests.
+
+- `@DeleteMapping:`
+Handles HTTP DELETE requests.
+
+- `@PatchMapping:`
+Handles HTTP PATCH requests.
+
+- `@RequestBody:`
+Maps the body of the HTTP request to a method parameter.
+
+- `@ResponseBody:`
+Maps the return value of a method to the HTTP response body.
+
+- `@RequestParam:`
+Extracts query parameters, form data, and parts of the URL from the request.
+
+- `@PathVariable:`
+Extracts values from the URI path.
+
+- `@ResponseStatus:`
+Specifies the HTTP status code for a method.
+
+- `@ExceptionHandler:`
+Defines methods to handle exceptions thrown during request processing.
+
+- `@CrossOrigin:`
+Enables Cross-Origin Resource Sharing (CORS).
