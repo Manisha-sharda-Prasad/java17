@@ -61,6 +61,7 @@
 ---
 
 ## B. Spring MVC (Model-View-Controller):
+
 - https://www.tutorialspoint.com/springmvc/springmvc_overview.htm
 - client-server interaction is essential for web applications 
 - Instead of traditional HTML views, you can return JSON data using Jackson, 
@@ -73,7 +74,7 @@
 
 - Old (no-framework): Tomcat : Web Container [[  url-1:servlet-1, url-2:servlet-2, ...  ]]
 
-- SpringMVC (framework) : Tomcat : web Container [[   `DispatcherServlet` + `web-AC`  ]]
+- SpringMVC (framework) : Tomcat : web Container [[   `DispatcherServlet` + `Spring web-AC`  ]]
   - `Single-servlet` `DispatcherServlet` --> forward request to multiple @controller class/s
   - `spring-Container`: web-AC [[ beans: @controller, @srv, @repo, @component, @Bean]]
   - helper: `handlerMapping, ViewResolver`
@@ -148,3 +149,30 @@ Defines methods to handle exceptions thrown during request processing.
 
 - `@CrossOrigin:`
 Enables Cross-Origin Resource Sharing (CORS).
+
+---
+## Coding/prog
+```
+FLOW:
+- client/browser > http req (data) > web-server/container/tomcat >  
+        SPRING-MVC/REST [` DispatcherServlet` will call Controller > `Spring-container/AC (controller > srv > rep >)` > database > model(entity,etc) ]
+- server has prepared `model` > convert to JSON > http response > browser/client
+```
+- send data from postman, catch/map those data in controller
+- http req sends some `data` to server
+  - data1 : student `Object:s1` : save
+  - data2 : filter : getAllStudentByCity : `String: city`
+  - how ? : 
+    - http req:`header` : k:v, k:v, ...  : `@RequestHeader`
+    - http req:`body` : json  : `@RequestBody`
+    - http req:`url/path` 
+      - url`?k=v1&k=v&k=v2`  : `@RequestParam`
+      - `url-prefix/v1/v2/url-suffix` : complete url : `@Pathvariable`
+      - `url-prefix/v1/v2/url-suffix`?k=v4&k=v&k=v3
+
+- `static url`: abc.com/get
+- `dynamic url` : abc.com/get/{pageName}/end
+  - abc.com/get/1/end
+  - abc.com/get/100/end
+  - abc.com/get/1000/end
+  - ...

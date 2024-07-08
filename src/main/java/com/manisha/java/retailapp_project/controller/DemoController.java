@@ -1,6 +1,9 @@
 package com.manisha.java.retailapp_project.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 // Req - url mapping >> k:v data fetch >> ...
@@ -11,12 +14,24 @@ import org.springframework.web.bind.annotation.*;
 public class DemoController
 {
     // Request :: url(demo/api1) + empty body + empty header
-    @GetMapping("api1/{data1}/{data2}")
-    String[] api1(
+    @GetMapping("api1/{data1}/{data2}") //dynanic url
+    //@ResponseStatus(HttpStatus.OK) - not good practice
+    //@ResponseBody - already
+    ResponseEntity<String[]> api1(
+            //req:header
+            @RequestHeader ("h1") String h1,
+            @RequestHeader ("h2") String h2,
+
+
+            //url?k=v
             @RequestParam("name") String k1,
+            @RequestParam("k2") String k2,
+
+            //dynamic url /url/{}/{}
             @PathVariable("data1") String data1,
-            @PathVariable("data2")String data2,
-            @RequestHeader ("h1") String h1
+            @PathVariable("data2")String data2
+
+           // @RequestBody : Json
     )
     {
         // Part-A || developer
@@ -25,7 +40,12 @@ public class DemoController
         log.info("Path Variable  - data1:{}, data2:{} ", data1, data2);
         log.info("Header Variable  - h1:{}", h1);
 
-        return new String[] {"item-1", "item-2", "item-3", "item-4"};
+         String[] body = new String[] {"item-1", "item-2", "item-3", "item-4"}; // json --> http:resp:body
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("hh1", "vv2");
+
+        return new ResponseEntity<String[]>(body, headers, HttpStatus.ACCEPTED);
 
         // Part-B || SB-starter-web
         // 1. jackson :: Java object ---> CONVERT ---> myJSON
