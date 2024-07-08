@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class DemoController
 {
     // Request :: url(demo/api1) + empty body + empty header
-    @GetMapping("api1/{data1}/{data2}") //dynanic url
+    @GetMapping("api1/{data1}/{data2}") //dynamic url
     //@ResponseStatus(HttpStatus.OK) - not good practice
     //@ResponseBody - already
     ResponseEntity<String[]> api1(
@@ -22,10 +22,9 @@ public class DemoController
             @RequestHeader ("h1") String h1,
             @RequestHeader ("h2") String h2,
 
-
             //url?k=v
             @RequestParam("name") String k1,
-            @RequestParam("k2") String k2,
+            @RequestParam("name2") String k2,
 
             //dynamic url /url/{}/{}
             @PathVariable("data1") String data1,
@@ -36,14 +35,16 @@ public class DemoController
     {
         // Part-A || developer
         System.out.println("===== api-1 is called ====");
-        log.info("request param - name:{} ", k1);
+        log.info("Request Param - name:{} ", k1);
+        log.info("Request Param - name:{} ", k2);
         log.info("Path Variable  - data1:{}, data2:{} ", data1, data2);
         log.info("Header Variable  - h1:{}", h1);
+        log.info("Header Variable  - h2:{}", h2);
 
          String[] body = new String[] {"item-1", "item-2", "item-3", "item-4"}; // json --> http:resp:body
 
         HttpHeaders headers = new HttpHeaders();
-        headers.add("hh1", "vv2");
+        headers.add("header1", "headerValue1");
 
         return new ResponseEntity<String[]>(body, headers, HttpStatus.ACCEPTED);
 
@@ -64,7 +65,7 @@ public class DemoController
 Json:
 {
     k:12,
-    k:"vjdfjbfdj"
+    k:"[i, i]"
     k: [ i1, i2 ]
 }
 
