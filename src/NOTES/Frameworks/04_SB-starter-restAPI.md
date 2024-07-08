@@ -67,23 +67,21 @@
 - simplifying the development of REST-ful web services.
 
 - `Spring MVC (Model-View-Controller):`
-  - `Model`: Represents the data (e.g., Java objects).
-  - `View`: Represents the presentation layer (e.g., HTML).
-  - `Controller`: Handles incoming HTTP requests, processes them, and returns a response.
+  - `Model`: Represents data (e.g. `Java objects, data from DB + @repo + @srv`)
+  - `View`: NA in REST, Replacing HTML-> JSON. 
+  - `Controller`: Handles HTTP requests, processes them, and returns response. DispatcherServlet(by Spring) + @Controller
 
-- old (no framework): Tomcat : web Container [[  url-1:servlet-1, url-2:servlet-2, ...  ]]
-- SpringMVC framework : Tomcat : web Container [[   `DispatcherServlet` + `web-AC`  ]]
-  - single-servlet `DispatcherServlet` --> degate request to multiple @controller class/s
+- Old (no-framework): Tomcat : Web Container [[  url-1:servlet-1, url-2:servlet-2, ...  ]]
+
+- SpringMVC (framework) : Tomcat : web Container [[   `DispatcherServlet` + `web-AC`  ]]
+  - `Single-servlet` `DispatcherServlet` --> forward request to multiple @controller class/s
   - `spring-Container`: web-AC [[ beans: @controller, @srv, @repo, @component, @Bean]]
-  - helper: handlerMapping, ViewResolver
-  - MVC
-    - model : data from DB + @repo + @srv
-    - controller : DispatcherServlet(by Spring) + @Controller
-    - view : NA in REST. Replacing `HTML` with `JSON` (Jackson).
-  - model(data object) to Json:
-    - `Jackson` is a library that converts `Java objects to JSON` and vice versa.
-    - When controller method returns a Java object, Jackson automatically converts it to JSON if the client expects JSON.
-    - controller method --> annotate with `@ResponseBody`
+  - helper: `handlerMapping, ViewResolver`
+
+- model(data object) to Json:
+  - `Jackson` is a library that converts `Java objects to JSON` and vice versa.
+  - When controller method returns a Java object, Jackson automatically converts it to JSON if the client expects JSON.
+  - controller method --> annotate with `@ResponseBody`
   
 - Annotations in SpringMVC
 - `@RestController`: Tells Spring that this controller returns data (usually JSON) instead of views (HTML).
