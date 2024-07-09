@@ -23,9 +23,9 @@ public class ProductController {
     )
     {
         Print.print("-----------Product_Api_1------------");
-        Print.print("RequestHeader, header1:{} " + product1 + "header2:{} " + product2);
-        Print.print("RequestParam, param1:{} " + p1 + "param1:{} " + p2);
-        Print.print("PathVariable, urlData1:{} " + u1  + "urlData1:{} " + u2);
+        Print.print("RequestHeader, header1: " + product1 + "header2: " + product2);
+        Print.print("RequestParam, param1: " + p1 + "param1: " + p2);
+        Print.print("PathVariable, urlData1: " + u1  + "urlData1: " + u2);
 
         String[] responseBody = new String[] {"Product1, Product2, Product3, Product4, Product5,"};
 

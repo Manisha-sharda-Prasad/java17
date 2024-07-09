@@ -1,5 +1,6 @@
 package com.manisha.java.retailapp_project.controller;
 
+import com.manisha.java.retailapp_project.model.SampleInputDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -28,9 +29,9 @@ public class DemoController
 
             //dynamic url /url/{}/{}
             @PathVariable("data1") String data1,
-            @PathVariable("data2")String data2
+            @PathVariable("data2")String data2,
 
-           // @RequestBody : Json
+            @RequestBody SampleInputDto inputBody
     )
     {
         // Part-A || developer
@@ -40,6 +41,7 @@ public class DemoController
         log.info("Path Variable  - data1:{}, data2:{} ", data1, data2);
         log.info("Header Variable  - h1:{}", h1);
         log.info("Header Variable  - h2:{}", h2);
+        log.info( " {}, {}, {}, {} ", inputBody.getProp1(), inputBody.getProp2(), inputBody.getProp3(), inputBody.getDate().getMonth());
 
          String[] body = new String[] {"item-1", "item-2", "item-3", "item-4"}; // json --> http:resp:body
 
