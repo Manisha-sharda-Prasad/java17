@@ -1,10 +1,10 @@
 # NOTES
 
 ## Java 17
-- https://github.com/Manisha-sharda-Prasad/java17/tree/main/src/main/NOTES/Java
+- [NOTES/Java](https://github.com/Manisha-sharda-Prasad/java17/tree/main/src/NOTES/Java)
 
 ## Framework
-- https://github.com/Manisha-sharda-Prasad/java17/tree/main/src/main/NOTES/Frameworks
+- [NOTES/Frameworks](https://github.com/Manisha-sharda-Prasad/java17/tree/main/src/NOTES/Frameworks)
 
 ## Database
-- https://github.com/Manisha-sharda-Prasad/java17/tree/main/src/main/NOTES/Database
+- [NOTES/DATABASE](https://github.com/Manisha-sharda-Prasad/java17/tree/main/src/NOTES/Database)
