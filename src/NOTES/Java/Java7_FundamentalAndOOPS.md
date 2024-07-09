@@ -57,8 +57,8 @@
 
 ---
 ## OOPS
-1. Class and objects
-  - Template for creating object
+`1. Class and objects`
+  - Template/blueprint for creating object
   - object create - using `new constructor(...)`
   - `this`,`super` : current object.
   - more:
@@ -68,7 +68,7 @@
     - Immutable classes. eg : String - NO code
 
 - class members: [ Apply `Access specifier` : private, protected, default and public , to set access boundaries ]
-  - a. `methods`:
+  - a. `Methods`:
     - local variable (var declared inside method), setter, getter, toString, etc
     - `Instance method`
       - first create instance.object. let's say obj1
@@ -78,16 +78,16 @@
       - Class level method
       - `className`.m() {...access static member...}
 
-  - b. `property`:
+  - b. `Property`:
     - `Static Property`
       - class-level property
       - `ClassName`.<static-property>
 
-    - `instance property`
+    - `Instance property`
       - first create instance.object. let's say obj1
       - `obj1`.p1 , p2, etc
 
-  - c. `constructor` :
+  - c. `Constructor` :
     - default/no-agr ,
     - All-Arg constructor,
     - chaining - `this()`, `super()`
@@ -98,44 +98,67 @@
   - Introduction to Annotation, eg : @override. markers/metaData to compiler.
   - `Object` is parent of ALL classes.
 
-2.Encapsulation:
-- wrapping or bundling of data in a {} bracket in as single unit.
+2.`Encapsulation:`
+- wrapping or bundling of data into a single unit (in {} bracket) .
 - not exposing directly, write/hide details {}
 
 
-3. Inheritance:
+3.`Inheritance:`
 - Subclass(child) inherits attributes and behaviours(properties,methods) of superClass(parent).
 - subclass 'extends' superClass
+- hierarchical relationship between classes.
 
-4. Polymorphism:
+4.` Polymorphism:`
 - Many Forms/changing according to situation.
 - method `Over-ride` -> signature same. Overriding parent's method-body {} by child-class.
 - method `Over-load` -> same name but different signature (number, type, count.,order of args).Return-type does not matter.
 
-5. Abstraction:
+5. `Abstraction:`
+- hiding implementation details,
 - Hide complex details/ showing only what is needed.
-- Interface:
-  - Abstract methods(no-body)
-  - subclass can implement many interfaces at one time
-  -
-- Abstract class:
-   - `Abstract` methods(no-body- implements by child class),
-   - `Concrete` Methods(has-body)
+  - `Interface:`
+    - Abstract methods(no-body)
+    - other class implements/ writes body.
+    - subclass can implement many interfaces at one time.
 
-6. Association (dependency, relationship):
+  - `Abstract class:`
+     - `Abstract` methods(no-body- implements by child class),
+     - `Concrete` Methods(has-body)
+
+6. `Association` (dependency, relationship):
 ```
  eg: Student has Address
    - Class `Address`
    - class `Student` {
       String name;
       int roll;
-      Adderss address;  //here
+      Adderss address;       //has Address /has relation
      }
 ```
-7. Keyword:
-- final
-- static
-- Passing Parameters:
+7. `Keyword:`
+- `Final`:
+  - Can be used with variables, methods, and classes.
+  - `final variables`, they become constants.
+  - `final methods`, they cannot be overridden.
+  - `final classes`, they cannot be subclassed.
+  
+- `Static`:
+  - related/connected with class, 
+  - `Static variables` and `methods` belong to the class itself , rather than instances (objects) of class.
+  
+- `this:`
+  - Refers to the current object instance within a class.
+  -  used to differentiate between `class- properties` and `method- parameters` with the same name.
+
+- `super:`
+  - Refers to the superclass of the current object.
+  - Used to access superclass methods and constructors.
+
+- `Constructors`:
+    - this(args): - Used to call another constructor within the same class.
+    - super(args): - Used to call a constructor from the superclass.
+  
+- `Passing Parameters`:
   - `Pass By Value`
     - For primitive types, the actual value is passed, changes to parameter do not affect the original variable.
   - `Pass By Reference`
