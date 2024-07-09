@@ -13,6 +13,7 @@ public class SampleInputDto {
     Integer prop2;
 
     Boolean prop3;
+
     LocalDateTime date;
 
 }

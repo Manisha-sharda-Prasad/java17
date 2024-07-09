@@ -1,4 +1,5 @@
 package com.manisha.java.retailapp_project.controller;
+import com.manisha.java.retailapp_project.entity.Product;
 import com.manisha.java.util.Print;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -35,4 +36,13 @@ public class ProductController {
 
         return new ResponseEntity<String[]>(responseBody, headers, HttpStatus.OK);
     }
+    @PostMapping("save")
+    ResponseEntity <String> saveProductData(
+            @RequestBody Product product
+    )
+    {
+        Print.print("Product details : " + product.getId() + product.getPrice() + product.getName());
+        return new ResponseEntity<String>("saved", HttpStatus.OK);
+    }
+
 }
