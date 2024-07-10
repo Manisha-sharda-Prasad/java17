@@ -20,7 +20,6 @@ public class ProductController
     ProductRepository productRepository;
     @Value("${save.order.flag}")
     String flag;                           //application properties - flag
-
     @Autowired
     Environment env;                       //application properties - flag
 
@@ -54,7 +53,9 @@ public class ProductController
     ResponseEntity <String> saveProductData(@RequestBody Product product)
     {
         log.info("Product details : " + product.getId() + product.getPrice() + product.getName());
+
         String flag2 = env.getProperty("save.order.flag");
+
         if(flag.equalsIgnoreCase("YES")){
             productRepository.save(product);
         }

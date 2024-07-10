@@ -3,10 +3,8 @@ package com.manisha.java.retailapp_project.configuration;
 import com.manisha.java.retailapp_project.entity.Order;
 import com.manisha.java.retailapp_project.entity.OrderDetails;
 import com.manisha.java.retailapp_project.entity.Product;
-import com.manisha.java.retailapp_project.repository.CustomerRepository;
-import com.manisha.java.retailapp_project.repository.OrderDetailsRepository;
-import com.manisha.java.retailapp_project.repository.OrderRepository;
-import com.manisha.java.retailapp_project.repository.ProductRepository;
+import com.manisha.java.retailapp_project.entity.Shop;
+import com.manisha.java.retailapp_project.repository.*;
 import jakarta.persistence.Tuple;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,12 +26,15 @@ public class CRUDRunner implements CommandLineRunner {
     @Autowired
     OrderDetailsRepository orderDetailsRepository;
     @Autowired ProductRepository productRepository;
+    @Autowired ShopRepository shopRepository;
+
     @Override
     public void run(String... args) throws Exception
     {
         Product p = null;
         Order o = null;
         OrderDetails p2 = null;
+        Shop s2 = null;
 
         // 1 findAll
         List<Product> findAll_result= productRepository.findAll();
