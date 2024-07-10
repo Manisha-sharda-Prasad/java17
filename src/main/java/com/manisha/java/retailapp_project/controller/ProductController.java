@@ -1,14 +1,22 @@
 package com.manisha.java.retailapp_project.controller;
+
 import com.manisha.java.retailapp_project.entity.Product;
-import com.manisha.java.util.Print;
+import com.manisha.java.retailapp_project.repository.ProductRepository;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("product")
-public class ProductController {
+public class ProductController
+{
+    @Autowired
+    ProductRepository productRepository;
+
     @GetMapping("productApi1/{urlData1}/{urlData2}")
     ResponseEntity <String[]>  productApi1(
 
@@ -23,10 +31,10 @@ public class ProductController {
           @PathVariable("urlData2") String u2
     )
     {
-        Print.print("-----------Product_Api_1------------");
-        Print.print("RequestHeader, header1: " + product1 + "header2: " + product2);
-        Print.print("RequestParam, param1: " + p1 + "param1: " + p2);
-        Print.print("PathVariable, urlData1: " + u1  + "urlData1: " + u2);
+        log.info("-----------Product_Api_1------------");
+        log.info("RequestHeader, header1: " + product1 + "header2: " + product2);
+        log.info("RequestParam, param1: " + p1 + "param1: " + p2);
+        log.info("PathVariable, urlData1: " + u1  + "urlData1: " + u2);
 
         String[] responseBody = new String[] {"Product1, Product2, Product3, Product4, Product5,"};
 
@@ -37,11 +45,10 @@ public class ProductController {
         return new ResponseEntity<String[]>(responseBody, headers, HttpStatus.OK);
     }
     @PostMapping("save")
-    ResponseEntity <String> saveProductData(
-            @RequestBody Product product
-    )
+    ResponseEntity <String> saveProductData(@RequestBody Product product)
     {
-        Print.print("Product details : " + product.getId() + product.getPrice() + product.getName());
+        log.info("Product details : " + product.getId() + product.getPrice() + product.getName());
+        productRepository.save(product);
         return new ResponseEntity<String>("saved", HttpStatus.OK);
     }
 
