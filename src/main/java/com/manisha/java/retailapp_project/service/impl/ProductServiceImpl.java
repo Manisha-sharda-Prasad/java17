@@ -1,4 +1,4 @@
-package com.manisha.java.retailapp_project.service;
+package com.manisha.java.retailapp_project.service.impl;
 
 /*import com.manisha.java.retailapp_project.entity.Product;
 import com.manisha.java.retailapp_project.repository.ProductRepository;

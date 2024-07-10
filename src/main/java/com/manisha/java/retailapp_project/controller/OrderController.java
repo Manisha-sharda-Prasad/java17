@@ -20,9 +20,7 @@ public class OrderController {
     ResponseEntity<String> saveOrderData(@RequestBody Order order){
 
         log.info("Order details : " + " " + order.getId() + " " +order.getOrderDate());
-
-        orderRepository.save(order);
-
+        //orderRepository.save(order);
         return new ResponseEntity <String>("saved order data " , HttpStatus.ACCEPTED);
     }
 }

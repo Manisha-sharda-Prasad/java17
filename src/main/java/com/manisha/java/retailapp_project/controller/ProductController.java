@@ -4,6 +4,8 @@ import com.manisha.java.retailapp_project.entity.Product;
 import com.manisha.java.retailapp_project.repository.ProductRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,10 +18,14 @@ public class ProductController
 {
     @Autowired
     ProductRepository productRepository;
+    @Value("${save.order.flag}")
+    String flag;                           //application properties - flag
+
+    @Autowired
+    Environment env;                       //application properties - flag
 
     @GetMapping("productApi1/{urlData1}/{urlData2}")
     ResponseEntity <String[]>  productApi1(
-
            //get from header -
           @RequestHeader("header1") String product1,
           @RequestHeader("header2") String product2,
@@ -48,8 +54,10 @@ public class ProductController
     ResponseEntity <String> saveProductData(@RequestBody Product product)
     {
         log.info("Product details : " + product.getId() + product.getPrice() + product.getName());
-        productRepository.save(product);
+        String flag2 = env.getProperty("save.order.flag");
+        if(flag.equalsIgnoreCase("YES")){
+            productRepository.save(product);
+        }
         return new ResponseEntity<String>("saved", HttpStatus.OK);
     }
-
 }

@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class DemoController
 {
+
+
     // Request :: url(demo/api1) + empty body + empty header
     @GetMapping("api1/{data1}/{data2}") //dynamic url
     //@ResponseStatus(HttpStatus.OK) - not good practice
