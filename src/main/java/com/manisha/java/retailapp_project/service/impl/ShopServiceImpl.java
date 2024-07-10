@@ -9,7 +9,7 @@ public class ShopServiceImpl
 {
 
     @Autowired
-    ShopRepository repo;
+    ShopRepository shopRepository;
 
     // addShop(Shop shop)
 
