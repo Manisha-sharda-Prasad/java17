@@ -50,6 +50,6 @@ public class ShopController
 
     @DeleteMapping("/delete")
     String findShopDetails5(@RequestParam Integer id){
-        return shopService.deleteShop(id);                        // inside optional .get/ .orElse(new Shop()- handle null exception (create new)
+        return shopService.deleteShop(id);
     }
 }
