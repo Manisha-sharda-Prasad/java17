@@ -34,13 +34,22 @@ public class ShopController
     }
 
     @GetMapping("/getByName")
-    List<Shop> findShopDetails2(@RequestHeader("name")String name, @RequestParam("name") String name2){
+    List<Shop> findShopDetails2(@RequestHeader("name") String name, @RequestParam("name") String name2){
         return shopService.getShopByName(name2);
     }
 
     @GetMapping("/getById")
-    Shop findShopDetails3(@RequestHeader("id") Long id){
+    Shop findShopDetails3(@RequestHeader("id") Integer id){
         return shopService.getShopByID(id).orElse(new Shop());                         // inside optional .get/ .orElse(new Shop()- handle null exception (create new)
     }
 
+    @PostMapping("/update")
+    String findShopDetails4(@RequestBody Shop shop){
+        return shopService.updateShop(shop);                        // inside optional .get/ .orElse(new Shop()- handle null exception (create new)
+    }
+
+    @DeleteMapping("/delete")
+    String findShopDetails5(@RequestParam Integer id){
+        return shopService.deleteShop(id);                        // inside optional .get/ .orElse(new Shop()- handle null exception (create new)
+    }
 }

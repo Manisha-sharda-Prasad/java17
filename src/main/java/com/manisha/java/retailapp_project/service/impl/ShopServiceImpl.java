@@ -28,11 +28,33 @@ public class ShopServiceImpl {
     public List<Shop> getShopByName(String name){
         return shopRepository.findByName(name);
     }
-    public Optional<Shop> getShopByID(Long id){
+    public Optional<Shop> getShopByID(Integer id){
         return shopRepository.findById(id);
     }
 
-    // updateShop(Shop shop){}
+    @Transactional
+    public String updateShop(Shop shopNew)
+    {
+        // 1. fetch Entity from DB
+        Shop shopCurrent =  shopRepository.findById(shopNew.getId()).get();
+
+        // 2. update entity
+        shopCurrent.setAddress(shopNew.getAddress());
+        shopCurrent.setCity(shopNew.getCity());
+        shopCurrent.setName(shopNew.getName());
+        shopCurrent.setCountry(shopNew.getCountry());
+        shopCurrent.setPostalCode(shopNew.getPostalCode());
+
+        // 3. persist entity
+        shopRepository.save(shopCurrent);
+
+        return "updated";
+    }
+
+    public String deleteShop(Integer id) {
+        shopRepository.deleteById(id);
+        return "shop deleted, having id : "+id;
+    }
 
     // deleteAllShop(){}
     // deleteAllById(){}
