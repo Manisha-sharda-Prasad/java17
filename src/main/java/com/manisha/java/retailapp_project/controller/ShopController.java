@@ -34,6 +34,7 @@ public class ShopController
 
     @GetMapping("/getByName")
     List<Shop> findShopDetails2(@RequestHeader("name") String name, @RequestParam("name") String name2){
+        //return shopService.getShopByName(name);
         return shopService.getShopByName(name2);
     }
 

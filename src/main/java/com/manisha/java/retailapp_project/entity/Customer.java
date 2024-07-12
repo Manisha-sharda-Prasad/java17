@@ -25,4 +25,12 @@ public class Customer
    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
    private Set<Order> orders;
 
+   @Override
+   public String toString() {
+      return "Customer{" +
+              "id=" + id +
+              ", name='" + name + '\'' +
+              ", orders=" + orders +
+              '}';
+   }
 }
