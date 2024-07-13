@@ -29,4 +29,9 @@ public class CustomerController {
         return customerService.getAllCustomerData();
     }
 
+    @GetMapping("/getId")
+     Customer findById(@RequestHeader ("id")Integer id){
+        return customerService.findCustomerById();
+    }
+
 }

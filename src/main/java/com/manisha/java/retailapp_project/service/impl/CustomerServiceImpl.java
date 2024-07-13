@@ -20,4 +20,8 @@ public class CustomerServiceImpl {
         return customerRepository.findAll();
     }
 
+    public Customer findCustomerById(){
+        return customerRepository.findById();
+    }
+
 }
