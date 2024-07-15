@@ -160,8 +160,13 @@
   
 - `Passing Parameters`:
   - `Pass By Value`
-    - For primitive types, the actual value is passed, changes to parameter do not affect the original variable.
+    - For primitive types, the actual value is passed, 
+    - changes to parameter do not affect the original variable.
   - `Pass By Reference`
-    - For reference types (objects), a copy of the reference is passed. Changes to the object inside the method will affect the original object.
+    - For reference types (objects), a copy of the reference is passed. 
+    - Changes to the object inside the method will affect the original object.
 
-
+- `Functional interface` :
+  - Single Abstract Method: contains only one abstract method.
+  - Default and Static Methods: any number of default, static methods.
+  - @FunctionalInterface Annotation: not mandatory, avoids accidentally adding more abstract methods.
