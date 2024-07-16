@@ -1,28 +1,31 @@
 # Java - learning programs
 
 ## Fundamental
-1. `DataType/s` :
-  - `Primitive` Type
-    - number: byte, short, int, Long, float, double
-    - char, boolean
-  - `Reference/Class` Type
-    - Animal, Car, String, etc
-    - Wrapper class : int-->Integer
-  - `Convert one Datatype to another`
-    - Automatic : int i = s,
-    - explicit : short s = `(cast)` i
-    - " "+type = String
+1. `Data-Type/s` :
+   - `Primitive Data` Type
+     - number: byte, short, int, Long, float, double
+     - char, boolean
+   - `Reference Data/Class` Type
+     - `Classes:` Animal, Car, String, etc
+     - `Arrays:` Ordered collections of elements
+     - `Interfaces:` Similar to classes but - Abstract `methods (no-body)`.
+     - `Enumerations (Enums):` define collections of constants`{SUN,MON..}`.
+
+   - `Wrapper class :` Byte, Short, Integer, Long, Float, Double, Character, Boolean
+     - Automatic : int i = s,
+     - explicit : short s = `(cast)` i
+     - " "+type = String
 
 2. `Control statements` :
-  - `if else` : if, if-else, if-elseif-elseif-else, if-elseif-elseif
-  - `Switch-block `and `Switch-expression` (java 14)
-  - operator and `operator-precedence` -->
-    - !, && , ||, ternary-`?:`,
-    - () + ? - * %
-    - `bit/byte` :  >> , <<
-      - rarely used.
-      - int i=8 (binary-100), left-shift: 100(12) | `i = i << 1`
-    - good practice : `wrap with ()`
+   - `if else` : if, if-else, if-elseif-elseif-else, if-elseif-elseif
+   - `Switch-block `and `Switch-expression` (java 14)
+   - `operator` and `operator-precedence` -->
+     - `!, && , ||,` ternary-`?:`,
+     - `() + ? - * %`
+     - `bit/byte` :  >> , <<
+       - rarely used.
+       - int i=8 (binary-100), left-shift: 100(12) | `i = i << 1`
+     - good practice : `wrap with ()`
 
 3. `Loop statements`:
    - `while` :
@@ -69,9 +72,9 @@
 ## OOPS
 1.`Class and objects`:
   - Template/blueprint for creating object
-  - `Object` is an `instance` of a `class`, has a `methods and properties`.
+  - `Object` is an `instance` of a `class`, has  `methods`,`properties`.
   - `Objects/Instance` created from `classes`, using the `new` keyword.
-  - object create - using `new constructor(...)`
+  - `Create Object` - using `new constructor(...)`
   - `this`,`super` : current object.
   - more:
     - `Enum`, `record`,
@@ -125,6 +128,8 @@
 - Subclass(child) inherits attributes and behaviours(properties,methods) of superClass(parent).
 - subclass 'extends' superClass
 - hierarchical relationship between classes.
+- promotes code re-usability.
+
 
 4.` Polymorphism:`
 - Many Forms/changing according to situation.
