@@ -140,8 +140,7 @@
 ---
 ### Keywords:
 
-- `Access Modifiers:`
-Accessibility of classes, methods, and properties:
+- `Access Modifiers:` Accessibility of classes, methods, and properties:
 
   - `public`: Accessible from anywhere, any package.
   - `protected`: within the same package and subclasses.
@@ -221,6 +220,12 @@ Accessibility of classes, methods, and properties:
     - which can run different platforms and environments.
     - providing platform independence.
 
+- `String Pool`:
+  - special area of memory in  (JVM) where string literals are stored. 
+  - (e.g., "hello") added to the string pool.
+  - Strings in the string pool are shared among different parts of your program,
+  - helps save memory, avoiding duplicate string objects with same value.
+
 - `String Vs String Builder`:
   - `String` :
     - objects are `immutable`, values cannot be changed after creation.
@@ -234,4 +239,17 @@ Accessibility of classes, methods, and properties:
     - can perform frequent string manipulations
     - avoids unnecessary object creation and copying.
 
+- `Immutable Class / objects` : 
+  - `state cannot change` after creation.
+  - `final` class: Prevents class from being subclassed.
+  - `private` and `final`property: cannot modify later.
+  - `setters` : Avoid methods that modify fields.
+  - `safe`, no concern for state change
+  -  `Wrapper Classes`
 
+- `Mutable Class / Object` : 
+  - `state can change` after creation.
+  - `non final`: don't declare final class
+  - `public` or `protected` setters : Methods that allow modification of property /fields.
+  - `Save memory` : don't need multiple instance creation, manipulate one object.
+  
