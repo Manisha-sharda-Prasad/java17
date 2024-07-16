@@ -162,11 +162,29 @@
   - `Pass By Value`
     - For primitive types, the actual value is passed, 
     - changes to parameter do not affect the original variable.
-  - `Pass By Reference`
+  - `Pass By Reference`:
     - For reference types (objects), a copy of the reference is passed. 
     - Changes to the object inside the method will affect the original object.
 
 - `Functional interface` :
-  - Single Abstract Method: contains only one abstract method.
-  - Default and Static Methods: any number of default, static methods.
-  - @FunctionalInterface Annotation: not mandatory, avoids accidentally adding more abstract methods.
+  - `Single Abstract Method`: contains only one abstract method.
+  - `Default & Static Methods`: any number of default, static methods.
+  - `@FunctionalInterface` : not mandatory, avoids accidentally adding more abstract methods.
+
+
+- `JDK (Java Development Kit)`:
+  - includes JRE and JVM.
+  - JRE- provides libraries, JVM 
+  - JVM- Compiler (javac) - Java compiler
+  - software development kit containing - tools, libraries for developing Java applications, 
+  
+
+- `JRE (Java Runtime Environment)`:
+  - package of software, provides libraries, Java Virtual Machine (JVM), 
+  - to run applications written in Java.
+
+- `JVM (Java Virtual Machine)`:
+  - JVM helps in - translating `Java bytecode` into `machine code`, 
+  - which can run different platforms and environments.
+  - providing platform independence.
+
