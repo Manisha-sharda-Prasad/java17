@@ -1,19 +1,19 @@
 # Java - learning programs
 
 ## Fundamental
-1. DataType/s :
-  - `primitive` Type
-    - number: byte,short,int **,Long | float, double **
-    - char | boolean
+1. `DataType/s` :
+  - `Primitive` Type
+    - number: byte, short, int, Long, float, double
+    - char, boolean
   - `Reference/Class` Type
     - Animal, Car, String, etc
-    - wrapper class : int-->Integer
+    - Wrapper class : int-->Integer
   - `Convert one Datatype to another`
     - Automatic : int i = s,
     - explicit : short s = `(cast)` i
     - " "+type = String
 
-2. Control statements :
+2. `Control statements` :
   - `if else` : if, if-else, if-elseif-elseif-else, if-elseif-elseif
   - `Switch-block `and `Switch-expression` (java 14)
   - operator and `operator-precedence` -->
@@ -24,12 +24,21 @@
       - int i=8 (binary-100), left-shift: 100(12) | `i = i << 1`
     - good practice : `wrap with ()`
 
-3. Loop statements:
-   - while :   `while(until condition=true) { ... }`
-   - do-while : `do{ ... } while(until condition=true)`, body will run at least once.
-   - `for` , `enhanced-for-loop`:used in collection
+3. `Loop statements`:
+   - `while` :
+     - `while() {..}` - 
+     - until condition = true/ loop continues.
+   - `do-while` : 
+     - `do{..} while()` 
+     - until condition=true/ before checking condition, body run at least once.
+   - `for` : 
+     - `for(int i=0; i<5; i++){..}` 
+     - initialization, condition, & increment/decrement
+   - `enhanced-for-loop` : 
+     - `for(int n : ns){..}` 
+     - iterate arrays /collections
 
-4. Exception handling:
+4. `Exception handling`:
    - prevent java program from crashing.
    - if error/exception comes, just handle it and proceed with rest of the execution.
    - syntax ::
@@ -39,7 +48,8 @@
      - checked (compile-time) : `Exception`, and its childException
      - unchecked (Runtime) :    `RuntimeException` and its child
 
-5. Input-Output :: java.util.io.* / `java.util.nio.*`
+5. `Input-Output `: 
+   -  java.util.io.* / `java.util.nio.*`
    - `output` : console, file, etc
    - `input` : keyboard-`Scanner`, file, etc
    - File
@@ -57,7 +67,7 @@
 
 ---
 ## OOPS
-`1. Class and objects`
+1.`Class and objects`:
   - Template/blueprint for creating object
   - `Object` is an `instance` of a `class`, has a `methods and properties`.
   - `Objects/Instance` created from `classes`, using the `new` keyword.
@@ -69,18 +79,25 @@
     - inner class - NO  code
     - Immutable classes. eg : String - NO code
 
-- class members: [ Apply `Access specifier` : private, protected, default and public , to set access boundaries ]
-  - a. `Methods`:
-    - local variable (var declared inside method), setter, getter, toString, etc
-    - `Instance method`
-      - first create instance.object. let's say obj1
-      - `obj1`.m(){...access any...}
+-  Class members:  
+  - A. `Access specifier` : 
+    -  set access boundaries, Accessibility of classes, methods, and properties:
+    - `public`: Accessible from anywhere, any package.
+    - `protected`: within the same package and subclasses.
+    - `default` :  same package only.
+    - `private`:  within the same class only.
 
-    - `Static method`
-      - Class level method
-      - `className`.m() {...access static member...}
+  - B. `Methods`:
+   - local variable (var declared inside method), setter, getter, toString, etc
+   - `Instance method`
+     - first create instance.object. let's say obj1
+     - `obj1`.m(){...access any...}
 
-  - b. `Property`:
+   - `Static method`
+     - Class level method
+     - `className`.m() {...access static member...}
+
+  - C. `Property`:
     - `Static Property`
       - class-level property
       - `ClassName`.<static-property>
@@ -89,16 +106,15 @@
       - first create instance.object. let's say obj1
       - `obj1`.p1 , p2, etc
 
-  - c. `Constructor` :
-    - default/no-agr ,
+  - D. `Constructor` :
+    - same name as the class,
+    - no return type or void
+    - default/no-agr present,
     - All-Arg constructor,
     - chaining - `this()`, `super()`
+    - this(args): call another constructor within  `same-class`.
+    - super(args): call a constructor from `super-class`.
 
-- Fact:
-  - `POJO` term - plain old java object / class with (setter,getter, constructor,toString)
-  - java 16 - record (removes boilerplate code) - no setter, allArgCont, getter with no prefix, final props.
-  - Introduction to Annotation, eg : @override. markers/metaData to compiler.
-  - `Object` is parent of ALL classes.
 
 2.`Encapsulation:`
 - wrapping or bundling of data into a single unit (in {} bracket) .
@@ -139,14 +155,7 @@
 ```
 ---
 ### Keywords:
-
-- `Access Modifiers:` Accessibility of classes, methods, and properties:
-
-  - `public`: Accessible from anywhere, any package.
-  - `protected`: within the same package and subclasses.
-  - `default` :  same package only.
-  - `private`:  within the same class only.
-
+ 
 - `void` :
     - The return type of the method.
     - void indicates that the method does not return any value.
@@ -173,16 +182,9 @@
   - Refers to the superclass of the current object.
   - Used to access superclass methods and constructors.
 
-- `Constructors`:
-    -  same name as the class, 
-    -  no return type or void
-    - default constructor (no args) present.
-    - this(args): - Used to call another constructor within the same class.
-    - super(args): - Used to call a constructor from the superclass.
 
 - `Reference` :  
   - a variable, holds the memory address (reference) of an object.
-
 
 - `Passing Parameters`:
   - `Pass By Value`
@@ -253,3 +255,9 @@
   - `public` or `protected` setters : Methods that allow modification of property /fields.
   - `Save memory` : don't need multiple instance creation, manipulate one object.
   
+---
+- Fact:
+  - `POJO` term - plain old java object / class with (setter,getter, constructor,toString)
+  - java 16 - record (removes boilerplate code) - no setter, allArgCont, getter with no prefix, final props.
+  - Introduction to Annotation, eg : @override. markers/metaData to compiler.
+  - `Object` is parent of ALL classes.
