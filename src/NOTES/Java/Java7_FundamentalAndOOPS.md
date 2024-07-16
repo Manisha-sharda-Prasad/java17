@@ -18,7 +18,7 @@
   - `Switch-block `and `Switch-expression` (java 14)
   - operator and `operator-precedence` -->
     - !, && , ||, ternary-`?:`,
-    - + - ? * `%`
+    - () + ? - * %
     - `bit/byte` :  >> , <<
       - rarely used.
       - int i=8 (binary-100), left-shift: 100(12) | `i = i << 1`
@@ -43,8 +43,8 @@
    - `output` : console, file, etc
    - `input` : keyboard-`Scanner`, file, etc
    - File
-     - READ :  `File`.lines(`Path`.of("filelocation"))
-     - WRITE : `FileWriter`.write(Path.of(filelocation), list<String> )
+     - READ :  `File`.lines(`Path`.of("file-location"))
+     - WRITE : `FileWriter`.write(Path.of(file-location), list<String> )
    - `Serialization`
      - serial : old-byte[],char[] | `new:JSON` - Library : Jackson
        - Object1 ---> 01010101,0101111,00001000, ::  `byte[]`// data --> internet
