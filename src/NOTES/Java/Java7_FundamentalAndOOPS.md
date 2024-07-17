@@ -211,8 +211,10 @@
     - For primitive types, the actual value is passed, 
     - changes to parameter do not affect the original variable.
   - `Pass By Reference`:
-    - For reference types (objects), a copy of the reference is passed. 
+    - When an` Object/Class `is passed to a `method`, 
+    - Java passes a `copy` of `reference` to object (not the object itself).
     - Changes to the object inside the method will affect the original object.
+    - cannot change the original reference to point to a new object.
 
 - `Functional interface` :
   - `Single Abstract Method`: contains only one abstract method.
