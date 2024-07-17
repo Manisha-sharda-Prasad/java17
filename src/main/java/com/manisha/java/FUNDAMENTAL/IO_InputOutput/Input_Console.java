@@ -1,4 +1,4 @@
-package com.manisha.java.FUNDAMENTAL.IO_inputOutput;
+package com.manisha.java.FUNDAMENTAL.IO_InputOutput;
 
 // Note : run from terminal only.
 public class Input_Console {

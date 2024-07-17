@@ -1,7 +1,5 @@
-package com.manisha.java.FUNDAMENTAL.IO_inputOutput;
-
+package com.manisha.java.FUNDAMENTAL.IO_InputOutput;
 import com.manisha.java.util.Print;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.LocalDateTime;

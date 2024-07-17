@@ -1,4 +1,4 @@
-package com.manisha.java.FUNDAMENTAL.IO_inputOutput;
+package com.manisha.java.FUNDAMENTAL.IO_InputOutput;
 
 import com.manisha.java.util.NumberUtil;
 import com.manisha.java.util.Print;
