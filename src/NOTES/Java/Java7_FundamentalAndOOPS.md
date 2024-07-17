@@ -3,7 +3,7 @@
 ## Fundamental
 1. `Data-Type/s` :
    - `Primitive Data` Type
-     - number: byte, short, int, Long, float, double
+     - number: byte, short, int, long, float, double
      - char, boolean
     
    - `Reference Data/Class` Type
@@ -76,6 +76,7 @@
   - Template/blueprint for creating object
   - `Object` is an `instance` of a `class`, has  `methods`,`properties`.
   - `Objects/Instance` created from `classes`, using the `new` keyword.
+  - `real-world entity` that has a `state` and `behavior`.
   - `Create Object` - using `new constructor(...)`
   - `this`,`super` : current object.
   - more:
@@ -177,10 +178,23 @@
   - `final classes`, they cannot be subclassed.
   
 - `Static`:
-  - related/connected with class, 
-  - `Static variables` and `methods` belong to the class itself , 
+  - `Class -Level- member`, related/ connected with class,
+  - `Static variables` and `Static methods` belong to the class itself,
   - rather than instances (objects) of class.
-  
+  - shared among all instances.
+  - accessed using the class name directly, `Static- Student.name`/ `Instance- s.name`
+  - Static cannot access instance variables/methods directly,
+  - only one copy, 
+  - `main` method, must be declared as static, 
+  - `called by JVM` before any objects are created.
+  - initialized once, loads and runs with class by JVM
+
+- `String[] args`:
+  - The `parameter` of the `main` method. 
+  - It's an `array of strings` (String[]) named `args`
+  - each element contains a command-line argument.
+
+
 - `this:`
   - Refers to the current object instance within a class.
   -  used to differentiate between `class- properties` and `method- parameters` with the same name.
