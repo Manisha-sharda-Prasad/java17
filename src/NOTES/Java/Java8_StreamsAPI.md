@@ -52,7 +52,7 @@ Obtain from a data source. Two types of Operations in Streams:-
 Input--> Intermediate {{operation1--> operation2-->}}-->Terminal {{Final operation 3}} --->Output
 
 ---
-## Functional Style programming
+## Functional Style programming :
 1. `Lambda Expression`:
 - Function without a name, and Clear, Concise way to represent an anonymous function .   
 - A way to implement instances of functional interfaces.
@@ -62,27 +62,25 @@ Input--> Intermediate {{operation1--> operation2-->}}-->Terminal {{Final operati
 - 
 
 3. `Functional Interfaces`:
-Interfaces with single abstract method, used for lambda expression or method reference. Main categories:-
+- Interfaces with single abstract method, 
+- used for lambda expression or method reference. Main categories:-
 
-a. `Predicates`: Boolean-valued function of 1 arg.
-- Predicate<T>: Takes 1 arg, returns boolean.
-- BiPredicate<T, U>: Takes 2 arg, returns boolean.
+  a. `Predicates`: Boolean-valued function of 1 arg.
+    - Predicate<T>: Takes 1 arg, returns boolean.
+    - BiPredicate<T, U>: Takes 2 arg, returns boolean.
 
-b. `Functions`: Function that produces a result.
-- Function<T, R>: Takes 1 arg, a returns  result.
-- BiFunction<T, U, R>: Takes 2 arg, returns  result.
-- UnaryOperator<T>:  operand and result are of the same type.
-- BinaryOperator<T>:  BiFunctions where operands, result are of same type.
+  b. `Functions`: Function that produces a result.
+    - Function<T, R>: Takes 1 arg, a returns  result.
+    - BiFunction<T, U, R>: Takes 2 arg, returns  result.
+    - UnaryOperator<T>:  operand and result are of the same type.
+    - BinaryOperator<T>:  BiFunctions where operands, result are of same type.
 
-c. `Consumers`: operation that accepts a single input arg, returns no result.
-- Consumer<T>:  1 arg, no result.
-- BiConsumer<T, U>: 2 arg, no result.
+  c. `Consumers`: operation that accepts a single input arg, returns no result.
+    - Consumer<T>:  1 arg, no result.
+    - BiConsumer<T, U>: 2 arg, no result.
 
-d. `Suppliers`: Functional interfaces that represent a supplier of results.
-- Supplier<T>: no args , returns result.
-
-
-
+  d. `Suppliers`: Functional interfaces that represent a supplier of results.
+    - Supplier<T>: no args , returns result.
 
 
 ---
