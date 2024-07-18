@@ -184,10 +184,10 @@
   - shared among all instances.
   - accessed using the class name directly, `Static- Student.name`/ `Instance- s.name`
   - Static cannot access instance variables/methods directly,
-  - only one copy, 
-  - `main` method, must be declared as static, 
+  - `one copy`, 
+  - `main` method, must be declared as `static`, 
   - `called by JVM` before any objects are created.
-  - initialized once, loads and runs with class by JVM
+  - `initialized once`, loads and runs with class by JVM
 
 - `String[] args`:
   - The `parameter` of the `main` method. 
@@ -277,7 +277,34 @@
   - `non final`: don't declare final class
   - `public` or `protected` setters : Methods that allow modification of property /fields.
   - `Save memory` : don't need multiple instance creation, manipulate one object.
-  
+
+
+- `Object / Superclass` :
+  - Every class `inherits` from `Object class`, 
+  - Fundamental methods :
+    - `1. equals(Object obj)`
+      - compare the current object with another object
+      - compares memory addresses (i.e., references)
+      - can be overridden,
+      - eg.`public boolean equals(Object obj)`
+      
+    - `2. hashCode()`
+      - returns an integer hash code value for object
+      - Hashing-based `collections` like `HashMap, HashSet`
+      - if `two objects` are `equal` according to `equals method`,
+      - must have `same hash-code`.
+      
+    - `3. finalize()`
+      - called by `garbage collector` before `object is destroyed`.
+      - can be `overridden` to perform `cleanup operations`,releasing resources
+      - don't rely on finalize for `resource management`, 
+      - `unpredictability` and `performance impact`.
+      
+    - `4. toString()` 
+      - returns a `string`, of the object
+      - includes the `class name`, followed by the `object’s hash-code`.
+      - `overridden` to provide a more `informative string`
+
 ---
 - Fact:
   - `POJO` term - plain old java object / class with (setter,getter, constructor,toString)
