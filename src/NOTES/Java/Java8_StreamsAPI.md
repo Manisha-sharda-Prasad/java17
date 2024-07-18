@@ -1,28 +1,27 @@
 # Streams in java8
 
 ## Intro
-  - Sequence of elements that supports operations, for processing data . 
-  - Data Flowing in packets.
-  - They allow us to  quickly perform bulk operations on them at one time,(Intermediate, Terminal operations)  
-  - It doesn't get stored in memory after processing.
+  - `Sequence of elements` that supports `operations`, for `processing data` . 
+  - `Data Flowing in packets`.
+  - They allow us to  quickly perform `bulk operations` on them at one time,`(Intermediate, Terminal)`  
+  - It `doesn't` get `stored in memory` after processing.
   - Consider a stream like a flow of water in a small canal. 
  
 
 ---
 ## Stream processing
-Perform operations on data in a clear and readable way.
-Introduced in Java 8 ,allows you to process sequences of elements (like collections),
+- Perform operations on data in a `clear` and `readable way`.
+- Introduced in `Java 8` ,allows you to process sequences of elements (like collections),
 
-1. `Source`:
-Obtain from a data source. Two types of Operations in Streams:-
+`1. Creating a Stream`: 
+- Streams can be created from various data sources like `collections | arrays | I/O channels`.
 
-
-2. `Intermediate Operations`:
+`2. Intermediate Operations`:
 - It transforms a stream into another stream.
-- Methods are chained together( Chained Operations ).
-- Intermediate operations transform a stream into another stream.
-- one method perform some operation in data and passes it to another method.
-- Lastly it is evoked with terminal operations.
+- Methods are chained together(`Chained Operations`).
+- Intermediate operations `transform` a `stream` into `another stream`.
+- one method perform some operation in data and `passes` it to `another method`.
+- Lastly it is `evoked` with `terminal` operations.
 - eg:
   - `filter`(Predicate): Filters on a condition.
   - `map`(Function): Transforms element.
@@ -34,8 +33,8 @@ Obtain from a data source. Two types of Operations in Streams:-
   - `takeWhile`(Predicate): 
   - `dropWhile`(Predicate):
 
-3. `Terminal Operations`:
-- Collects bulk  intermediate Operation and presents/shows/produce the final result, or a side effect, 
+`3. Terminal Operations`:
+- Collects `bulkin termediate` Operation and` presents/shows/produce` the `final` result, or a `side effect`, 
 - Trigger the processing of stream pipeline.
 - Methods on a stream that will cause a stream to be “closed”
 - eg:
@@ -53,15 +52,15 @@ Input--> Intermediate {{operation1--> operation2-->}}-->Terminal {{Final operati
 
 ---
 ## Functional Style programming :
-1. `Lambda Expression`:
+`1. Lambda Expression`:
 - Function without a name, and Clear, Concise way to represent an anonymous function .   
 - A way to implement instances of functional interfaces.
 
-2. `Method Reference`:
+`2. Method Reference`:
 - A way to implement instances of functional interfaces.
 - 
 
-3. `Functional Interfaces`:
+`3. Functional Interfaces`:
 - Interfaces with single abstract method, 
 - used for lambda expression or method reference. Main categories:-
 
