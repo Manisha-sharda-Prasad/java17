@@ -5,7 +5,7 @@
   - `Data Flowing in packets`.
   - They allow us to  quickly perform `bulk operations` on them at one time,`(Intermediate, Terminal)`  
   - It `doesn't` get `stored in memory` after processing.
-  - Consider a stream like a flow of water in a small canal. 
+  - Consider a stream like a `flow` of water in a small canal. 
  
 
 ---
@@ -14,14 +14,15 @@
 - Introduced in `Java 8` ,allows you to process sequences of elements (like collections),
 
 `1. Creating a Stream`: 
-- Streams can be created from various data sources like `collections | arrays | I/O channels`.
+- Streams can be created from various `data-sources` like `collections | arrays | I/O channels`.
 
 `2. Intermediate Operations`:
-- It transforms a stream into another stream.
+- `Transform` a `stream` into `another stream`.
 - Methods are chained together(`Chained Operations`).
-- Intermediate operations `transform` a `stream` into `another stream`.
-- one method perform some operation in data and `passes` it to `another method`.
+- one method perform operation in data,
+- `passes` it to `another method`.
 - Lastly it is `evoked` with `terminal` operations.
+- `lazy`, they are not executed until a `terminal operation` is `invoked.`
 - eg:
   - `filter`(Predicate): Filters on a condition.
   - `map`(Function): Transforms element.
@@ -34,9 +35,11 @@
   - `dropWhile`(Predicate):
 
 `3. Terminal Operations`:
-- Collects `bulkin termediate` Operation and` presents/shows/produce` the `final` result, or a `side effect`, 
-- Trigger the processing of stream pipeline.
-- Methods on a stream that will cause a stream to be “closed”
+-  Produce a result
+- `Collects bulk intermediate` Operation 
+- `Presents`/`produce` the `final result`/`side effect`, 
+- `Trigger` the processing of stream pipeline.
+- Methods on a stream that will cause a stream to be “`closed`”
 - eg:
   - `min(),max()`:            Comparator
   - `count`():                Returns the number of elements.
@@ -53,16 +56,17 @@ Input--> Intermediate {{operation1--> operation2-->}}-->Terminal {{Final operati
 ---
 ## Functional Style programming :
 `1. Lambda Expression`:
-- Function without a name, and Clear, Concise way to represent an anonymous function .   
-- A way to implement instances of functional interfaces.
+- Function without a name, 
+- Clear, Concise way to `represent` an `anonymous function` .   
+- A way to `implement instances` of `functional interfaces`.
 
 `2. Method Reference`:
 - A way to implement instances of functional interfaces.
-- 
+
 
 `3. Functional Interfaces`:
-- Interfaces with single abstract method, 
-- used for lambda expression or method reference. Main categories:-
+- Interfaces with `single abstract` method, 
+- used for `lambda expression` or` method reference`. Main categories:-
 
   a. `Predicates`: Boolean-valued function of 1 arg.
     - Predicate<T>: Takes 1 arg, returns boolean.
