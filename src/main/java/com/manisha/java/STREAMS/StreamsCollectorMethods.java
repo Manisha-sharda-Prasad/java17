@@ -19,12 +19,12 @@ public class StreamsCollectorMethods {
                             .collect(Collectors.counting());
                       System.out.println(count);
 
-        //summingInt--
+        //summingInt (ToIntFunction<? super T> mapper)--
         int sum = numbers.stream()
                          .collect(Collectors.summingInt(n -> n));
                    System.out.println(sum);
 
-        //averagingInt--
+        //averagingInt (ToIntFunction<? super T> mapper)--
         double average = numbers.stream()
                                 .collect(Collectors.averagingInt(n -> n));
                           System.out.println(average);
@@ -48,7 +48,10 @@ public class StreamsCollectorMethods {
         Map <String,Integer> charMapLength = chars.stream()
                                                   .collect(Collectors.toMap(m->m, m->m.length()));
                                             System.out.println(charMapLength);
-        //groupingBy(classifier)--
+        //groupingBy (classifier)--
+        Map <Character, List<String>> groupByFirstLetter = chars.stream()
+                                                                .collect(Collectors.groupingBy(c -> c.charAt(0)));
+                                                          System.out.println(groupByFirstLetter);
 
 
 

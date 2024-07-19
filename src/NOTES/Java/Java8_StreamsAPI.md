@@ -85,7 +85,17 @@ Input--> Intermediate {{operation1--> operation2-->}}-->Terminal {{Final operati
   d. `Suppliers`: Functional interfaces that represent a supplier of results.
     - Supplier<T>: no args , returns result.
 
-
+### Collect Methods :
+- `counting`(): Counts number of `elements` in stream.
+- `summingInt`(mapper): Sums elements using mapper function,`extracts integer` values.
+- `averagingInt`(mapper): Calculates average of the elements. 
+- `joining`(delimiter): `Concatenates` elements into a `single string`,separated by`delimiter(,+:?)`.
+- `toList`(): Collects elements- `List`.
+-  `toSet`(): Collects elements- `Set`.
+-  `toMap`(keyMapper, valueMapper): Collects elements- `Map`.
+-  `groupingBy`(classifier): Groups elements by a `classifier function`.
+-  `partitioningBy`(predicate): Partitions elements based on a `predicate`.
+-  `collectingAndThen`(collector, finisher): Performs an `additional finishing` transformation `after collecting`.
 ---
 ## references:
 - https://www.geeksforgeeks.org/stream-in-java/?ref=header_search
