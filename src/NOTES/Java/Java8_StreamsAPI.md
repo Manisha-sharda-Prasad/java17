@@ -1,15 +1,15 @@
 # Streams in java8
 
 ## Intro
-  - `Sequence of elements` that supports `operations`, for `processing data` . 
+  - `Sequence of elements` that supports `Operations`, for `Processing Data` . 
   - `Data Flowing in packets`.
-  - They allow us to  quickly perform `bulk operations` on them at one time,`(Intermediate, Terminal)`  
+  - They allow us to  quickly perform `Bulk Operations` on them at one time,`(Intermediate, Terminal)`  
   - It `doesn't` get `stored in memory` after processing.
   - Consider a stream like a `flow` of water in a small canal. 
  
 
 ---
-## Stream processing
+## Stream processing `(Operations on elements)`:
 - Perform operations on data in a `clear` and `readable way`.
 - Introduced in `Java 8` ,allows you to process sequences of elements (like collections),
 
@@ -68,28 +68,28 @@ Input--> Intermediate {{operation1--> operation2-->}}-->Terminal {{Final operati
 - Interfaces with `single abstract` method, 
 - used for `lambda expression` or` method reference`. Main categories:-
 
-  a. `Predicates`: Boolean-valued function of 1 arg.
-    - Predicate<T>: Takes 1 arg, returns boolean.
-    - BiPredicate<T, U>: Takes 2 arg, returns boolean.
+  a. `Predicates`: `Boolean-valued` function of `1 arg`.
+    - Predicate<T>: Takes `1 arg`, returns `boolean`.
+    - BiPredicate<T, U>: Takes` 2 arg`, returns `boolean`.
 
-  b. `Functions`: Function that produces a result.
-    - Function<T, R>: Takes 1 arg, a returns  result.
-    - BiFunction<T, U, R>: Takes 2 arg, returns  result.
+  b. `Functions`: Function that `produces a result`.
+    - Function<T, R>: Takes `1 arg`, a returns  `result`.
+    - BiFunction<T, U, R>: Takes `2 arg`, returns  `result`.
     - UnaryOperator<T>:  operand and result are of the same type.
     - BinaryOperator<T>:  BiFunctions where operands, result are of same type.
 
-  c. `Consumers`: operation that accepts a single input arg, returns no result.
-    - Consumer<T>:  1 arg, no result.
-    - BiConsumer<T, U>: 2 arg, no result.
+  c. `Consumers`: operation that `accepts` a `single-input arg`, returns `no-result`.
+    - Consumer<T>:  `1 arg`, `no` result.
+    - BiConsumer<T, U>: `2 arg`, `no` result.
 
   d. `Suppliers`: Functional interfaces that represent a supplier of results.
-    - Supplier<T>: no args , returns result.
+    - Supplier<T>:` no args` , returns `result`.
 
-### Collect Methods :
+## Collect Methods  `(.collect(Collectors.methods)` :
 - `counting`(): Counts number of `elements` in stream.
 - `summingInt`(mapper): Sums elements using mapper function,`extracts integer` values.
 - `averagingInt`(mapper): Calculates average of the elements. 
-- `joining`(delimiter): `Concatenates` elements into a `single string`,separated by`delimiter(,+:?)`.
+- `joining`(delimiter): `Concatenates` elements into a `single string`,separated-`delimiter(,+:?)`.
 - `toList`(): Collects elements- `List`.
 -  `toSet`(): Collects elements- `Set`.
 -  `toMap`(keyMapper, valueMapper): Collects elements- `Map`.
