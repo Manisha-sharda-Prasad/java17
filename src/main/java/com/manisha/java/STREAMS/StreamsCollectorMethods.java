@@ -10,6 +10,7 @@ public class StreamsCollectorMethods {
 
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8);
+        List <String> chars = Arrays.asList("Apple", "Banana", "Orange");
 
         //counting--
         Long count = numbers.stream()
@@ -26,6 +27,14 @@ public class StreamsCollectorMethods {
         double average = numbers.stream()
                 .collect(Collectors.averagingInt(n -> n));
         System.out.println(average);
+
+        //joining--
+        String string = chars.stream()
+                .collect(Collectors.joining("::"));
+        System.out.println(string);
+
+
+
 
 
     }
