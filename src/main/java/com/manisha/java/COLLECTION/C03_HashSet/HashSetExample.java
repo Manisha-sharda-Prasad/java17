@@ -29,4 +29,9 @@ public class HashSetExample {
         }
     }
 }
-//HashSet--collection implements Set interface,does not allow duplicate elements and,maintaining any order of it.
+/*
+HashSet--
+- collection implements Set interface,
+- does not allow duplicate elements and,
+- maintaining any order of it.
+*/

@@ -1,5 +1,4 @@
 package com.manisha.java.COLLECTION.C02_HashMap;
-
 import java.util.Map;
 
 public class HashMap {
