@@ -35,10 +35,10 @@ A group of  `objects` that represent a single `entity` is known as a collection.
 
 
 ## 1. List < T> :
-- Ordered collection (sequence),  duplicate elements, insertion order
-- Interface: 
-  - abstract method - add(), get(), remove(), size(), contains()
-  - Generic interface - can hold objects of any type T
+- `Ordered` collection (sequence),  `duplicate elements`, `insertion order`.
+- `Interface`: 
+  - `Abstract method` - `add(), get(), remove(), size(), contains()`
+  - `Generic interface` - can hold objects of any `type T`
 
 - Implementations classes: 
   - `ArrayList` - general purpose, fast-get(index)::O(1)
@@ -108,7 +108,7 @@ interfaces are used to order objects in collections such as lists or arrays.
 - Class implement `Comparable` interface and `override` the `compareTo` method.
 - Used for `natural ordering`. 
 - Implemented `within class`
-- `Collections.sort` is called, it sorts the list of Class.
+- `Collections.sort` is called, it `sorts` list of Class.
 
 
 ### 4.2. Comparator
@@ -127,4 +127,6 @@ interfaces are used to order objects in collections such as lists or arrays.
 - `Deque`:
   -`Double-Ended`: Allows `insertion` and `removal` from `both ends`.
   -eg: `ArrayDeque, LinkedList.`
-
+---
+NOTES -
+https://chatgpt.com/c/f5946a4e-627c-4f0f-acc2-0462e91bb45e
