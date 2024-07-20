@@ -28,6 +28,11 @@ A group of  `objects` that represent a single `entity` is known as a collection.
 - Iteration on collection(List,Set)
   - `ListIterator`
   - `Iterator`
+    - `Methods :`
+      - `hasNext():` Returns `true`,if iteration has more elements.
+      - `next():` Returns `next`, element in iteration.
+      - `remove():` Removes `last`, element returned by iterator.
+
 
 ## 1. List < T>
 - Ordered collection (sequence),  duplicate elements, insertion order
