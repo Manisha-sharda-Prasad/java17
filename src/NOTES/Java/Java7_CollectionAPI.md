@@ -50,8 +50,9 @@ A group of  `objects` that represent a single `entity` is known as a collection.
 
   
 ### 1.1. ArrayList < T >
-- `Dynamic Size`: dynamically grow/shrink as elements added/removed.
-- Access Time: `O(1)` - Fast random access.
+- `Dynamic Size`: dynamically `grow/shrink` as elements `added/removed`.
+-  `Duplicates`, maintains `insertion order`.
+- Access Time: `O(1)` - `Fast random access`.
 - Internal structure: [ 1,2,3,new-item,4,5,...]
 - `limitation` : insert New-Item in middle is slow.
 - Override methods: `add`(), `remove`(), `get`(index), `size`(), `sort`(Comparator)
@@ -77,23 +78,24 @@ A group of  `objects` that represent a single `entity` is known as a collection.
 
 ---
 ## 2. Set < T >
-- Unique elements, no duplicates.
+- `Unique elements`, `no duplicates`.
 - Implementations: HashSet, TreeSet, LinkedHashSet.
-- add(),remove(),contains(), size()
+- `add(),remove(),contains(), size()`
 
 ### 2.1. HashSet < T >
-- Fast access, unordered. Use for unique collections.
-- The objects are inserted based on their hash code.
+- `Fast access`, `unordered`, does not maintain order
+- `No duplicates`, Use for `unique collections`
+- The objects are inserted based on their `hash code`.
 
 
 ## 3. Map < K,V >
-- Key-value pairs, unique keys.
-- Maps keys to values, with no duplicate keys allowed.
-- Implementations: HashMap, TreeMap, LinkedHashMap.
-- Put(),get(),remove(),containsKey(),keySet()
+- `Key-value` pairs, Maps keys to values.
+- `unique- keys`, no`duplicate-Keys` allowed.
+- Implementations: `HashMap`, `TreeMap`, `LinkedHashMap`.
+- `Put(),get(),remove(),containsKey(),keySet()`
 
 ###  3.1. HashMap < K,V >
-- Fast access, unordered. Use for quick look-ups.
+- `Fast access`, `unordered`. Use for `quick look-ups`.
 - To access value in HashMap, must know its key.
 - Implementation of the Map interface of Java.
 

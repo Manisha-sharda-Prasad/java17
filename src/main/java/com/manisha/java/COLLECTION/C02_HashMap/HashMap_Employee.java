@@ -22,11 +22,12 @@ public class HashMap_Employee {
 
         System.out.println(employee.size());
         System.out.println(employee); //lifo print--last(new)
-
-
     }
 }
 
-//Entry, entrySet
-//get, getKey, getValue
-//put, remove, size
+/*
+(Entry, entrySet)
+(get, getKey, getValue)
+(put, remove, size)
+- Fast access, unordered. Use for quick look-ups.
+- To access value in HashMap, must know its key.*/
