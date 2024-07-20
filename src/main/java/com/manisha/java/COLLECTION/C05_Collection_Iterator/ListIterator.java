@@ -1,4 +1,4 @@
-package com.manisha.java.COLLECTION.C05_List_Iterator;
+package com.manisha.java.COLLECTION.C05_Collection_Iterator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -25,7 +25,6 @@ public class ListIterator {
             }
         }
         System.out.println("After Removal : " + listFruits);
-
     }
 }
 /*
