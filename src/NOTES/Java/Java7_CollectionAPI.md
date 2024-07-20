@@ -1,4 +1,4 @@
-#  A. Array 
+#  A. Array :
 An array is a data structure that holds a fixed number of values of a single data type.
 - Fixed Size: fixed size defined at the time of creation
 - Type-Safe: Arrays are type-safe and can store only elements of a specified type
@@ -16,7 +16,7 @@ An array is a data structure that holds a fixed number of values of a single dat
 
 ---
 
-# B. Collection 
+# B. Collection :
 A group of  `objects` that represent a single `entity` is known as a collection.
 - Common : `List`, `Map`, `Set`
 - less common : `Queue`, `DeQue`
@@ -34,7 +34,7 @@ A group of  `objects` that represent a single `entity` is known as a collection.
       - `remove():` Removes `last`, element returned by iterator.
 
 
-## 1. List < T>
+## 1. List < T> :
 - Ordered collection (sequence),  duplicate elements, insertion order
 - Interface: 
   - abstract method - add(), get(), remove(), size(), contains()
@@ -77,7 +77,7 @@ A group of  `objects` that represent a single `entity` is known as a collection.
     - getFirst(),getLast()
 
 ---
-## 2. Set < T >
+## 2. Set < T > :
 - `Unique elements`, `no duplicates`.
 - Implementations: HashSet, TreeSet, LinkedHashSet.
 - `add(),remove(),contains(), size()`
@@ -100,7 +100,7 @@ A group of  `objects` that represent a single `entity` is known as a collection.
 - Implementation of the Map interface of Java.
 
 ---
-## 4.Comparable and Comparator
+## 4.Comparable and Comparator :
 interfaces are used to order objects in collections such as lists or arrays.
 
 ### 4.1. Comparable
@@ -118,5 +118,13 @@ interfaces are used to order objects in collections such as lists or arrays.
 - Implemented as a `separate`/`anonymous class`
 - `Collections.sort` 
 
+---
+## 5. Queue & Deque:
+- `Queue`:
+  - `FIFO`: First-In-First-Out order (typically).
+  - eg: `LinkedList, PriorityQueue`.
 
+- `Deque`:
+  -`Double-Ended`: Allows `insertion` and `removal` from `both ends`.
+  -eg: `ArrayDeque, LinkedList.`
 

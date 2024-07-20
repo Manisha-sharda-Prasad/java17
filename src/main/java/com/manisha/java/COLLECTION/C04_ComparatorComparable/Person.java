@@ -1,15 +1,16 @@
 package com.manisha.java.COLLECTION.C04_ComparatorComparable;
 
 import com.manisha.java.util.Print;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class Person {
     String name;
     int age;
