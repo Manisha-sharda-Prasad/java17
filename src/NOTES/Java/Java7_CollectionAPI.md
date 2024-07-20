@@ -102,18 +102,18 @@ A group of  `objects` that represent a single `entity` is known as a collection.
 interfaces are used to order objects in collections such as lists or arrays.
 
 ### 4.1. Comparable
-- Used for natural ordering. 
-- Implemented within the class 
 - Uses the `compareTo` method.
-- Class must implement the `Comparable` interface and `override` the `compareTo` method.
+- Class implement `Comparable` interface and `override` the `compareTo` method.
+- Used for `natural ordering`. 
+- Implemented `within class`
 - `Collections.sort` is called, it sorts the list of Class.
 
 
 ### 4.2. Comparator
-- Used for custom ordering. 
-- Implemented as a separate class or anonymous class 
 - uses the `compare` method.
-- Create separate class that implements the `Comparator` interface and `override` the `compare` method.
+- Class implements `Comparator` interface and `override` the `compare` method.
+- Used for `custom ordering`. 
+- Implemented as a `separate`/`anonymous class`
 - `Collections.sort` 
 
 

@@ -5,7 +5,7 @@ import com.manisha.java.util.Print;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HashMapExample {
+public class HashMap_Climate {
     public static void main(String[] args) {
 
         Map<String, Boolean> map = new HashMap<>();

@@ -18,7 +18,6 @@ public class HashMap {
         myMap.put("891-LakeWood", null);
         myMap.put("892-Orange blossom", null);
 
-
         // Convert to list/Set
         // entrySet() - [ entry1, entry2, entry3 ] = list/set :: Set<Entry> :: random order
         // keySet() - [ 716-OakGlen , 40-Tangelo, 41-Tangelo ] :: Set<String>
@@ -28,7 +27,6 @@ public class HashMap {
             System.out.println("\n"+entry.getKey());
             System.out.println(entry.getValue());
         }
-
         System.out.println( "\n"+myMap.get("41-Tangelo"));  //  <<<<
     }
 }

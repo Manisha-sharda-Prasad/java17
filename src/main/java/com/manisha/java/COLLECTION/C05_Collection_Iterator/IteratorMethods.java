@@ -1,6 +1,7 @@
 package com.manisha.java.COLLECTION.C05_Collection_Iterator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class IteratorMethods {
@@ -13,7 +14,7 @@ public class IteratorMethods {
         listFruits.add("Orange");
         listFruits.add("Mango");
 
-        java.util.Iterator<String> iterator = listFruits.iterator();
+        Iterator<String> iterator = listFruits.iterator();
 
         while (iterator.hasNext()){
             String fruit = iterator.next();
