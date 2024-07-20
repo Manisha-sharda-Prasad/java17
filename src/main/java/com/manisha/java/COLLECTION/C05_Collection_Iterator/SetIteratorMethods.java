@@ -2,7 +2,7 @@ package com.manisha.java.COLLECTION.C05_Collection_Iterator;
 
 import java.util.*;
 
-public class SetIterator {
+public class SetIteratorMethods {
     public static void main(String[] args) {
         Set<String> listFruits = new HashSet<>();
 

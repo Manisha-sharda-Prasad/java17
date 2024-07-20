@@ -1,4 +1,4 @@
-package com.manisha.java.COLLECTION.C01_List.sorting;
+package com.manisha.java.COLLECTION.C04_ComparatorComparable;
 
 import lombok.*;
 

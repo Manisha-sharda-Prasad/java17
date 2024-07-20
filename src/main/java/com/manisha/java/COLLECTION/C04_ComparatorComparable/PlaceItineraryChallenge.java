@@ -1,4 +1,4 @@
-package com.manisha.java.COLLECTION.C01_List.sorting;
+package com.manisha.java.COLLECTION.C04_ComparatorComparable;
 
 import com.manisha.java.util.Print;
 
@@ -11,7 +11,7 @@ import java.util.*;
  * switch block vs Switch Expression
  */
 
-public class ItineraryChallenge {
+public class PlaceItineraryChallenge {
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
