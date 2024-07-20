@@ -1,12 +1,11 @@
 package com.manisha.java.COLLECTION.C02_HashMap;
 
-import java.util.HashMap;
 import java.util.Map;
 
-public class Runner {
+public class HashMap {
     public static void main(String[] args) {
 
-        Map<String,String> myMap = new HashMap<>();
+        Map<String,String> myMap = new java.util.HashMap<>();
 
         //HashMap
         myMap.put("716-OakGlen", "De-active");

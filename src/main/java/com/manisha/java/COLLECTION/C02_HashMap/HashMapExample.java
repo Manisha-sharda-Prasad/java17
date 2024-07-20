@@ -7,6 +7,7 @@ import java.util.Map;
 
 public class HashMapExample {
     public static void main(String[] args) {
+
         Map<String, Boolean> map = new HashMap<>();
 
         map.put("Summer", true);
@@ -18,17 +19,23 @@ public class HashMapExample {
 
         map.get("Rainy");            //("Key")--gets value
         map.containsKey("April");    //("Key")--gets value
+
         map.putIfAbsent("Snow", false);
+
         map.replace("Climate-Change", false, true);
 
         Print.print(map);
-
+        //map.entrySet();
         map.keySet();
-        //Print.print(map);
+
 
         for (String key : map.keySet()){
             Print.print("KEY: "+ key + ", VALUE: " + map.get(key) );
         }
     }
 }
-//HashMap--collection that implements Map interface. Stores key-value pairs,each key must be unique,does not maintain any order of elements.
+/*
+HashMap--
+- collection that implements Map interface.
+- Stores (key , value) pairs,each key must be unique,
+- does not maintain any order of elements.*/
