@@ -111,7 +111,7 @@ Input--> Intermediate {{operation1--> operation2-->}}-->Terminal {{Final operati
 -  `toSet`(): Collects elements- `Set`.
 -  `toMap`(keyMapper, valueMapper): Collects elements- `Map`.
 -  `groupingBy`(classifier): Groups elements by a `classifier function`.
--  `partitioningBy`(predicate): Partitions elements based on a `predicate`.
+-  `partitioningBy`(predicate): Partitions elements based on (condition) `predicate`.
 -  `collectingAndThen`(collector, finisher): Performs an `additional finishing` transformation `after collecting`.
 
 ---
