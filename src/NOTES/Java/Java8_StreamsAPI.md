@@ -113,6 +113,33 @@ Input--> Intermediate {{operation1--> operation2-->}}-->Terminal {{Final operati
 -  `groupingBy`(classifier): Groups elements by a `classifier function`.
 -  `partitioningBy`(predicate): Partitions elements based on a `predicate`.
 -  `collectingAndThen`(collector, finisher): Performs an `additional finishing` transformation `after collecting`.
+
+---
+### Thread-Safe Collection VS. Fast Collection : 
+- `Speed / Commonly used (HashMap, HashSet, and ArrayList)`
+- `Thread Safe /Less used (TreeSet,TreeMap,LinkedHashSet,LinkedHashMap,LinkedList)`
+
+- `HashMap, HashSet, ArrayList` :
+
+  - `Fast` access, `insertion`, and `deletion` operations `(O(1)`.
+  - Ideal for `quick look-ups` and modifications are required.
+  - frequently accessing elements by `index`.
+  - not Sorted, use method- `sorted()`
+  - prioritize HashMap, HashSet, ArrayList for their `speed` in typical use cases.
+  
+  
+- `TreeSet,TreeMap, LinkedList, LinkedHashSet, LinkedHashMap, Vector, Stack`:
+
+  - Maintain `insertion order`, used when insertion is important
+  - sorts while adding new, `keeps shuffling`.
+  - `Slower` than HashSet and HashMap due to maintaining list.
+  - with O(1) insertions and deletions.
+  - chosen based on specific needs such as sorted order, insertion order, or specific data access patterns.
+  - `Vector, Stack,` and `synchronized versions` of other collections (e.g., `Collections.synchronizedList`)
+  - `Thread safety` is managed using specialized `concurrent` collection / explicit `synchronization` when necessary, 
+  -  balancing safety and performance.
+
+  
 ---
 ## references:
 - https://www.geeksforgeeks.org/stream-in-java/?ref=header_search

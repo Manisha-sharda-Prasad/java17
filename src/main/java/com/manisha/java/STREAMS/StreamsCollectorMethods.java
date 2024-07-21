@@ -64,10 +64,14 @@ public class StreamsCollectorMethods {
         Stream.of(1,2,3,4,5,6,7,8).collect(Collectors.partitioningBy(i-> i%2==0 ? true : false)); // only 2 group : T/F
         System.out.println(result2);
 
-        // even = [2,4,6,8]
-        // odd = [1,3,5,7]
-        //k:v, k:v, k:v, ... // map<String, List<Integer>>
-        // map<boolean, List<Integer>>
+
+
+
 
     }
 }
+
+// even = [2,4,6,8]
+// odd = [1,3,5,7]
+//k:v, k:v, k:v, ... // map<String, List<Integer>>
+// map<boolean, List<Integer>>
