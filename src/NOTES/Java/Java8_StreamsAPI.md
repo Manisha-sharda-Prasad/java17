@@ -22,11 +22,12 @@
 - one method perform operation in data,
 - `passes` it to `another method`.
 - Lastly it is `evoked` with `terminal` operations.
-- `lazy`, they are not executed until a `terminal operation` is `invoked.`
+- `Lazy`, they are not executed until a `Terminal operation` is `invoked.`
 - eg:
   - `filter`(Predicate): Filters on a condition.
   - `map`(Function): Transforms element.
   - `sorted`(): Takes comparator
+  - `peek`(): peek result in middle of the operations
   - `distinct`(): Removes duplicates.
   - `limit`(long n): Limits the stream.
   - `skip`(long n)

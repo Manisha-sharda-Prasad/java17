@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 @Slf4j
 public class StreamsCollectorMethods {
 
@@ -53,7 +55,19 @@ public class StreamsCollectorMethods {
                                                                 .collect(Collectors.groupingBy(c -> c.charAt(0)));
                                                           System.out.println(groupByFirstLetter);
 
+        Map<String, List<Integer>> result =
+        Stream.of(1,2,3,4,5,6,7,8).collect(Collectors.groupingBy(i-> i%2==0 ? "even" : "odd")); // any no. of group
+        System.out.println(result);
 
+        //partitioningBy--
+        Map<Boolean, List<Integer>> result2 =
+        Stream.of(1,2,3,4,5,6,7,8).collect(Collectors.partitioningBy(i-> i%2==0 ? true : false)); // only 2 group : T/F
+        System.out.println(result2);
+
+        // even = [2,4,6,8]
+        // odd = [1,3,5,7]
+        //k:v, k:v, k:v, ... // map<String, List<Integer>>
+        // map<boolean, List<Integer>>
 
     }
 }
