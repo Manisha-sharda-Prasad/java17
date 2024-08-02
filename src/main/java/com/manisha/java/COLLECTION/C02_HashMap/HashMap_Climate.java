@@ -16,18 +16,15 @@ public class HashMap_Climate {
         map.put("Climate-Change", false);
         map.put("April", false);
         map.put("April", false);
-
         map.get("Rainy");            //("Key")--gets value
         map.containsKey("April");    //("Key")--gets value
 
         map.putIfAbsent("Snow", false);
-
         map.replace("Climate-Change", false, true);
 
         Print.print(map);
         //map.entrySet();
         map.keySet();
-
 
         for (String key : map.keySet()){
             Print.print("KEY: "+ key + ", VALUE: " + map.get(key) );

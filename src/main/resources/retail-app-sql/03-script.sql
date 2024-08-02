@@ -2,7 +2,6 @@
 -- #1 Start /Stop service
 -- sudo /usr/local/mysql/support-files/mysql.server start
 -- sudo /usr/local/mysql/support-files/mysql.server stop
-
 -- source ~/.bash_profile 
 -- startmysql
 -- stopmysql
@@ -54,8 +53,6 @@ Update Employees
 
 -- Delete From Employees where LastName = 'Miller';
 
-
-
 SELECT * From Suppliers;
 -- FETCH FIRST 4 ROWS ONLY
 
@@ -83,7 +80,6 @@ SELECT COUNT (Country)
  WHERE Country = 'Japan';
 
 
-
 SELECT  ProductId, SUM(Price * 2) AS NewPrice
  FROM PRODUCTS
  GROUP BY ProductId;
@@ -92,13 +88,16 @@ SELECT AVG(Price)
  FROM Products
  WHERE CategoryID > 5;
 
+
 SELECT AVG(Price) AS AveragePrice
  FROM Products
  WHERE CategoryID <= 5;
 
+
 SELECT * FROM Customers
  WHERE City LIKE '_erlin'
  OR City LIKE 'Be_lin';
+
 
 SELECT * FROM Customers
  WHERE City LIKE '[xyz]%'
@@ -108,21 +107,26 @@ SELECT * FROM Customers
 SELECT ContactName AS FullName, CustomerName AS ContactName
 FROM Customers;
 
+
 SELECT ContactName AS "Customer Full Name"
  FROM Customers;
 
+
 SELECT  (Suppliers.ContactName), (Suppliers.City), (OrderDetails.OrderID)
  FROM Suppliers, OrderDetails ;
+
 
 SELECT  (Orders.OrderDate), (Orders.ShipperID), (OrderDetails.OrderDetailID), (OrderDetails.ProductID)
  FROM Orders
  INNER JOIN OrderDetails
  ON (Orders.OrderID) = (OrderDetails.OrderID);
 
+
 SELECT  (Orders.OrderDate), (Orders.ShipperID), (OrderDetails.ProductID)
  FROM Orders
  LEFT JOIN OrderDetails
  ON (Orders.OrderID) = (OrderDetails.OrderID);
+
 
 SELECT DISTINCT cs.CustomerName
  FROM Categories c, Orders o, OrderDetails od, Products p, Customers cs
@@ -143,6 +147,7 @@ SELECT COUNT(CustomerID), city
  FROM Customers
  GROUP BY city;
 
+
 SELECT COUNT(CustomerName), Country
  FROM CUSTOMERS
  GROUP BY Country
@@ -160,6 +165,7 @@ WHEN Quantity = 30 THEN 'The quantity is 30'
 ELSE 'The quantity is under 30'
 END AS QuantityText
 FROM OrderDetails;
+
 
 SELECT FirstName, BirthDate,
 CASE

@@ -26,7 +26,9 @@ A group of  `objects` that represent a single `entity` is known as a collection.
     - `sort`() :
     - `binarySearch`(): returns index of searched item.
 - Iteration on collection(List,Set)
-  - `ListIterator` : extends Iterator,(`Backwards)` `HasPrevious, previous`, `Forwards``HasNext, next` methods
+  - `ListIterator` : extends Iterator,
+    - (`Backwards)` `HasPrevious, previous`,
+    - (`Forwards`)`HasNext, next` methods,
   - `Iterator`     :  traverse any collection (List, Set), Forwards (`HasNext), next` methods
     - Methods :  
       - `hasNext():` Returns `true`,if iteration has more elements.
