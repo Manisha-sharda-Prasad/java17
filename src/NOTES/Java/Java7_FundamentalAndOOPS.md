@@ -135,11 +135,11 @@
 
 4.` Polymorphism:`
 - Many Forms/changing according to situation.
-- method `Over-ride` -> signature same. Overriding parent's method-body {} by child-class.
-- method `Over-load` -> same name but different signature (number, type, count.,order of args).Return-type does not matter.
+- method `Over-ride` -> same name, same signature. Overriding parent's method-body {} by child-class.
+- method `Over-load` -> same name, but different signature. (number, type, count.,order of args). Return-type does not matter.
 
 5.`Abstraction:`
-- hiding implementation details,
+- Hiding Implementation Details,
 - Hide complex details/ showing only what is needed.
   - `Interface:`
     - Abstract methods(no-body)
@@ -147,8 +147,8 @@
     - subclass can implement many interfaces at one time.
 
   - `Abstract class:`
-     - `Abstract` methods(no-body- implements by child class),
-     - `Concrete` Methods(has-body)
+     - `Abstract` methods (no-body- implements by child class),
+     - `Concrete` Methods (has-body)
 
 6.`Association` (dependency, relationship):
 ```
